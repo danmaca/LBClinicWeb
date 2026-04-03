@@ -8,7 +8,6 @@
   "hero": {
     "title": "Péče o váš úsměv na prvním místě.",
     "subtitle": "Vítejte v zubní ordinaci, kde se spojuje moderní technika s profesionální péčí.",
-    "cta": "Kontaktujte nás",
     "before": "Před",
     "after": "Po",
     "beforeAlt": "Stav chrupu před zákrokem",
@@ -171,6 +170,12 @@
         "messageMaxLength": "Zpráva může mít nejvýše {{max}} znaků."
       }
     }
+  },
+  "carousel": {
+    "slideAlt": "Ukázka {{index}}",
+    "prev": "Předchozí ukázka",
+    "next": "Další ukázka",
+    "goToSlide": "Přejít na posuv {{index}}"
   },
   "languageSwitcher": {
     "cs": "Česky",

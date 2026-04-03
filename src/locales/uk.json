@@ -8,7 +8,6 @@
   "hero": {
     "title": "Péče o váš úsměv na prvním místě.",
     "subtitle": "Vítejte v zubní ordinaci, kde se spojuje moderní technika s profesionální péčí.",
-    "cta": "Kontaktujte nás",
     "before": "Před",
     "after": "Po",
     "beforeAlt": "Stav chrupu před zákrokem",
@@ -171,6 +170,12 @@
         "messageMaxLength": "Повідомлення не може перевищувати {{max}} символів."
       }
     }
+  },
+  "carousel": {
+    "slideAlt": "Приклад {{index}}",
+    "prev": "Попередній приклад",
+    "next": "Наступний приклад",
+    "goToSlide": "Перейти до слайду {{index}}"
   },
   "languageSwitcher": {
     "cs": "Česky",

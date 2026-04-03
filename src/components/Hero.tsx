@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { ReferenceCarousel } from './ReferenceCarousel';
 
 export const Hero: React.FC = () => {
   const { t } = useTranslation();
@@ -16,34 +17,10 @@ export const Hero: React.FC = () => {
         <p className="text-md text-gray-500 mb-10 font-medium">
           {t('hero.hours')}
         </p>
-        
-        <a 
-          href="#contact" 
-          className="inline-block bg-black text-[#D4A853] px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors shadow-sm"
-        >
-          {t('hero.cta')}
-        </a>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mt-20">
-          <div className="text-center group">
-            <div className="relative overflow-hidden rounded-lg shadow-md aspect-[4/3] w-full max-w-[320px] mx-auto bg-gray-100">
-               {/* Using placeholder for now, replace real image later */}
-               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                 Before Image Placeholder
-               </div>
-            </div>
-            <p className="mt-4 font-semibold text-gray-800">{t('hero.before')}</p>
-          </div>
-          <div className="text-center group">
-            <div className="relative overflow-hidden rounded-lg shadow-md aspect-[4/3] w-full max-w-[320px] mx-auto bg-gray-100">
-               <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-                 After Image Placeholder
-               </div>
-            </div>
-            <p className="mt-4 font-semibold text-gray-800">{t('hero.after')}</p>
-          </div>
-        </div>
+        <ReferenceCarousel />
       </div>
     </section>
   );
 };
+
