@@ -124,6 +124,8 @@
     "monThu": "Po–Čt",
     "fri": "Pá",
     "closed": "Zavřeno",
+    "mapIframeTitle": "Mapa — poloha ordinace LB Clinic",
+    "openInGoogleMaps": "Otevřít v Google Maps",
     "form": {
       "name": "Jméno",
       "phone": "Telefon",
@@ -153,7 +155,21 @@
       "submit": "Odeslat",
       "sending": "Odesílání...",
       "successMessage": "Zpráva byla úspěšně odeslána. Brzy se vám ozveme.",
-      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později."
+      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později.",
+      "validation": {
+        "nameRequired": "Vyplňte prosím jméno.",
+        "nameMinLength": "Jméno musí mít alespoň {{min}} znaků.",
+        "nameMaxLength": "Jméno může mít nejvýše {{max}} znaků.",
+        "phoneRequired": "Vyplňte prosím telefon.",
+        "phoneMinLength": "Telefon musí mít alespoň {{min}} znaků.",
+        "phoneMaxLength": "Telefon může mít nejvýše {{max}} znaků.",
+        "emailRequired": "Vyplňte prosím e-mail.",
+        "emailInvalid": "Zadejte platnou e-mailovou adresu.",
+        "emailMaxLength": "E-mail může mít nejvýše {{max}} znaků.",
+        "reasonRequired": "Vyberte prosím důvod objednání.",
+        "preferredTimeRequired": "Vyberte prosím preferovaný čas.",
+        "messageMaxLength": "Zpráva může mít nejvýše {{max}} znaků."
+      }
     }
   },
   "languageSwitcher": {

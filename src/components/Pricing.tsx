@@ -99,10 +99,8 @@ export const Pricing: React.FC = () => {
             <h3 className="text-xl font-bold mb-6 text-gray-900 text-center md:text-left">{t('pricing.insurance.heading')}</h3>
             <div className="grid grid-cols-2 gap-6">
               {SITE_CONFIG.insurance.map((ins) => (
-                <div key={ins.key} className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg border border-gray-100 group hover:border-gray-200 transition-colors">
-                  <div className="h-16 w-full flex items-center justify-center grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                    <img src={ins.logo} alt={ins.name} className="max-h-12 max-w-full object-contain" />
-                  </div>
+                <div key={ins.key}>
+                    <img src={ins.logo} alt={ins.name} title={ins.name} className="max-h-12 max-w-full object-contain" />
                 </div>
               ))}
             </div>

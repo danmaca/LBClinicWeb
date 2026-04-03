@@ -124,6 +124,8 @@
     "monThu": "Po–Čt",
     "fri": "Pá",
     "closed": "Zavřeno",
+    "mapIframeTitle": "Карта — расположение клиники LB Clinic",
+    "openInGoogleMaps": "Открыть в Google Maps",
     "form": {
       "name": "Jméno",
       "phone": "Telefon",
@@ -153,7 +155,21 @@
       "submit": "Odeslat",
       "sending": "Odesílání...",
       "successMessage": "Zpráva byla úspěšně odeslána. Brzy se vám ozveme.",
-      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později."
+      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později.",
+      "validation": {
+        "nameRequired": "Пожалуйста, укажите имя.",
+        "nameMinLength": "Имя должно содержать не менее {{min}} символов.",
+        "nameMaxLength": "Имя не должно превышать {{max}} символов.",
+        "phoneRequired": "Пожалуйста, укажите телефон.",
+        "phoneMinLength": "Телефон должен содержать не менее {{min}} символов.",
+        "phoneMaxLength": "Телефон не должен превышать {{max}} символов.",
+        "emailRequired": "Пожалуйста, укажите электронную почту.",
+        "emailInvalid": "Введите корректный адрес электронной почты.",
+        "emailMaxLength": "Адрес почты не должен превышать {{max}} символов.",
+        "reasonRequired": "Пожалуйста, выберите причину записи.",
+        "preferredTimeRequired": "Пожалуйста, выберите удобное время.",
+        "messageMaxLength": "Сообщение не должно превышать {{max}} символов."
+      }
     }
   },
   "languageSwitcher": {

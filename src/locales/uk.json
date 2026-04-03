@@ -124,6 +124,8 @@
     "monThu": "Po–Čt",
     "fri": "Pá",
     "closed": "Zavřeno",
+    "mapIframeTitle": "Карта — розташування клініки LB Clinic",
+    "openInGoogleMaps": "Відкрити в Google Maps",
     "form": {
       "name": "Jméno",
       "phone": "Telefon",
@@ -153,7 +155,21 @@
       "submit": "Odeslat",
       "sending": "Odesílání...",
       "successMessage": "Zpráva byla úspěšně odeslána. Brzy se vám ozveme.",
-      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později."
+      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později.",
+      "validation": {
+        "nameRequired": "Будь ласка, введіть ім’я.",
+        "nameMinLength": "Ім’я має містити щонайменше {{min}} символів.",
+        "nameMaxLength": "Ім’я не може перевищувати {{max}} символів.",
+        "phoneRequired": "Будь ласка, введіть номер телефону.",
+        "phoneMinLength": "Номер телефону має містити щонайменше {{min}} символів.",
+        "phoneMaxLength": "Номер телефону не може перевищувати {{max}} символів.",
+        "emailRequired": "Будь ласка, введіть електронну пошту.",
+        "emailInvalid": "Введіть коректну адресу електронної пошти.",
+        "emailMaxLength": "Електронна пошта не може перевищувати {{max}} символів.",
+        "reasonRequired": "Будь ласка, оберіть причину запису.",
+        "preferredTimeRequired": "Будь ласка, оберіть зручний час.",
+        "messageMaxLength": "Повідомлення не може перевищувати {{max}} символів."
+      }
     }
   },
   "languageSwitcher": {

@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '../config';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const Header: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    i18n.changeLanguage(e.target.value);
-  };
 
   const navLinks = [
     { href: '#team', label: t('nav.team') },
@@ -70,19 +67,7 @@ export const Header: React.FC = () => {
               </a>
             </div>
             
-            <div className="relative">
-              <select 
-                value={i18n.language} 
-                onChange={handleLanguageChange}
-                className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-accent focus:border-accent sm:text-sm rounded-md appearance-none border bg-white"
-              >
-                {SITE_CONFIG.supportedLanguages.map(lng => (
-                  <option key={lng} value={lng}>
-                    {t(`languageSwitcher.${lng}`)}
-                  </option>
-                ))}
-              </select>
-            </div>
+            <LanguageSwitcher className="shrink-0" />
           </div>
 
           {/* Mobile menu button */}
@@ -130,18 +115,8 @@ export const Header: React.FC = () => {
                 <span>{SITE_CONFIG.phone}</span>
               </a>
             </div>
-            <div className="mt-4 px-5">
-              <select 
-                value={i18n.language} 
-                onChange={handleLanguageChange}
-                className="block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-accent focus:border-accent sm:text-sm rounded-md border bg-white"
-              >
-                {SITE_CONFIG.supportedLanguages.map(lng => (
-                  <option key={lng} value={lng}>
-                    {t(`languageSwitcher.${lng}`)}
-                  </option>
-                ))}
-              </select>
+            <div className="mt-4 flex justify-center px-5">
+              <LanguageSwitcher onAfterChange={() => setIsMenuOpen(false)} />
             </div>
           </div>
         </div>

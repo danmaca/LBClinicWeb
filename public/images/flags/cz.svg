@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" aria-hidden="true">
+  <path fill="#fff" d="M0 0h900v600H0z"/>
+  <path fill="#d7141a" d="M0 300h900v300H0z"/>
+  <!-- Modrý klín: základna na levém okraji, kratší dosah (vrchol ~60 % šířky — čitelnější v malé ikonce) -->
+  <path fill="#11457e" d="M0 0L0 600L540 300z"/>
+</svg>

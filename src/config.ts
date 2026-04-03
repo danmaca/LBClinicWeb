@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  companyName: "LB dental clinic s.r.o.",
+  companyName: "LB Dental Clinic s.r.o.",
   brandName: "LB Clinic",
   url: "https://www.lbclinic.cz/",
   email: "recepce@lbclinic.cz",
@@ -21,13 +21,14 @@ export const SITE_CONFIG = {
   supportedLanguages: ["cs", "en", "uk", "ru"] as const,
   defaultLanguage: "cs",
   contactApiUrl: "/api/contact.php",
-  googleMapsEmbedQuery: "Vodňanská+1656/5,+Praha+9",
+  /** Souřadnice ordinace (OpenStreetMap embed, bez API klíče) */
+  clinicMapCoordinates: { lat: 50.1079862, lon: 14.5625057 },
   social: {
     instagram: "https://www.instagram.com/lbdentalclinic",
   },
   insurance: [
-    { key: "vzp", name: "VZP", logo: "/images/insurance-vzp.png" },
-    { key: "ozp", name: "OZP", logo: "/images/insurance-ozp.png" },
-    { key: "zpmv", name: "ZP MV", logo: "/images/insurance-zpmv.png" },
+    { key: "vzp", name: "Všeobecná zdravotní pojišťovna", logo: "/images/insurance/vzp.png" },
+    { key: "ozp", name: "Obohacená zdravotní pojišťovna", logo: "/images/insurance/ozp.png" },
+    { key: "zpmv", name: "Zdravotní pojišťovna ministerstva vnitra", logo: "/images/insurance/zpmv.png" },
   ],
 };
