@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm';
 import { ContactInfo } from './ContactInfo';
 import { AddressMap } from './AddressMap';
 
-export const Contact: React.FC = () => {
+export const ContactSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (

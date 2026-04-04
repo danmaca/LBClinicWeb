@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { ReferenceCarousel } from './ReferenceCarousel';
 
-export const Hero: React.FC = () => {
+export const HeroSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -23,4 +23,3 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
-

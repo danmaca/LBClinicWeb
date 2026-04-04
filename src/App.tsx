@@ -1,23 +1,23 @@
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { Team } from './components/Team';
-import { Pricing } from './components/Pricing';
-import { FAQ } from './components/FAQ';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+import { HeaderSection } from './components/HeaderSection';
+import { HeroSection } from './components/HeroSection';
+import { TeamSection } from './components/TeamSection';
+import { PricingSection } from './components/PricingSection';
+import { FAQSection } from './components/FAQSection';
+import { ContactSection } from './components/ContactSection';
+import { FooterSection } from './components/FooterSection';
 
 function App() {
   return (
     <div className="min-h-screen flex flex-col font-sans">
-      <Header />
+      <HeaderSection />
       <main className="flex-grow">
-        <Hero />
-        <Team />
-        <Pricing />
-        <FAQ />
-        <Contact />
+        <HeroSection />
+        <TeamSection />
+        <PricingSection />
+        <FAQSection />
+        <ContactSection />
       </main>
-      <Footer />
+      <FooterSection />
     </div>
   );
 }

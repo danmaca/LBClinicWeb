@@ -4,7 +4,7 @@ import { Menu, X, Phone, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '../config';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
-export const Header: React.FC = () => {
+export const HeaderSection: React.FC = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

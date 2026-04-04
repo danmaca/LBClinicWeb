@@ -31,7 +31,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
   );
 };
 
-export const FAQ: React.FC = () => {
+export const FAQSection: React.FC = () => {
   const { t } = useTranslation();
 
   const faqCount = 8;

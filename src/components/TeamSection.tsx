@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-export const Team: React.FC = () => {
+export const TeamSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (

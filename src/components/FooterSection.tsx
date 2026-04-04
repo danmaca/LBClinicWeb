@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { SITE_CONFIG } from '../config';
 
-export const Footer: React.FC = () => {
+export const FooterSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
