@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ContactForm } from './ContactForm';
 import { ContactInfo } from './ContactInfo';
 import { AddressMap } from './AddressMap';
+import { TestContactForm } from './TestContactForm';
 
 export const ContactSection: React.FC = () => {
   const { t } = useTranslation();
@@ -23,6 +24,7 @@ export const ContactSection: React.FC = () => {
 
           {/* Contact Form */}
           <ContactForm />
+          <TestContactForm />
         </div>
       </div>
     </section>
