@@ -12,7 +12,6 @@ export const HeaderSection: React.FC = () => {
     { href: '#team', label: t('nav.team') },
     { href: '#pricing', label: t('nav.pricing') },
     { href: '#faq', label: t('nav.faq') },
-    { href: '#contact', label: t('nav.contact') },
   ];
 
   return (
@@ -68,6 +67,13 @@ export const HeaderSection: React.FC = () => {
             </div>
             
             <LanguageSwitcher className="shrink-0" />
+            
+            <a
+              href="#contact"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
+            >
+              {t('nav.contact')}
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -117,6 +123,15 @@ export const HeaderSection: React.FC = () => {
             </div>
             <div className="mt-4 flex justify-center px-5">
               <LanguageSwitcher onAfterChange={() => setIsMenuOpen(false)} />
+            </div>
+            <div className="mt-4 flex justify-center px-5">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.contact')}
+              </a>
             </div>
           </div>
         </div>

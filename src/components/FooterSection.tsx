@@ -47,10 +47,6 @@ export const FooterSection: React.FC = () => {
                 <span>{t('contact.fri')}:</span>
                 <span>8:00 – 13:00</span>
               </div>
-              <div className="flex justify-between max-w-[200px]">
-                <span>So-Ne:</span>
-                <span>{t('contact.closed')}</span>
-              </div>
             </div>
           </div>
           
