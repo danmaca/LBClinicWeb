@@ -8,7 +8,6 @@ require_once __DIR__ . '/PHPMailer/PHPMailer.php';
 require_once __DIR__ . '/PHPMailer/SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 header("Access-Control-Allow-Origin: *"); // Restrict to lbclinic.cz in production
@@ -21,7 +20,8 @@ $envFile = __DIR__ . '/.env';
 if (file_exists($envFile)) {
     $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
-        if (str_starts_with(trim($line), '#')) continue;
+        if (str_starts_with(trim($line), '#'))
+            continue;
         if (strpos($line, '=') !== false) {
             putenv(trim($line));
             error_log("Loaded env: $line");
@@ -63,7 +63,7 @@ if (file_exists($rateLimitFile)) {
     if ($content) {
         $requests = json_decode($content, true);
         // Filter out requests older than 1 hour
-        $requests = array_filter($requests, function($timestamp) use ($currentTime) {
+        $requests = array_filter($requests, function ($timestamp) use ($currentTime) {
             return ($currentTime - $timestamp) < 3600;
         });
     }
@@ -78,16 +78,6 @@ if (count($requests) >= ($isDebug ? 60 : 5)) {
 $requests[] = $currentTime;
 file_put_contents($rateLimitFile, json_encode($requests));
 
-// 3. Validation
-$requiredFields = ['name', 'phone', 'email', 'reason', 'preferred_time'];
-foreach ($requiredFields as $field) {
-    if (empty($data[$field])) {
-        http_response_code(400);
-        echo json_encode(["status" => "error", "message" => "Missing required field: $field"]);
-        exit;
-    }
-}
-
 $name = htmlspecialchars(strip_tags(trim($data['name'])));
 $phone = htmlspecialchars(strip_tags(trim($data['phone'])));
 $email = filter_var(trim($data['email']), FILTER_VALIDATE_EMAIL);
@@ -99,17 +89,6 @@ $lang = htmlspecialchars(strip_tags(trim($data['lang'] ?? 'cs')));
 if (!$email) {
     http_response_code(400);
     echo json_encode(["status" => "error", "message" => "Invalid email format"]);
-    exit;
-}
-
-// 4. Verification from allowed options
-$allowedReasons = [
-    'dental_hygiene', 'acute_treatment', 'prevention', 'initial_exam', 
-    'teeth_whitening', 'filling', 'root_canal', 'prosthetics', 'extraction', 'consultation', 'other'
-];
-if (!in_array($reason, $allowedReasons)) {
-    http_response_code(400);
-    echo json_encode(["status" => "error", "message" => "Invalid reason"]);
     exit;
 }
 
@@ -140,7 +119,7 @@ $timeText = $timeCs[$preferred_time] ?? $preferred_time;
 
 $config = require __DIR__ . '/config/mail.php';
 
-$mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+$mail = new PHPMailer(true);
 
 try {
     // Server settings
@@ -149,12 +128,12 @@ try {
     $mail->Encoding = 'base64';                            // Kódovat obsah v base64
     $mail->Timeout = 5;                                    // Kratší timeout (5 sekund)
     $mail->SMTPKeepAlive = false;                          // Neudržuj připojení
-    $mail->Host       = $config['smtp_host'];
-    $mail->SMTPAuth   = true;
-    $mail->Username   = $config['smtp_user'];
-    $mail->Password   = $config['smtp_password'];
+    $mail->Host = $config['smtp_host'];
+    $mail->SMTPAuth = true;
+    $mail->Username = $config['smtp_user'];
+    $mail->Password = $config['smtp_password'];
     $mail->SMTPSecure = $config['smtp_secure'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
-    $mail->Port       = $config['smtp_port'];
+    $mail->Port = $config['smtp_port'];
     $mail->XMailer = ' ';                    // skryje "PHPMailer" z hlaviček
     $mail->MessageID = sprintf(
         '<%s@%s>',
@@ -163,7 +142,7 @@ try {
     );
     if ($isDebug) {
         $mail->SMTPDebug = 2;      // vypíše co se děje
-        $mail->Debugoutput = function($str, $level) {
+        $mail->Debugoutput = function ($str, $level) {
             error_log("SMTP: $str");
         };
     }
@@ -196,7 +175,7 @@ try {
 
     // Send email
     $mail->send();
-    
+
     echo json_encode(["status" => "success", "message" => "Zpráva byla úspěšně odeslána."]);
     exit;
 } catch (Exception $e) {
