@@ -13,7 +13,7 @@ return [
 */
 return [
     'smtp_host'     => 'smtp.websupport.cz',    // SMTP_HOST
-    'smtp_port'     => 465,   // SMTP_PORT
+    'smtp_port'     => 587,   // SMTP_PORT
     'smtp_user'     => 'recepce@lbclinic.cz',    // SMTP_USER
     'smtp_password' => '',    // SMTP_PASSWORD
     'smtp_secure'   => 'tls', // SMTP_SECURE

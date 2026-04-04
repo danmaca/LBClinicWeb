@@ -1,4 +1,16 @@
 <?php
+// Nastavit UTF-8 kódování
+ini_set('default_charset', 'UTF-8');
+set_time_limit(15);
+
+require_once __DIR__ . '/PHPMailer/Exception.php';
+require_once __DIR__ . '/PHPMailer/PHPMailer.php';
+require_once __DIR__ . '/PHPMailer/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 header("Access-Control-Allow-Origin: *"); // Restrict to lbclinic.cz in production
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Methods: POST");
@@ -43,7 +55,7 @@ if (file_exists($rateLimitFile)) {
     }
 }
 
-if (count($requests) >= 5) {
+if (count($requests) >= 15) {
     http_response_code(429);
     echo json_encode(["status" => "error", "message" => "Rate limit exceeded (5 requets per hour)"]);
     exit;
@@ -110,34 +122,62 @@ $timeCs = [
 $reasonText = $reasonsCs[$reason] ?? $reason;
 $timeText = $timeCs[$preferred_time] ?? $preferred_time;
 
-// 5. Send email (Mocked with mail() for now, in real it should use PHPMailer & SMTP config)
+// 5. Send email using PHPMailer
 
 $config = require __DIR__ . '/config/mail.php';
-$to = $config['to_email'];
-$subject = "Nová objednávka z webu LB Clinic – $name – $reasonText";
 
-$mailBody = "Nová objednávka z kontaktního formuláře na webu LB Clinic\n";
-$mailBody .= "=========================================================\n\n";
-$mailBody .= "Jméno:             $name\n";
-$mailBody .= "Telefon:           $phone\n";
-$mailBody .= "E-mail:            $email\n";
-$mailBody .= "Důvod objednání:   $reasonText\n";
-$mailBody .= "Preferovaný čas:   $timeText\n\n";
-$mailBody .= "Zpráva:\n$message\n\n";
-$mailBody .= "-----\n";
-$mailBody .= "Odesláno: " . date('j. n. Y, H:i') . "\n";
-$mailBody .= "IP: $ip | Jazyk: $lang\n";
+$mail = new \PHPMailer\PHPMailer\PHPMailer(true);
 
-$headers = "From: " . $config['from_name'] . " <" . $config['from_email'] . ">\r\n";
-$headers .= "Reply-To: $email\r\n";
+try {
+    // Server settings
+    $mail->isSMTP();
+    $mail->CharSet = 'UTF-8';                              // Nastavit UTF-8 kódování
+    $mail->Encoding = 'base64';                            // Kódovat obsah v base64
+    $mail->Timeout = 5;                                    // Kratší timeout (5 sekund)
+    $mail->SMTPKeepAlive = false;                          // Neudržuj připojení
+    $mail->Host       = $config['smtp_host'];
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $config['smtp_user'];
+    $mail->Password   = $config['smtp_password'];
+    $mail->SMTPSecure = $config['smtp_secure'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = $config['smtp_port'];
+    $mail->SMTPDebug = 0;                                  // Vypnout debug v produkci
 
-// In production, we assume PHPMailer would be used with SMTP configurations 
-// from $config. For boilerplate, we'll try standard mail().
-$success = mail($to, $subject, $mailBody, $headers);
+    // Recipients
+    $mail->setFrom($config['from_email'], $config['from_name']);
+    $mail->addAddress($config['to_email']);
+    $mail->addReplyTo($email, $name);
 
-if ($success || true) { // Defaulting to true so API behaves nicely in dev
+    // Content
+    $subject = "Nová objednávka z webu LB Clinic – $name – $reasonText";
+    $mail->isHTML(false);                                  // Nastavit na plain text
+    $mail->Subject = $subject;
+
+    // Plain text body
+    $mailBody = "Nová objednávka z kontaktního formuláře na webu LB Clinic\n";
+    $mailBody .= "=========================================================\n\n";
+    $mailBody .= "Jméno:             $name\n";
+    $mailBody .= "Telefon:           $phone\n";
+    $mailBody .= "E-mail:            $email\n";
+    $mailBody .= "Důvod objednání:   $reasonText\n";
+    $mailBody .= "Preferovaný čas:   $timeText\n\n";
+    $mailBody .= "Zpráva:\n$message\n\n";
+    $mailBody .= "-----\n";
+    $mailBody .= "Odesláno: " . date('j. n. Y, H:i') . "\n";
+    $mailBody .= "IP: $ip | Jazyk: $lang\n";
+
+    $mail->Body = $mailBody;
+
+    // Send email
+    $mail->send();
+    
+    exit;
     echo json_encode(["status" => "success", "message" => "Zpráva byla úspěšně odeslána."]);
-} else {
+} catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(["status" => "error", "message" => "Chyba při odesílání e-mailu"]);
+    echo json_encode([
+        "status" => "error",
+        "message" => "Chyba při odesílání: " . $mail->ErrorInfo
+    ]);
+    exit;
 }
