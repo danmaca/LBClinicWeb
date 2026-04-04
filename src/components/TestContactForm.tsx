@@ -31,12 +31,14 @@ export const TestContactForm: React.FC = () => {
         body: JSON.stringify(testData)
       });
 
+      const responseData = await response.json();
+
       if (response.ok) {
         setStatus('success');
-        setMessage('Testovací formulář byl úspěšně odeslán!');
+        setMessage(responseData.message || 'Testovací formulář byl úspěšně odeslán!');
       } else {
         setStatus('error');
-        setMessage(`Chyba: Server vrátil status ${response.status}`);
+        setMessage(responseData.message || `Chyba: Server vrátil status ${response.status}`);
       }
     } catch (err) {
       setStatus('error');

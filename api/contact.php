@@ -17,6 +17,20 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
+$envFile = __DIR__ . '/.env';
+if (file_exists($envFile)) {
+    $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (str_starts_with(trim($line), '#')) continue;
+        if (strpos($line, '=') !== false) {
+            putenv(trim($line));
+            error_log("Loaded env: $line");
+        }
+    }
+}
+
+$isDebug = getenv('IS_DEBUG') === 'true';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
     echo json_encode(["status" => "error", "message" => "Method not allowed"]);
@@ -55,7 +69,7 @@ if (file_exists($rateLimitFile)) {
     }
 }
 
-if (count($requests) >= 15) {
+if (count($requests) >= ($isDebug ? 60 : 5)) {
     http_response_code(429);
     echo json_encode(["status" => "error", "message" => "Rate limit exceeded (5 requets per hour)"]);
     exit;
@@ -141,10 +155,22 @@ try {
     $mail->Password   = $config['smtp_password'];
     $mail->SMTPSecure = $config['smtp_secure'] === 'tls' ? PHPMailer::ENCRYPTION_STARTTLS : PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = $config['smtp_port'];
-    $mail->SMTPDebug = 0;                                  // Vypnout debug v produkci
+    $mail->XMailer = ' ';                    // skryje "PHPMailer" z hlaviček
+    $mail->MessageID = sprintf(
+        '<%s@%s>',
+        bin2hex(random_bytes(16)),
+        $config['from_domain']
+    );
+    if ($isDebug) {}
+        $mail->SMTPDebug = 2;      // vypíše co se děje
+        $mail->Debugoutput = function($str, $level) {
+            error_log("SMTP: $str");
+        };
+    }
 
     // Recipients
     $mail->setFrom($config['from_email'], $config['from_name']);
+    $mail->Sender = $config['from_email'];   // nastaví Return-Path
     $mail->addAddress($config['to_email']);
     $mail->addReplyTo($email, $name);
 
@@ -171,10 +197,11 @@ try {
     // Send email
     $mail->send();
     
-    exit;
     echo json_encode(["status" => "success", "message" => "Zpráva byla úspěšně odeslána."]);
+    exit;
 } catch (Exception $e) {
     http_response_code(500);
+    error_log("SMTP configuration: Host={$config['smtp_host']}, Port={$config['smtp_port']}, User={$config['smtp_user']}, Secure={$config['smtp_secure']}");
     echo json_encode([
         "status" => "error",
         "message" => "Chyba při odesílání: " . $mail->ErrorInfo

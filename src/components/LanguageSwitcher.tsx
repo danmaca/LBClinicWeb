@@ -32,7 +32,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   listClassName = '',
   onAfterChange,
 }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const listId = useId();

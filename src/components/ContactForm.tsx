@@ -25,6 +25,7 @@ export const ContactForm: React.FC = () => {
   });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   const inputErrorClass = (field: FormField) =>
     fieldErrors[field] ? 'border-red-500 focus:border-red-500 focus:ring-red-500' : '';
@@ -87,6 +88,7 @@ export const ContactForm: React.FC = () => {
     if (!validateForm()) return;
 
     setStatus('submitting');
+    setErrorMessage('');
     
     try {
       const payload = {
@@ -102,6 +104,8 @@ export const ContactForm: React.FC = () => {
         body: JSON.stringify(payload)
       });
       
+      const responseData = await response.json();
+      
       if (response.ok) {
         setStatus('success');
         setFieldErrors({});
@@ -110,9 +114,11 @@ export const ContactForm: React.FC = () => {
         });
       } else {
         setStatus('error');
+        setErrorMessage(responseData.message || t('contact.form.errorMessage'));
       }
     } catch (err) {
       setStatus('error');
+      setErrorMessage(t('contact.form.errorMessage'));
     }
   };
 
@@ -259,7 +265,7 @@ export const ContactForm: React.FC = () => {
           </div>
           
           {status === 'error' && (
-            <p className="text-red-500 text-sm">{t('contact.form.errorMessage')}</p>
+            <p className="text-red-500 text-sm">{errorMessage}</p>
           )}
           
           <button
