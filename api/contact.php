@@ -92,28 +92,8 @@ if (!$email) {
     exit;
 }
 
-// Texts translations based on lang or defaulting to CS since email is for admin
-$reasonsCs = [
-    'dental_hygiene' => 'Dentální hygiena',
-    'acute_treatment' => 'Akutní ošetření',
-    'prevention' => 'Prevence',
-    'initial_exam' => 'Vstupní prohlídka',
-    'teeth_whitening' => 'Bělení zubů',
-    'filling' => 'Výplň',
-    'root_canal' => 'Ošetření kořenových kanálků',
-    'prosthetics' => 'Protetická práce',
-    'extraction' => 'Extrakce',
-    'consultation' => 'Konzultace',
-    'other' => 'Jiné'
-];
-$timeCs = [
-    'any' => 'Nerozhoduje',
-    'morning' => 'Dopoledne',
-    'afternoon' => 'Odpoledne'
-];
-
-$reasonText = $reasonsCs[$reason] ?? $reason;
-$timeText = $timeCs[$preferred_time] ?? $preferred_time;
+$reasonText = $reason;
+$timeText = $preferred_time;
 
 // 5. Send email using PHPMailer
 

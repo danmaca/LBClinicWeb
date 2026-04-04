@@ -93,6 +93,8 @@ export const ContactForm: React.FC = () => {
     try {
       const payload = {
         ...formData,
+        reason: t(`contact.form.reasonOptions.${formData.reason}`, { lng: 'cs' }),
+        preferred_time: t(`contact.form.timeOptions.${formData.preferred_time}`, { lng: 'cs' }),
         lang: i18n.language
       };
       
