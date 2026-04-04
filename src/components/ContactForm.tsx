@@ -91,11 +91,21 @@ export const ContactForm: React.FC = () => {
     setErrorMessage('');
     
     try {
+      const currentLang = i18n.language;
+      const getLocalizedValue = (baseKey: string, valueKey: string) => {
+        const csText = t(`${baseKey}.${valueKey}`, { lng: 'cs' });
+        if (currentLang !== 'cs') {
+          const userText = t(`${baseKey}.${valueKey}`);
+          return `${csText} (${userText})`;
+        }
+        return csText;
+      };
+
       const payload = {
         ...formData,
-        reason: t(`contact.form.reasonOptions.${formData.reason}`, { lng: 'cs' }),
-        preferred_time: t(`contact.form.timeOptions.${formData.preferred_time}`, { lng: 'cs' }),
-        lang: i18n.language
+        reason: getLocalizedValue('contact.form.reasonOptions', formData.reason),
+        preferred_time: getLocalizedValue('contact.form.timeOptions', formData.preferred_time),
+        lang: currentLang
       };
       
       const response = await fetch(SITE_CONFIG.contactApiUrl, {

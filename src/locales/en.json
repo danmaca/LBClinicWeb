@@ -72,7 +72,7 @@
       "reason": "Důvod objednání",
       "reasonPlaceholder": "– Vyberte důvod –",
       "reasonOptions": {
-        "dental_hygiene": "Dentální hygiena",
+        "dental_hygiene": "Dental hygiene",
         "acute_treatment": "Akutní ošetření",
         "prevention": "Prevence",
         "initial_exam": "Vstupní prohlídka",
