@@ -12,6 +12,13 @@ const LANGUAGE_FLAG_SRC: Record<SupportedLanguage, string> = {
   ru: '/images/flags/ru.svg',
 };
 
+const LANGUAGE_NAMES: Record<SupportedLanguage, string> = {
+  cs: 'Česky',
+  en: 'English',
+  uk: 'Українська',
+  ru: 'Русский',
+};
+
 type LanguageSwitcherProps = {
   className?: string;
   buttonClassName?: string;
@@ -65,7 +72,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-controls={listId}
-        aria-label={t(`languageSwitcher.${current}`)}
+        aria-label={LANGUAGE_NAMES[current]}
         onClick={() => setOpen((o) => !o)}
         className={`inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white py-1 pl-1.5 pr-1 shadow-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent ${buttonClassName}`}
       >
@@ -107,7 +114,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                   height={16}
                   className="h-4 w-[22px] shrink-0 rounded-sm object-cover shadow-sm ring-1 ring-black/5"
                 />
-                <span className="whitespace-nowrap">{t(`languageSwitcher.${lng}`)}</span>
+                <span className="whitespace-nowrap">{LANGUAGE_NAMES[lng]}</span>
               </button>
             </li>
           ))}

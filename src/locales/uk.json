@@ -8,10 +8,6 @@
   "hero": {
     "title": "Péče o váš úsměv na prvním místě.",
     "subtitle": "Vítejte v zubní ordinaci, kde se spojuje moderní technika s profesionální péčí.",
-    "before": "Před",
-    "after": "Po",
-    "beforeAlt": "Stav chrupu před zákrokem",
-    "afterAlt": "Stav chrupu po zákroku",
     "hours": "Ordinační hodiny: Po–Čt 8:00–16:00 | Pá 8:00–13:00"
   },
   "team": {
@@ -39,62 +35,6 @@
     },
     "insurance": {
       "heading": "Spolupracující pojišťovny"
-    },
-    "categories": {
-      "exam": "Vstupní a kontrolní vyšetření",
-      "hygiene": "Dentální hygiena",
-      "conservation": "Záchovná stomatologie",
-      "endo": "Endodoncie (léčba kořenových kanálků)",
-      "surgery": "Chirurgické výkony",
-      "prosthetics": "Protetika",
-      "whitening": "Bělení zubů",
-      "kids": "Dětská stomatologie"
-    },
-    "items": {
-      "exam": [
-        {"name": "Komplexní vstupní vyšetření", "price": "800 Kč"},
-        {"name": "Kontrolní vyšetření", "price": "500 Kč"},
-        {"name": "Rentgenový snímek (intraorální)", "price": "200 Kč"},
-        {"name": "Panoramatický snímek (OPG)", "price": "500 Kč"}
-      ],
-      "hygiene": [
-        {"name": "Dentální hygiena (60 min)", "price": "2 200 Kč"},
-        {"name": "Dentální hygiena (45 min)", "price": "1 800 Kč"},
-        {"name": "Air-Flow (pískování)", "price": "500 Kč"},
-        {"name": "Fluoridace", "price": "300 Kč"}
-      ],
-      "conservation": [
-        {"name": "Estetická výplň (fotokompozit) — malá", "price": "1 500 Kč"},
-        {"name": "Estetická výplň (fotokompozit) — střední", "price": "2 000 Kč"},
-        {"name": "Estetická výplň (fotokompozit) — velká", "price": "2 500 Kč"},
-        {"name": "Dočasná výplň", "price": "300 Kč"}
-      ],
-      "endo": [
-        {"name": "Jednokořenový zub", "price": "3 000 Kč"},
-        {"name": "Vícekořenový zub", "price": "5 000 Kč"},
-        {"name": "Reendodoncie", "price": "od 4 000 Kč"}
-      ],
-      "surgery": [
-        {"name": "Extrakce zubu — jednoduchá", "price": "1 000 Kč"},
-        {"name": "Extrakce zubu — komplikovaná", "price": "2 500 Kč"},
-        {"name": "Chirurgická extrakce zubu moudrosti", "price": "od 3 500 Kč"}
-      ],
-      "prosthetics": [
-        {"name": "Keramická korunka", "price": "od 8 000 Kč"},
-        {"name": "Zirkonová korunka", "price": "od 10 000 Kč"},
-        {"name": "Fazeta (veneer)", "price": "od 8 000 Kč"},
-        {"name": "Snímatelná náhrada — částečná", "price": "od 5 000 Kč"},
-        {"name": "Snímatelná náhrada — celková", "price": "od 8 000 Kč"}
-      ],
-      "whitening": [
-        {"name": "Ordinační bělení", "price": "5 000 Kč"},
-        {"name": "Domácí bělení (nosičky + gel)", "price": "3 500 Kč"}
-      ],
-      "kids": [
-        {"name": "Preventivní prohlídka dítěte", "price": "400 Kč"},
-        {"name": "Pečetění fisur (1 zub)", "price": "500 Kč"},
-        {"name": "Výplň u dětského zubu", "price": "od 1 000 Kč"}
-      ]
     }
   },
   "faq": {
@@ -176,11 +116,5 @@
     "prev": "Попередній приклад",
     "next": "Наступний приклад",
     "goToSlide": "Перейти до слайду {{index}}"
-  },
-  "languageSwitcher": {
-    "cs": "Česky",
-    "en": "English",
-    "uk": "Українська",
-    "ru": "Русский"
   }
 }

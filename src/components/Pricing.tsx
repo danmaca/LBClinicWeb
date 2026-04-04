@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { QRCodeSVG } from 'qrcode.react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { SITE_CONFIG } from '../config';
+import { pricelist } from '../data/pricelist';
 
 const AccordionItem = ({ title, items }: { title: string, items: { name: string, price: string }[] }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,18 +34,7 @@ const AccordionItem = ({ title, items }: { title: string, items: { name: string,
 };
 
 export const Pricing: React.FC = () => {
-  const { t } = useTranslation();
-
-  const pricingCategories = [
-    { key: "exam" },
-    { key: "hygiene" },
-    { key: "conservation" },
-    { key: "endo" },
-    { key: "surgery" },
-    { key: "prosthetics" },
-    { key: "whitening" },
-    { key: "kids" },
-  ];
+  const { t, i18n } = useTranslation();
 
   return (
     <section id="pricing" className="py-20 bg-white">
@@ -57,13 +47,21 @@ export const Pricing: React.FC = () => {
         </p>
 
         <div className="mb-16 bg-gray-50 p-6 rounded-xl border border-gray-100">
-          {pricingCategories.map((category) => {
-            const items = t(`pricing.items.${category.key}`, { returnObjects: true }) as { name: string, price: string }[];
+          {pricelist.categories.map((category, idx) => {
+            const lang = i18n.language as string;
+            // Bezpečné získání textů; fallback na 'cs'
+            const getTitle = (nameObj: any) => nameObj[lang] || nameObj['cs'];
+
+            const processedItems = category.items.map(item => ({
+              name: getTitle(item.name),
+              price: typeof item.price === 'number' ? `${item.price.toLocaleString('cs-CZ')} Kč` : item.price as string
+            }));
+
             return (
               <AccordionItem
-                key={category.key}
-                title={t(`pricing.categories.${category.key}`)}
-                items={items}
+                key={idx}
+                title={getTitle(category.name)}
+                items={processedItems}
               />
             );
           })}
@@ -100,7 +98,7 @@ export const Pricing: React.FC = () => {
             <div className="grid grid-cols-2 gap-6">
               {SITE_CONFIG.insurance.map((ins) => (
                 <div key={ins.key}>
-                    <img src={ins.logo} alt={ins.name} title={ins.name} className="max-h-12 max-w-full object-contain" />
+                  <img src={ins.logo} alt={ins.name} title={ins.name} className="max-h-12 max-w-full object-contain" />
                 </div>
               ))}
             </div>
