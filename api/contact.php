@@ -161,7 +161,7 @@ try {
         bin2hex(random_bytes(16)),
         $config['from_domain']
     );
-    if ($isDebug) {}
+    if ($isDebug) {
         $mail->SMTPDebug = 2;      // vypíše co se děje
         $mail->Debugoutput = function($str, $level) {
             error_log("SMTP: $str");
