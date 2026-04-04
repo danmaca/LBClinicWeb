@@ -6,7 +6,7 @@ export const HeroSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="hero" className="pt-28 pb-20 min-h-[80vh] flex flex-col justify-center bg-white relative">
+    <section id="hero" className="pt-28 pb-20 min-h-[80vh] flex flex-col justify-center relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-10 md:mt-0">
         <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 leading-tight">
           {t('hero.title')}

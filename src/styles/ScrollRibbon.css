@@ -1,0 +1,45 @@
+.scroll-ribbon {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(100vw * 0.577); /* Mantains 30 degree angle: 100 * tan(30) */
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+  opacity: 0.3;
+}
+
+.scroll-ribbon-ltr {
+  top: 10%;
+}
+
+.scroll-ribbon-rtl {
+  top: 40%;
+  transform: scaleX(-1);
+}
+
+.ribbon-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ribbon-path {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  animation: organicWave 15s ease-in-out infinite alternate;
+}
+
+.ribbon-gold {
+  animation-duration: 20s;
+}
+
+.ribbon-brown {
+  animation-duration: 25s;
+  animation-delay: -5s;
+}
+
+@keyframes organicWave {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(2%, 2%) rotate(1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
