@@ -27,7 +27,7 @@ export const HeaderSection: React.FC = () => {
               <img
                 src="/images/logo_LbClinicDental_pod.svg"
                 alt={SITE_CONFIG.brandName}
-                className="h-9 w-auto max-w-[min(58vw,220px)] sm:h-11 sm:max-w-[280px] md:h-12 md:max-w-[340px] lg:h-[4.5rem] lg:max-w-[510px] object-contain object-left"
+                className="h-[4.5rem] w-auto max-w-[510px] object-contain object-left"
               />
             </a>
           </div>

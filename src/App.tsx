@@ -6,6 +6,7 @@ import { FAQSection } from './components/FAQSection';
 import { ContactSection } from './components/ContactSection';
 import { FooterSection } from './components/FooterSection';
 import { ScrollRibbon } from './components/ScrollRibbon';
+import { TestContactForm } from './components/TestContactForm';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <PricingSection />
           <FAQSection />
           <ContactSection />
+          <TestContactForm />
         </main>
         <FooterSection />
       </div>
