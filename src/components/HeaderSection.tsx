@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '../config';
+import { MainLogoImage } from './MainLogoImage';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export const HeaderSection: React.FC = () => {
@@ -20,15 +21,12 @@ export const HeaderSection: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center min-w-0">
-            <a
+                        <a
               href="#"
-              className="flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
+              aria-label={SITE_CONFIG.brandName}
+              className="flex items-center text-[#1d1d1b] hover:text-yellow-600 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
             >
-              <img
-                src="/images/logo_LbClinicDental_pod.svg"
-                alt={SITE_CONFIG.brandName}
-                className="h-[4.5rem] w-auto max-w-[510px] object-contain object-left"
-              />
+              <MainLogoImage className="h-[4.5rem] w-auto max-w-[510px]" />
             </a>
           </div>
 
