@@ -29,9 +29,9 @@ export const SITE_CONFIG = {
     instagram: "https://www.instagram.com/lbdentalclinic",
   },
   insurance: [
-    { key: "vzp", name: "Všeobecná zdravotní pojišťovna", logo: "/images/insurance/vzp.png" },
-    { key: "ozp", name: "Obohacená zdravotní pojišťovna", logo: "/images/insurance/ozp.png" },
-    { key: "zpmv", name: "Zdravotní pojišťovna ministerstva vnitra", logo: "/images/insurance/zpmv.png" },
+    { key: "vzp", name: "Všeobecná zdravotní pojišťovna", logo: "vzp.png" },
+    { key: "ozp", name: "Obohacená zdravotní pojišťovna", logo: "ozp.png" },
+    { key: "zpmv", name: "Zdravotní pojišťovna ministerstva vnitra", logo: "zpmv.png" },
   ],
 };
 
