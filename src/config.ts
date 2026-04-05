@@ -1,5 +1,7 @@
+import type { ReferenceSlide } from './TypeDefinitions';
+
 export const SITE_CONFIG = {
-  companyName: "LB Dental Clinic s.r.o.",
+  companyName: "LB dental clinic s.r.o.",
   brandName: "LB Clinic",
   url: "https://www.lbclinic.cz/",
   email: "recepce@lbclinic.cz",
@@ -13,7 +15,7 @@ export const SITE_CONFIG = {
     number: "670100-2200909939/6210",
     bankName: "mBank",
     iban: "CZ1262100000006701002200909939",  // A dummy IBAN derived for the purposes, check needed
-    recipientName: "LB Clinic",
+    recipientName: "LB clinic",
     get spdString() {
       return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:Platba LB Clinic*RN:${this.recipientName}`;
     }
@@ -32,3 +34,10 @@ export const SITE_CONFIG = {
     { key: "zpmv", name: "Zdravotní pojišťovna ministerstva vnitra", logo: "/images/insurance/zpmv.png" },
   ],
 };
+
+export const REFERENCE_SLIDES: ReferenceSlide[] = [
+  { image: '/images/reference/1.png', caption: ['Před ošetřením', 'Po ošetření'] },
+  { image: '/images/reference/2.png', caption: ['Byl jsem tam poprvé a hrozně jsem se bál', 'Nakonec to bylo úplně v pohodě. Nakonec to bylo úplně v pohodě']  },
+  { image: '/images/reference/3.png', caption: 'Estetická stomatologie' },
+  { image: '/images/reference/4.png' },
+];

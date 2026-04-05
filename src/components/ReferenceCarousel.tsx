@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
-const referenceImages = [
-  '/images/reference/1.png',
-  '/images/reference/2.png',
-  '/images/reference/3.png',
-  '/images/reference/4.png',
-];
+import { REFERENCE_SLIDES } from '../config';
 
 export const ReferenceCarousel: React.FC = () => {
   const { t } = useTranslation();
@@ -26,7 +20,7 @@ export const ReferenceCarousel: React.FC = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const maxSlide = Math.max(0, referenceImages.length - itemsPerView);
+  const maxSlide = Math.max(0, REFERENCE_SLIDES.length - itemsPerView);
 
   useEffect(() => {
     if (currentSlide > maxSlide) {
@@ -48,18 +42,32 @@ export const ReferenceCarousel: React.FC = () => {
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * slideWidthPercent}%)` }}
           >
-            {referenceImages.map((src, index) => (
+                        {REFERENCE_SLIDES.map((slide, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 px-2"
                 style={{ width: `${slideWidthPercent}%` }}
               >
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden bg-white shadow-sm items-center justify-center">
+                <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm">
                   <img
-                    src={src}
-                    alt={t('carousel.slideAlt', { index: index + 1 })}
-                    className="w-full h-full object-contain bg-white"
+                    src={slide.image}
+                    alt={(
+                      Array.isArray(slide.caption) ? slide.caption.join(' ') : slide.caption
+                    ) ?? t('carousel.slideAlt', { index: index + 1 })}
+                    className="w-full h-full object-contain"
                   />
+                                    {slide.caption && (
+                    <span className="absolute bottom-0 right-0 max-w-[75%] px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-xs sm:text-sm font-medium rounded-tl-lg select-none pointer-events-none text-right leading-snug">
+                      {Array.isArray(slide.caption)
+                        ? slide.caption.map((line, i) => (
+                            <React.Fragment key={i}>
+                              {i > 0 && <br />}
+                              {line}
+                            </React.Fragment>
+                          ))
+                        : slide.caption}
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
