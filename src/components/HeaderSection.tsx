@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-import { SITE_CONFIG } from '../config';
-import { MainLogoImage } from './MainLogoImage';
-import { LanguageSwitcher } from './LanguageSwitcher';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Menu, X, Phone, Mail } from "lucide-react";
+import { SITE_CONFIG } from "../config";
+import { MainLogoImage } from "./MainLogoImage";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const HeaderSection: React.FC = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#team', label: t('nav.team') },
-    { href: '#pricing', label: t('nav.pricing') },
-    { href: '#faq', label: t('nav.faq') },
+    { href: "#team", label: t("nav.team") },
+    { href: "#pricing", label: t("nav.pricing") },
+    { href: "#faq", label: t("nav.faq") },
   ];
 
   return (
@@ -21,10 +21,10 @@ export const HeaderSection: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center min-w-0">
-                        <a
+            <a
               href="#"
               aria-label={SITE_CONFIG.brandName}
-              className="flex items-center text-[#1d1d1b] hover:text-yellow-600 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
+              className="flex items-center text-[#1d1d1b] hover:text-yellow-600 transition-colors duration-[1000ms] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
             >
               <MainLogoImage className="h-[4.5rem] w-auto max-w-[510px]" />
             </a>
@@ -33,7 +33,11 @@ export const HeaderSection: React.FC = () => {
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href} className="text-gray-700 hover:text-accent font-medium transition-colors">
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-gray-700 hover:text-accent font-medium transition-colors duration-[800ms]"
+              >
                 {link.label}
               </a>
             ))}
@@ -44,7 +48,7 @@ export const HeaderSection: React.FC = () => {
             <div className="flex items-center space-x-4">
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
-                className="flex items-center gap-2 text-gray-500 hover:text-accent"
+                className="flex items-center gap-2 text-gray-500 hover:text-accent transition-colors duration-[800ms]"
                 aria-label={SITE_CONFIG.email}
               >
                 <Mail className="h-5 w-5 shrink-0" aria-hidden />
@@ -53,8 +57,8 @@ export const HeaderSection: React.FC = () => {
                 </span>
               </a>
               <a
-                href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, '')}`}
-                className="flex items-center gap-2 text-gray-500 hover:text-accent"
+                href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, "")}`}
+                className="flex items-center gap-2 text-gray-500 hover:text-accent transition-colors duration-[800ms]"
                 aria-label={SITE_CONFIG.phone}
               >
                 <Phone className="h-5 w-5 shrink-0" aria-hidden />
@@ -63,14 +67,14 @@ export const HeaderSection: React.FC = () => {
                 </span>
               </a>
             </div>
-            
+
             <LanguageSwitcher className="shrink-0" />
-            
+
             <a
               href="#contact"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
             >
-              {t('nav.contact')}
+              {t("nav.contact")}
             </a>
           </div>
 
@@ -99,7 +103,7 @@ export const HeaderSection: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-[800ms]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
@@ -108,13 +112,19 @@ export const HeaderSection: React.FC = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-gray-200">
             <div className="flex items-center px-5 space-x-4">
-              <a href={`mailto:${SITE_CONFIG.email}`} className="flex items-center text-gray-500 hover:text-accent">
+              <a
+                href={`mailto:${SITE_CONFIG.email}`}
+                className="flex items-center text-gray-500 hover:text-accent transition-colors duration-[800ms]"
+              >
                 <Mail className="h-5 w-5 mr-2" />
                 <span>{SITE_CONFIG.email}</span>
               </a>
             </div>
             <div className="mt-3 flex items-center px-5 space-x-4">
-              <a href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, '')}`} className="flex items-center text-gray-500 hover:text-accent">
+              <a
+                href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, "")}`}
+                className="flex items-center text-gray-500 hover:text-accent transition-colors duration-[800ms]"
+              >
                 <Phone className="h-5 w-5 mr-2" />
                 <span>{SITE_CONFIG.phone}</span>
               </a>
@@ -128,7 +138,7 @@ export const HeaderSection: React.FC = () => {
                 className="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('nav.contact')}
+                {t("nav.contact")}
               </a>
             </div>
           </div>
