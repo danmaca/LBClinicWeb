@@ -41,16 +41,16 @@ export const SITE_CONFIG = {
 
 export const REFERENCE_SLIDES: ReferenceSlide[] = [
   {
-    image: "/images/reference/1.png",
+    image: "1.png",
     caption: ["Před ošetřením", "Po ošetření"],
   },
   {
-    image: "/images/reference/2.png",
+    image: "2.png",
     caption: [
       "Byl jsem tam poprvé a hrozně jsem se bál",
       "Nakonec to bylo úplně v pohodě. Nakonec to bylo úplně v pohodě",
     ],
   },
-  { image: "/images/reference/3.png", caption: "Estetická stomatologie" },
-  { image: "/images/reference/4.png" },
+  { image: "3.png", caption: "Estetická stomatologie" },
+  { image: "4.png" },
 ];

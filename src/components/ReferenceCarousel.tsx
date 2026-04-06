@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { REFERENCE_SLIDES } from '../config';
+import React, { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { REFERENCE_SLIDES } from "../config";
 
 export const ReferenceCarousel: React.FC = () => {
   const { t } = useTranslation();
@@ -16,8 +16,8 @@ export const ReferenceCarousel: React.FC = () => {
     // Úvodní nastavení
     handleResize();
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const maxSlide = Math.max(0, REFERENCE_SLIDES.length - itemsPerView);
@@ -28,8 +28,10 @@ export const ReferenceCarousel: React.FC = () => {
     }
   }, [itemsPerView, currentSlide, maxSlide]);
 
-  const nextSlide = () => setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
-  const prevSlide = () => setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+  const nextSlide = () =>
+    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
+  const prevSlide = () =>
+    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
 
   const slideWidthPercent = 100 / itemsPerView;
   const numDots = maxSlide + 1;
@@ -40,9 +42,11 @@ export const ReferenceCarousel: React.FC = () => {
         <div className="overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * slideWidthPercent}%)` }}
+            style={{
+              transform: `translateX(-${currentSlide * slideWidthPercent}%)`,
+            }}
           >
-                        {REFERENCE_SLIDES.map((slide, index) => (
+            {REFERENCE_SLIDES.map((slide, index) => (
               <div
                 key={index}
                 className="flex-shrink-0 px-2"
@@ -50,13 +54,16 @@ export const ReferenceCarousel: React.FC = () => {
               >
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm">
                   <img
-                    src={slide.image}
-                    alt={(
-                      Array.isArray(slide.caption) ? slide.caption.join(' ') : slide.caption
-                    ) ?? t('carousel.slideAlt', { index: index + 1 })}
+                    src={`/images/reference/` + slide.image}
+                    alt={
+                      (Array.isArray(slide.caption)
+                        ? slide.caption.join(" ")
+                        : slide.caption) ??
+                      t("carousel.slideAlt", { index: index + 1 })
+                    }
                     className="w-full h-full object-contain"
                   />
-                                    {slide.caption && (
+                  {slide.caption && (
                     <span className="absolute bottom-0 right-0 max-w-[75%] px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-xs sm:text-sm font-medium rounded-tl-lg select-none pointer-events-none text-right leading-snug">
                       {Array.isArray(slide.caption)
                         ? slide.caption.map((line, i) => (
@@ -78,14 +85,14 @@ export const ReferenceCarousel: React.FC = () => {
         <button
           onClick={prevSlide}
           className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-2 md:p-2.5 rounded-full shadow border border-gray-100 backdrop-blur-sm transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
-          aria-label={t('carousel.prev')}
+          aria-label={t("carousel.prev")}
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-2 md:p-2.5 rounded-full shadow border border-gray-100 backdrop-blur-sm transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
-          aria-label={t('carousel.next')}
+          aria-label={t("carousel.next")}
         >
           <ChevronRight size={24} />
         </button>
@@ -96,9 +103,12 @@ export const ReferenceCarousel: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all ${currentSlide === index ? 'bg-black w-4' : 'bg-black/30 hover:bg-black/50'
-                }`}
-              aria-label={t('carousel.goToSlide', { index: index + 1 })}
+              className={`w-2 h-2 rounded-full transition-all ${
+                currentSlide === index
+                  ? "bg-black w-4"
+                  : "bg-black/30 hover:bg-black/50"
+              }`}
+              aria-label={t("carousel.goToSlide", { index: index + 1 })}
             />
           ))}
         </div>
