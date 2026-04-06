@@ -1,4 +1,4 @@
-import type { ReferenceSlide } from './TypeDefinitions';
+import type { ReferenceSlide } from "./TypeDefinitions";
 
 export const SITE_CONFIG = {
   companyName: "LB dental clinic s.r.o.",
@@ -14,11 +14,11 @@ export const SITE_CONFIG = {
   bankAccount: {
     number: "670100-2200909939/6210",
     bankName: "mBank",
-    iban: "CZ1262100000006701002200909939",  // A dummy IBAN derived for the purposes, check needed
+    iban: "CZ1262100000006701002200909939",
     recipientName: "LB clinic",
     get spdString() {
       return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:Platba LB Clinic*RN:${this.recipientName}`;
-    }
+    },
   },
   supportedLanguages: ["cs", "en", "uk", "ru"] as const,
   defaultLanguage: "cs",
@@ -31,13 +31,26 @@ export const SITE_CONFIG = {
   insurance: [
     { key: "vzp", name: "Všeobecná zdravotní pojišťovna", logo: "vzp.png" },
     { key: "ozp", name: "Obohacená zdravotní pojišťovna", logo: "ozp.png" },
-    { key: "zpmv", name: "Zdravotní pojišťovna ministerstva vnitra", logo: "zpmv.png" },
+    {
+      key: "zpmv",
+      name: "Zdravotní pojišťovna ministerstva vnitra",
+      logo: "zpmv.png",
+    },
   ],
 };
 
 export const REFERENCE_SLIDES: ReferenceSlide[] = [
-  { image: '/images/reference/1.png', caption: ['Před ošetřením', 'Po ošetření'] },
-  { image: '/images/reference/2.png', caption: ['Byl jsem tam poprvé a hrozně jsem se bál', 'Nakonec to bylo úplně v pohodě. Nakonec to bylo úplně v pohodě']  },
-  { image: '/images/reference/3.png', caption: 'Estetická stomatologie' },
-  { image: '/images/reference/4.png' },
+  {
+    image: "/images/reference/1.png",
+    caption: ["Před ošetřením", "Po ošetření"],
+  },
+  {
+    image: "/images/reference/2.png",
+    caption: [
+      "Byl jsem tam poprvé a hrozně jsem se bál",
+      "Nakonec to bylo úplně v pohodě. Nakonec to bylo úplně v pohodě",
+    ],
+  },
+  { image: "/images/reference/3.png", caption: "Estetická stomatologie" },
+  { image: "/images/reference/4.png" },
 ];
