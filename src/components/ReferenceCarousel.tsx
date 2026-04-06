@@ -28,10 +28,8 @@ export const ReferenceCarousel: React.FC = () => {
     }
   }, [itemsPerView, currentSlide, maxSlide]);
 
-  const nextSlide = () =>
-    setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
-  const prevSlide = () =>
-    setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
+  const nextSlide = () => setCurrentSlide((prev) => (prev >= maxSlide ? 0 : prev + 1));
+  const prevSlide = () => setCurrentSlide((prev) => (prev <= 0 ? maxSlide : prev - 1));
 
   const slideWidthPercent = 100 / itemsPerView;
   const numDots = maxSlide + 1;
@@ -56,9 +54,7 @@ export const ReferenceCarousel: React.FC = () => {
                   <img
                     src={`/images/reference/` + slide.image}
                     alt={
-                      (Array.isArray(slide.caption)
-                        ? slide.caption.join(" ")
-                        : slide.caption) ??
+                      (Array.isArray(slide.caption) ? slide.caption.join(" ") : slide.caption) ??
                       t("carousel.slideAlt", { index: index + 1 })
                     }
                     className="w-full h-full object-contain"
@@ -104,9 +100,7 @@ export const ReferenceCarousel: React.FC = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 rounded-full transition-all ${
-                currentSlide === index
-                  ? "bg-black w-4"
-                  : "bg-black/30 hover:bg-black/50"
+                currentSlide === index ? "bg-black w-4" : "bg-black/30 hover:bg-black/50"
               }`}
               aria-label={t("carousel.goToSlide", { index: index + 1 })}
             />

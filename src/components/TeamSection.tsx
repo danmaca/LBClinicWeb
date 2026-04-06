@@ -1,5 +1,5 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const TeamSection: React.FC = () => {
   const { t } = useTranslation();
@@ -8,9 +8,9 @@ export const TeamSection: React.FC = () => {
     <section id="team" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
-          {t('team.heading')}
+          {t("team.heading")}
         </h2>
-        
+
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {/* Member 1 */}
           <div className="flex flex-col">
@@ -24,11 +24,9 @@ export const TeamSection: React.FC = () => {
                 Photo 2 (Hover)
               </div>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-1">{t('team.dr_vernerova.name')}</h3>
-            <p className="text-[#D4A853] font-medium mb-4">{t('team.dr_vernerova.position')}</p>
-            <p className="text-gray-600 leading-relaxed">
-              {t('team.dr_vernerova.bio')}
-            </p>
+            <h3 className="text-xl font-bold text-gray-900 mb-1">{t("team.dr_vernerova.name")}</h3>
+            <p className="text-[#D4A853] font-medium mb-4">{t("team.dr_vernerova.position")}</p>
+            <p className="text-gray-600 leading-relaxed">{t("team.dr_vernerova.bio")}</p>
           </div>
 
           {/* Member 2 */}
@@ -43,11 +41,9 @@ export const TeamSection: React.FC = () => {
                 Photo 2 (Hover)
               </div>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-1">{t('team.dr_blakesova.name')}</h3>
-            <p className="text-[#D4A853] font-medium mb-4">{t('team.dr_blakesova.position')}</p>
-            <p className="text-gray-600 leading-relaxed">
-              {t('team.dr_blakesova.bio')}
-            </p>
+            <h3 className="text-xl font-bold text-gray-900 mb-1">{t("team.dr_blakesova.name")}</h3>
+            <p className="text-[#D4A853] font-medium mb-4">{t("team.dr_blakesova.position")}</p>
+            <p className="text-gray-600 leading-relaxed">{t("team.dr_blakesova.bio")}</p>
           </div>
         </div>
       </div>

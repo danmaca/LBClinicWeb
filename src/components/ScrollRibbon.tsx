@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
-import '../styles/ScrollRibbon.css';
+import { useEffect, useRef, useState } from "react";
+import "../styles/ScrollRibbon.css";
 
 interface ScrollRibbonProps {
-  direction?: 'ltr' | 'rtl'; // ltr = zleva doprava, rtl = zprava doleva
+  direction?: "ltr" | "rtl"; // ltr = zleva doprava, rtl = zprava doleva
 }
 
-export function ScrollRibbon({ direction = 'rtl' }: ScrollRibbonProps) {
+export function ScrollRibbon({ direction = "rtl" }: ScrollRibbonProps) {
   const ribbonRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -20,42 +20,44 @@ export function ScrollRibbon({ direction = 'rtl' }: ScrollRibbonProps) {
       setScrollProgress(progress);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const getRibbonPath = (startY: number, endY: number, widthBase: number, phase: number) => {
     const steps = 40;
     const pointsTop: string[] = [];
     const pointsBottom: string[] = [];
-    
+
     for (let i = 0; i <= steps; i++) {
-      const x = -100 + (1400 * (i / steps));
+      const x = -100 + 1400 * (i / steps);
       const t = i / steps;
-      
+
       // Základní diagonální linie s mírným zvlněním
       const baseY = startY + (endY - startY) * t + Math.sin(t * Math.PI * 2) * 30;
-      
+
       // Změna šířky (4x v průběhu délky, až o 50 %)
       const currentWidth = widthBase * (1 + 0.4 * Math.sin(t * Math.PI * 8 + phase));
-      
+
       pointsTop.push(`${x},${baseY - currentWidth / 2}`);
       pointsBottom.unshift(`${x},${baseY + currentWidth / 2}`);
     }
-    
-    return `M ${pointsTop.join(' L ')} L ${pointsBottom.join(' L ')} Z`;
+
+    return `M ${pointsTop.join(" L ")} L ${pointsBottom.join(" L ")} Z`;
   };
 
-  const goldPath = getRibbonPath(90, 550, 16, 0);   // Začíná těsněji u hnědé
+  const goldPath = getRibbonPath(90, 550, 16, 0); // Začíná těsněji u hnědé
   const brownPath = getRibbonPath(140, 475, 16, Math.PI); // Končí těsněji u zlaté (překřížení stále proběhne)
 
   return (
     <div
       ref={ribbonRef}
       className={`scroll-ribbon scroll-ribbon-${direction}`}
-      style={{
-        '--scroll-progress': scrollProgress,
-      } as React.CSSProperties & { '--scroll-progress': number }}
+      style={
+        {
+          "--scroll-progress": scrollProgress,
+        } as React.CSSProperties & { "--scroll-progress": number }
+      }
     >
       <svg
         viewBox="0 0 1200 692"
@@ -76,11 +78,15 @@ export function ScrollRibbon({ direction = 'rtl' }: ScrollRibbonProps) {
           </mask>
 
           <filter id="ribbonBlurWhite" x="-50%" y="-50%" width="200%" height="200%">
-            <feColorMatrix in="SourceGraphic" type="matrix"
+            <feColorMatrix
+              in="SourceGraphic"
+              type="matrix"
               values="0 0 0 0 1
                       0 0 0 0 1
                       0 0 0 0 1
-                      0 0 0 1 0" result="whiteBase" />
+                      0 0 0 1 0"
+              result="whiteBase"
+            />
             <feGaussianBlur in="whiteBase" stdDeviation="30" result="largeWhiteBlur" />
             <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="softColoredBlur" />
             <feMerge>

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
-const FaqItem = ({ question, answer }: { question: string, answer: string }) => {
+const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,11 +22,7 @@ const FaqItem = ({ question, answer }: { question: string, answer: string }) => 
           )}
         </span>
       </button>
-      {isOpen && (
-        <div className="mt-4 text-gray-600 prose prose-slate">
-          {answer}
-        </div>
-      )}
+      {isOpen && <div className="mt-4 text-gray-600 prose prose-slate">{answer}</div>}
     </div>
   );
 };
@@ -39,7 +35,7 @@ export const FAQSection: React.FC = () => {
   for (let i = 1; i <= faqCount; i++) {
     faqs.push({
       q: t(`faq.q${i}`),
-      a: t(`faq.a${i}`)
+      a: t(`faq.a${i}`),
     });
   }
 
@@ -47,9 +43,9 @@ export const FAQSection: React.FC = () => {
     <section id="faq" className="py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
-          {t('faq.heading')}
+          {t("faq.heading")}
         </h2>
-        
+
         <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
           {faqs.map((faq, index) => (
             <FaqItem key={index} question={faq.q} answer={faq.a} />
