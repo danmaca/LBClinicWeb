@@ -30,7 +30,7 @@
       "heading": "Bankovní spojení",
       "accountLabel": "Číslo účtu",
       "bankLabel": "Banka",
-      "recipientLabel": "Příjemce",
+      "recipientLabel": "Recipient",
       "qrLabel": "Naskenujte QR kód pro platbu"
     },
     "insurance": {
