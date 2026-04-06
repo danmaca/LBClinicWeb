@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
   },
   bankAccount: {
     number: "670100-2200909939/6210",
-    bankName: "mBank",
+    bankName: "mBankX",
     iban: "CZ1262100000006701002200909939",
     recipientName: "LB clinic",
     get spdString() {
