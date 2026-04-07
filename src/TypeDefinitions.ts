@@ -1,7 +1,9 @@
 export interface ReferenceSlide {
   /** Path to the image */
   image: string;
-  /** Optional overlay caption displayed at the bottom-right corner.
+  /** Optional name of the person (displayed as a heading above the caption). */
+  personName?: string;
+  /** Optional text displayed below the person name.
    *  Use a string array for multiple lines. */
-  caption?: string | string[];
+  text?: string | string[];
 }

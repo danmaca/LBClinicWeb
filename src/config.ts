@@ -42,15 +42,22 @@ export const SITE_CONFIG = {
 export const REFERENCE_SLIDES: ReferenceSlide[] = [
   {
     image: "1.png",
-    caption: ["Před ošetřením", "Po ošetření"],
+    personName: "Jaroslava",
+    text: "Díky okamžité implantaci jsem nemusela čekat měsíce. Vše proběhlo rychle a bez bolesti. Děkuji celému týmu za profesionální přístup.",
   },
   {
     image: "2.png",
-    caption: [
-      "Byl jsem tam poprvé a hrozně jsem se bál",
-      "Nakonec to bylo úplně v pohodě. Nakonec to bylo úplně v pohodě",
-    ],
+    personName: "Martin",
+    text: "Celý život jsem se bál zubaře, ale tady mě dokázali uklidnit a všechno mi vysvětlili. Ošetření bylo naprosto bezbolestné – konečně mám zuby, za které se nestydím.",
   },
-  { image: "3.png", caption: "Estetická stomatologie" },
-  { image: "4.png" },
+  {
+    image: "3.png",
+    personName: "Petra",
+    text: "Po estetické úpravě předních zubů se mi úplně změnil úsměv. Výsledek předčil mé očekávání. Doporučuji každému, kdo váhá.",
+  },
+  {
+    image: "4.png",
+    personName: "Tomáš",
+    text: "Přišel jsem s akutní bolestí a odcházel s úlevou. Rychlé objednání, příjemný personál a špičková péče. Lepší zubní kliniku jsem nenašel.",
+  },
 ];

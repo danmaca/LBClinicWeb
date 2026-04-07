@@ -50,18 +50,18 @@ export const ReferenceCarousel: React.FC = () => {
   const slideWidthPercent = 100 / itemsPerView;
   const numDots = maxSlide + 1;
 
-  const renderCaption = (caption: string | string[]) =>
-    Array.isArray(caption)
-      ? caption.map((line, i) => (
+  const renderText = (text: string | string[]) =>
+    Array.isArray(text)
+      ? text.map((line, i) => (
           <React.Fragment key={i}>
             {i > 0 && <br />}
             {line}
           </React.Fragment>
         ))
-      : caption;
+      : text;
 
   const getAlt = (slide: (typeof REFERENCE_SLIDES)[number], index: number) =>
-    (Array.isArray(slide.caption) ? slide.caption.join(" ") : slide.caption) ??
+    (Array.isArray(slide.text) ? slide.text.join(" ") : slide.text) ??
     t("carousel.slideAlt", { index: index + 1 });
 
   return (
@@ -80,27 +80,35 @@ export const ReferenceCarousel: React.FC = () => {
                 className="flex-shrink-0 px-2"
                 style={{ width: `${slideWidthPercent}%` }}
               >
-                {/* lg: horizontal layout (image left, caption right) */}
-                {/* sm/md: vertical layout (image top, caption bottom) */}
-                <div className="flex flex-col lg:flex-row-reverse rounded-lg overflow-hidden shadow-sm bg-white h-full">
-                  {/* Image */}
-                  <div className="lg:w-1/2 flex-shrink-0">
-                    <div className="aspect-[4/3] overflow-hidden bg-gray-100">
-                      <img
-                        src={"/images/reference/" + slide.image}
-                        alt={getAlt(slide, index)}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
+                <div className="rounded-lg overflow-hidden shadow-sm bg-white lg:relative h-full">
+                  {/* Image: normal block on sm/md, absolute right-aligned on lg */}
+                  <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0">
+                    <img
+                      src={"/images/reference/" + slide.image}
+                      alt={getAlt(slide, index)}
+                      className="w-full aspect-[4/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
+                    />
                   </div>
 
-                  {/* Caption */}
-                  {slide.caption && (
-                    <div className="lg:w-1/2 flex items-center p-4 lg:p-6">
-                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                        {renderCaption(slide.caption)}
-                      </p>
+                  {/* White fade overlay – only visible on lg */}
+                  <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-white via-white/80 to-transparent" />
+
+                  {/* Text */}
+                  {slide.personName || slide.text ? (
+                    <div className="p-4 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[320px] lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-10 xl:px-16">
+                      {slide.personName && (
+                        <h3 className="text-left text-base sm:text-lg text-gray-900 font-semibold mb-2 lg:text-2xl xl:text-3xl lg:font-light lg:mb-4">
+                          {slide.personName}
+                        </h3>
+                      )}
+                      {slide.text && (
+                        <p className="text-left text-sm sm:text-base text-gray-700 leading-relaxed lg:text-lg xl:text-xl lg:italic lg:leading-relaxed lg:font-medium">
+                          {renderText(slide.text)}
+                        </p>
+                      )}
                     </div>
+                  ) : (
+                    <div className="hidden lg:block lg:min-h-[320px]" />
                   )}
                 </div>
               </div>
