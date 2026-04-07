@@ -3,19 +3,35 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { REFERENCE_SLIDES } from "../config";
 
+type BreakpointKey = "sm" | "md" | "lg";
+
+const getBreakpoint = (width: number): BreakpointKey => {
+  if (width >= 1024) return "lg";
+  if (width >= 768) return "md";
+  return "sm";
+};
+
+const ITEMS_PER_VIEW: Record<BreakpointKey, number> = {
+  sm: 1,
+  md: 2,
+  lg: 1,
+};
+
 export const ReferenceCarousel: React.FC = () => {
   const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [itemsPerView, setItemsPerView] = useState(1);
+  const [breakpoint, setBreakpoint] = useState<BreakpointKey>(() =>
+    typeof window !== "undefined" ? getBreakpoint(window.innerWidth) : "sm",
+  );
+
+  const itemsPerView = ITEMS_PER_VIEW[breakpoint];
 
   useEffect(() => {
     const handleResize = () => {
-      setItemsPerView(window.innerWidth >= 768 ? 2 : 1);
+      setBreakpoint(getBreakpoint(window.innerWidth));
     };
 
-    // Úvodní nastavení
     handleResize();
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -34,6 +50,20 @@ export const ReferenceCarousel: React.FC = () => {
   const slideWidthPercent = 100 / itemsPerView;
   const numDots = maxSlide + 1;
 
+  const renderCaption = (caption: string | string[]) =>
+    Array.isArray(caption)
+      ? caption.map((line, i) => (
+          <React.Fragment key={i}>
+            {i > 0 && <br />}
+            {line}
+          </React.Fragment>
+        ))
+      : caption;
+
+  const getAlt = (slide: (typeof REFERENCE_SLIDES)[number], index: number) =>
+    (Array.isArray(slide.caption) ? slide.caption.join(" ") : slide.caption) ??
+    t("carousel.slideAlt", { index: index + 1 });
+
   return (
     <div className="mt-20 max-w-5xl mx-auto w-full">
       <div className="relative group overflow-hidden rounded-xl shadow-lg bg-gray-50 w-full py-6 px-2 md:px-12 border border-gray-100">
@@ -50,26 +80,27 @@ export const ReferenceCarousel: React.FC = () => {
                 className="flex-shrink-0 px-2"
                 style={{ width: `${slideWidthPercent}%` }}
               >
-                <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm">
-                  <img
-                    src={`/images/reference/` + slide.image}
-                    alt={
-                      (Array.isArray(slide.caption) ? slide.caption.join(" ") : slide.caption) ??
-                      t("carousel.slideAlt", { index: index + 1 })
-                    }
-                    className="w-full h-full object-contain"
-                  />
+                {/* lg: horizontal layout (image left, caption right) */}
+                {/* sm/md: vertical layout (image top, caption bottom) */}
+                <div className="flex flex-col lg:flex-row-reverse rounded-lg overflow-hidden shadow-sm bg-white h-full">
+                  {/* Image */}
+                  <div className="lg:w-1/2 flex-shrink-0">
+                    <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+                      <img
+                        src={"/images/reference/" + slide.image}
+                        alt={getAlt(slide, index)}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Caption */}
                   {slide.caption && (
-                    <span className="absolute bottom-0 right-0 max-w-[75%] px-3 py-1.5 bg-black/60 backdrop-blur-sm text-white text-xs sm:text-sm font-medium rounded-tl-lg select-none pointer-events-none text-right leading-snug">
-                      {Array.isArray(slide.caption)
-                        ? slide.caption.map((line, i) => (
-                            <React.Fragment key={i}>
-                              {i > 0 && <br />}
-                              {line}
-                            </React.Fragment>
-                          ))
-                        : slide.caption}
-                    </span>
+                    <div className="lg:w-1/2 flex items-center p-4 lg:p-6">
+                      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                        {renderCaption(slide.caption)}
+                      </p>
+                    </div>
                   )}
                 </div>
               </div>
