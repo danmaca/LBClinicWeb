@@ -12,10 +12,10 @@ function App() {
   return (
     <>
       <div style={{ position: "relative", zIndex: 0 }}>
-        <div>
+        {/*  <div>
           <ScrollRibbon direction="ltr" />
           <ScrollRibbon direction="rtl" />
-        </div>
+        </div> */}
         <div className="min-h-screen flex flex-col font-sans relative" style={{ zIndex: 10 }}>
           <HeaderSection />
           <main className="flex-grow">
