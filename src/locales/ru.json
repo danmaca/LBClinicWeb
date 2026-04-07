@@ -7,6 +7,9 @@
   },
   "hero": {
     "title": "Péče o váš úsměv na prvním místě.",
+    "titleBefore": "Péče o váš ",
+    "titleHighlight": "úsměv",
+    "titleAfter": " na prvním místě.",
     "subtitle": "Vítejte v zubní ordinaci, kde se spojuje moderní technika s profesionální péčí.",
     "hours": "Ordinační hodiny: Po–Čt 8:00–16:00 | Pá 8:00–13:00"
   },
@@ -14,12 +17,10 @@
     "heading": "Náš tým",
     "dr_vernerova": {
       "name": "MDDr. Kateřina Vernerová",
-      "position": "Zubní lékařka",
-      "bio": "Absolventka Lékařské fakulty Univerzity Karlovy v Praze, obor zubní lékařství. Specializuje se na záchovnou stomatologii, estetické výplně a protetiku. Klade důraz na individuální přístup ke každému pacientovi a bezbolestné ošetření s využitím moderních technologií. Pravidelně se vzdělává na odborných kurzech a konferencích v České republice i v zahraničí."
+      "bio": "Absolventka 1. lékařské fakulty Univerzity Karlovy\nKonzervační stomatologie\nČištění kořenových kanálků pod mikroskopem\nProtetika\nChirurgie\nDětská stomatologie"
     },
     "dr_blakesova": {
       "name": "Bc. Adéla Blakešová, DiS.",
-      "position": "Dentální hygienistka",
       "bio": "Diplomovaná dentální hygienistka s bakalářským vzděláním v oboru dentální hygiena. Zaměřuje se na preventivní péči, profesionální čištění zubů, instruktáž správné ústní hygieny a ošetření dásní. Pacientům pomáhá s prevencí paradontózy a správným výběrem pomůcek pro domácí péči. Věří, že zdravý úsměv začíná pravidelnou hygienou."
     }
   },
