@@ -28,6 +28,18 @@ export const SITE_CONFIG = {
   social: {
     instagram: "https://www.instagram.com/lbdentalclinic",
   },
+  teamMembers: [
+    {
+      name: "MDDr. Kateřina Vernerová",
+      photo1: "vernerova_1.jpg",
+      photo2: "vernerova_2.jpg",
+    },
+    {
+      name: "Bc. Adéla Bakešová, DiS.",
+      photo1: "bakesova_1.jpg",
+      photo2: "bakesova_2.jpg",
+    },
+  ],
   insurance: [
     { key: "vzp", name: "Všeobecná zdravotní pojišťovna", logo: "vzp.png" },
     { key: "ozp", name: "Obohacená zdravotní pojišťovna", logo: "ozp.png" },

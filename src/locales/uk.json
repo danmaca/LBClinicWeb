@@ -15,14 +15,10 @@
   },
   "team": {
     "heading": "Náš tým",
-    "dr_vernerova": {
-      "name": "MDDr. Kateřina Vernerová",
-      "bio": "Absolventka 1. lékařské fakulty Univerzity Karlovy\nKonzervační stomatologie\nČištění kořenových kanálků pod mikroskopem\nProtetika\nChirurgie\nDětská stomatologie"
-    },
-    "dr_blakesova": {
-      "name": "Bc. Adéla Blakešová, DiS.",
-      "bio": "Diplomovaná dentální hygienistka s bakalářským vzděláním v oboru dentální hygiena. Zaměřuje se na preventivní péči, profesionální čištění zubů, instruktáž správné ústní hygieny a ošetření dásní. Pacientům pomáhá s prevencí paradontózy a správným výběrem pomůcek pro domácí péči. Věří, že zdravý úsměv začíná pravidelnou hygienou."
-    }
+    "memberBios": [
+      "Absolventka 1. lékařské fakulty Univerzity Karlovy\nKonzervační stomatologie\nČištění kořenových kanálků pod mikroskopem\nProtetika\nChirurgie\nDětská stomatologie",
+      "Diplomovaná dentální hygienistka s bakalářským vzděláním v oboru dentální hygiena. Zaměřuje se na preventivní péči, profesionální čištění zubů, instruktáž správné ústní hygieny a ošetření dásní. Pacientům pomáhá s prevencí paradontózy a správným výběrem pomůcek pro domácí péči. Věří, že zdravý úsměv začíná pravidelnou hygienou."
+    ]
   },
   "pricing": {
     "heading": "Ceník",

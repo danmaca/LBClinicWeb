@@ -1,8 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { SITE_CONFIG } from "../config";
 
 export const TeamSection: React.FC = () => {
   const { t } = useTranslation();
+
+  const memberBios = t("team.memberBios", { returnObjects: true }) as string[];
 
   return (
     <section id="team" className="py-20">
@@ -12,43 +15,32 @@ export const TeamSection: React.FC = () => {
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-          {/* Member 1 */}
-          <div className="relative overflow-hidden rounded-lg aspect-[3/4] group bg-gray-200">
-            {/* Photo 1 */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500 transition-opacity duration-500 ease-in-out group-hover:opacity-0">
-              Photo 1
+          {SITE_CONFIG.teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className="relative overflow-hidden rounded-lg aspect-[3/4] group bg-gray-200"
+            >
+              {/* Photo 1 */}
+              <img
+                src={`/images/team/${member.photo1}`}
+                alt={member.name}
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
+              />
+              {/* Photo 2 (hover) */}
+              <img
+                src={`/images/team/${member.photo2}`}
+                alt={`${member.name} – hover`}
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
+              />
+              {/* Text overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-5 pb-5 pt-16 pointer-events-none">
+                <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
+                <p className="text-gray-200 leading-relaxed whitespace-pre-line text-sm">
+                  {Array.isArray(memberBios) ? (memberBios[index] ?? "") : ""}
+                </p>
+              </div>
             </div>
-            {/* Photo 2 (hover) */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-400 text-white transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-              Photo 2 (Hover)
-            </div>
-            {/* Text overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-5 pb-5 pt-16 pointer-events-none">
-              <h3 className="text-xl font-bold text-white mb-1">{t("team.dr_vernerova.name")}</h3>
-              <p className="text-gray-200 leading-relaxed whitespace-pre-line text-sm">
-                {t("team.dr_vernerova.bio")}
-              </p>
-            </div>
-          </div>
-
-          {/* Member 2 */}
-          <div className="relative overflow-hidden rounded-lg aspect-[3/4] group bg-gray-200">
-            {/* Photo 1 */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-300 text-gray-500 transition-opacity duration-500 ease-in-out group-hover:opacity-0">
-              Photo 1
-            </div>
-            {/* Photo 2 (hover) */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-400 text-white transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
-              Photo 2 (Hover)
-            </div>
-            {/* Text overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-5 pb-5 pt-16 pointer-events-none">
-              <h3 className="text-xl font-bold text-white mb-1">{t("team.dr_blakesova.name")}</h3>
-              <p className="text-gray-200 leading-relaxed whitespace-pre-line text-sm">
-                {t("team.dr_blakesova.bio")}
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
