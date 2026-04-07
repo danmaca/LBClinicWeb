@@ -24,9 +24,6 @@ export const PricingSection: React.FC = () => {
         <PricingListInfo />
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Bank Info */}
-          <BankAccountInfo />
-
           {/* Insurance */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-gray-900 text-center md:text-left">
@@ -45,6 +42,9 @@ export const PricingSection: React.FC = () => {
               ))}
             </div>
           </div>
+
+          {/* Bank Info */}
+          <BankAccountInfo />
         </div>
       </div>
     </section>

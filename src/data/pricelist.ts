@@ -2,333 +2,435 @@ export const pricelist = {
   categories: [
     {
       name: {
-        cs: "Vstupní a kontrolní vyšetření",
-        en: "Vstupní a kontrolní vyšetřeníEN",
-        ru: "Vstupní a kontrolní vyšetření",
-        uk: "Vstupní a kontrolní vyšetření",
+        cs: "Prevence a vyšetření",
+        en: "",
+        ru: "",
+        uk: "",
       },
       items: [
         {
           name: {
-            cs: "Komplexní vstupní vyšetření",
-            en: "Komplexní vstupní vyšetření",
-            ru: "Komplexní vstupní vyšetření",
-            uk: "Komplexní vstupní vyšetření",
+            cs: "Vstupní prohlídka pro registrované pacienty",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 800,
+          price: "hradí ZP",
         },
         {
           name: {
-            cs: "Kontrolní vyšetření",
-            en: "Kontrolní vyšetření",
-            ru: "Kontrolní vyšetření",
-            uk: "Kontrolní vyšetření",
+            cs: "Preventivní prohlídka s RTG",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 500,
+          price: "hradí ZP",
         },
         {
           name: {
-            cs: "Rentgenový snímek (intraorální)",
-            en: "Rentgenový snímek (intraorální)",
-            ru: "Rentgenový snímek (intraorální)",
-            uk: "Rentgenový snímek (intraorální)",
+            cs: "Panoramatický rentgenový snímek",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 200,
+          price: "hradí ZP 1x za 2 roky",
         },
         {
           name: {
-            cs: "Panoramatický snímek (OPG)",
-            en: "Panoramatický snímek (OPG)",
-            ru: "Panoramatický snímek (OPG)",
-            uk: "Panoramatický snímek (OPG)",
+            cs: "CBCT 3D rentgen",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 500,
+          price: 1500,
         },
       ],
     },
     {
       name: {
         cs: "Dentální hygiena",
-        en: "Dentální hygiena",
-        ru: "Dentální hygiena",
-        uk: "Dentální hygiena",
+        en: "",
+        ru: "",
+        uk: "",
       },
       items: [
         {
           name: {
-            cs: "Dentální hygiena (60 min)",
-            en: "Dentální hygiena (60 min)",
-            ru: "Dentální hygiena (60 min)",
-            uk: "Dentální hygiena (60 min)",
+            cs: "Dentální hygiena 60 min vstupní",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 2200,
+          price: "1 900 Kč",
         },
         {
           name: {
-            cs: "Dentální hygiena (45 min)",
-            en: "Dentální hygiena (45 min)",
-            ru: "Dentální hygiena (45 min)",
-            uk: "Dentální hygiena (45 min)",
+            cs: "Dentální hygiena 60 min recall",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 1800,
+          price: "2 100 Kč",
         },
         {
           name: {
-            cs: "Air-Flow (pískování)",
-            en: "Air-Flow (pískování)",
-            ru: "Air-Flow (pískování)",
-            uk: "Air-Flow (pískování)",
+            cs: "Dentální hygiena děti do 12 let",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 500,
+          price: "1 100 Kč",
         },
         {
           name: {
-            cs: "Fluoridace",
-            en: "Fluoridace",
-            ru: "Fluoridace",
-            uk: "Fluoridace",
+            cs: "Deep scaling / hloubkové čistění parodontálních kapes, odstranění poddásňového kamene",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 300,
-        },
-      ],
-    },
-    {
-      name: {
-        cs: "Záchovná stomatologie",
-        en: "Záchovná stomatologie",
-        ru: "Záchovná stomatologie",
-        uk: "Záchovná stomatologie",
-      },
-      items: [
-        {
-          name: {
-            cs: "Estetická výplň (fotokompozit) — malá",
-            en: "Estetická výplň (fotokompozit) — malá",
-            ru: "Estetická výplň (fotokompozit) — malá",
-            uk: "Estetická výplň (fotokompozit) — malá",
-          },
-          price: 1500,
-        },
-        {
-          name: {
-            cs: "Estetická výplň (fotokompozit) — střední",
-            en: "Estetická výplň (fotokompozit) — střední",
-            ru: "Estetická výplň (fotokompozit) — střední",
-            uk: "Estetická výplň (fotokompozit) — střední",
-          },
-          price: 2000,
-        },
-        {
-          name: {
-            cs: "Estetická výplň (fotokompozit) — velká",
-            en: "Estetická výplň (fotokompozit) — velká",
-            ru: "Estetická výplň (fotokompozit) — velká",
-            uk: "Estetická výplň (fotokompozit) — velká",
-          },
-          price: 2500,
-        },
-        {
-          name: {
-            cs: "Dočasná výplň",
-            en: "Dočasná výplň",
-            ru: "Dočasná výplň",
-            uk: "Dočasná výplň",
-          },
-          price: 300,
-        },
-      ],
-    },
-    {
-      name: {
-        cs: "Endodoncie (léčba kořenových kanálků)",
-        en: "Endodoncie (léčba kořenových kanálků)",
-        ru: "Endodoncie (léčba kořenových kanálků)",
-        uk: "Endodoncie (léčba kořenových kanálků)",
-      },
-      items: [
-        {
-          name: {
-            cs: "Jednokořenový zub",
-            en: "Jednokořenový zub",
-            ru: "Jednokořenový zub",
-            uk: "Jednokořenový zub",
-          },
-          price: 3000,
-        },
-        {
-          name: {
-            cs: "Vícekořenový zub",
-            en: "Vícekořenový zub",
-            ru: "Vícekořenový zub",
-            uk: "Vícekořenový zub",
-          },
-          price: 5000,
-        },
-        {
-          name: {
-            cs: "Reendodoncie",
-            en: "Reendodoncie",
-            ru: "Reendodoncie",
-            uk: "Reendodoncie",
-          },
-          price: "od 4 000 Kč",
-        },
-      ],
-    },
-    {
-      name: {
-        cs: "Chirurgické výkony",
-        en: "Chirurgické výkony",
-        ru: "Chirurgické výkony",
-        uk: "Chirurgické výkony",
-      },
-      items: [
-        {
-          name: {
-            cs: "Extrakce zubu — jednoduchá",
-            en: "Extrakce zubu — jednoduchá",
-            ru: "Extrakce zubu — jednoduchá",
-            uk: "Extrakce zubu — jednoduchá",
-          },
-          price: 1000,
-        },
-        {
-          name: {
-            cs: "Extrakce zubu — komplikovaná",
-            en: "Extrakce zubu — komplikovaná",
-            ru: "Extrakce zubu — komplikovaná",
-            uk: "Extrakce zubu — komplikovaná",
-          },
-          price: 2500,
-        },
-        {
-          name: {
-            cs: "Chirurgická extrakce zubu moudrosti",
-            en: "Chirurgická extrakce zubu moudrosti",
-            ru: "Chirurgická extrakce zubu moudrosti",
-            uk: "Chirurgická extrakce zubu moudrosti",
-          },
-          price: "od 3 500 Kč",
-        },
-      ],
-    },
-    {
-      name: {
-        cs: "Protetika",
-        en: "Protetika",
-        ru: "Protetika",
-        uk: "Protetika",
-      },
-      items: [
-        {
-          name: {
-            cs: "Keramická korunka",
-            en: "Keramická korunka",
-            ru: "Keramická korunka",
-            uk: "Keramická korunka",
-          },
-          price: "od 8 000 Kč",
-        },
-        {
-          name: {
-            cs: "Zirkonová korunka",
-            en: "Zirkonová korunka",
-            ru: "Zirkonová korunka",
-            uk: "Zirkonová korunka",
-          },
-          price: "od 10 000 Kč",
-        },
-        {
-          name: {
-            cs: "Fazeta (veneer)",
-            en: "Fazeta (veneer)",
-            ru: "Fazeta (veneer)",
-            uk: "Fazeta (veneer)",
-          },
-          price: "od 8 000 Kč",
-        },
-        {
-          name: {
-            cs: "Snímatelná náhrada — částečná",
-            en: "Snímatelná náhrada — částečná",
-            ru: "Snímatelná náhrada — částečná",
-            uk: "Snímatelná náhrada — částečná",
-          },
-          price: "od 5 000 Kč",
-        },
-        {
-          name: {
-            cs: "Snímatelná náhrada — celková",
-            en: "Snímatelná náhrada — celková",
-            ru: "Snímatelná náhrada — celková",
-            uk: "Snímatelná náhrada — celková",
-          },
-          price: "od 8 000 Kč",
+          price: "2 800 Kč",
         },
       ],
     },
     {
       name: {
         cs: "Bělení zubů",
-        en: "Bělení zubů",
-        ru: "Bělení zubů",
-        uk: "Bělení zubů",
+        en: "",
+        ru: "",
+        uk: "",
       },
       items: [
         {
           name: {
-            cs: "Ordinační bělení",
-            en: "Ordinační bělení",
-            ru: "Ordinační bělení",
-            uk: "Ordinační bělení",
+            cs: "Domácí bělení Opalescence 10 % nebo 16% (v ceně gely, nosiče obě čelisti, instruktáž)",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 5000,
+          price: "8 000 Kč",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Extrakce osmiček, trhání zubu",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Jednoduchá extrakce dočasného i stálého zubu",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "provádíme za úhradu ZP",
         },
         {
           name: {
-            cs: "Domácí bělení (nosičky + gel)",
-            en: "Domácí bělení (nosičky + gel)",
-            ru: "Domácí bělení (nosičky + gel)",
-            uk: "Domácí bělení (nosičky + gel)",
+            cs: "Komplikovaná chirurgická extrakce",
+            en: "",
+            ru: "",
+            uk: "",
           },
-          price: 3500,
+          price: "2 500 Kč",
+        },
+        {
+          name: {
+            cs: "Vstřebatelná kolagenová houbička s lokálním ATB do extrakční rány",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: 800,
+        },
+        {
+          name: {
+            cs: "Krytí odhalených krčků - chirurgické krytí obnažených kořenů 1 zub",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 5 000 Kč",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Bílé fotokompozitní výplně",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Výplň dočasného - mléčného - zubu fotokompozitem",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 1 000 až 1 200 Kč",
+        },
+        {
+          name: {
+            cs: "Výplň fotokompozitní krček zubu",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 2 600 Kč",
+        },
+        {
+          name: {
+            cs: "Fotokompozitní výplň 1 ploška",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 2 500 Kč",
+        },
+        {
+          name: {
+            cs: "Fotokompozitní výplň 2 plošky",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 3 500 Kč",
+        },
+        {
+          name: {
+            cs: "Fotokompozitní výplň 3 plošky",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 3 900 až 5 000 Kč",
+        },
+        {
+          name: {
+            cs: "Estetická fotokompozitní rekonstrukce předních zubů / dostavby po úrazech dle náročnosti",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 4 500 až 7 500 Kč",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Endodoncie - ošetření kořenových kanálků",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Ošetření kořenových kanálků pod mikroskopem",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 10 500 Kč až 16 000 Kč dle počtu kanálků",
         },
       ],
     },
     {
       name: {
         cs: "Dětská stomatologie",
-        en: "Dětská stomatologie",
-        ru: "Dětská stomatologie",
-        uk: "Dětská stomatologie",
+        en: "",
+        ru: "",
+        uk: "",
       },
       items: [
         {
           name: {
-            cs: "Preventivní prohlídka dítěte",
-            en: "Preventivní prohlídka dítěte",
-            ru: "Preventivní prohlídka dítěte",
-            uk: "Preventivní prohlídka dítěte",
-          },
-          price: 400,
-        },
-        {
-          name: {
-            cs: "Pečetění fisur (1 zub)",
-            en: "Pečetění fisur (1 zub)",
-            ru: "Pečetění fisur (1 zub)",
-            uk: "Pečetění fisur (1 zub)",
-          },
-          price: 500,
-        },
-        {
-          name: {
-            cs: "Výplň u dětského zubu",
-            en: "Výplň u dětského zubu",
-            ru: "Výplň u dětského zubu",
-            uk: "Výplň u dětského zubu",
+            cs: "Fotokompozitní výplň dočasného zubu",
+            en: "",
+            ru: "",
+            uk: "",
           },
           price: "od 1 000 Kč",
+        },
+        {
+          name: {
+            cs: "Extrakce mléčného zubu",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "provádíme za úhradu ZP",
+        },
+        {
+          name: {
+            cs: "Odstranění podjazykové uzdičky",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "3 200 Kč",
+        },
+        {
+          name: {
+            cs: "Mezerník nebo prefabrikovaná kovová korunka",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 3 000 Kč",
+        },
+        {
+          name: {
+            cs: "Endodoncie dočasného zubu",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "3 000 Kč",
+        },
+        {
+          name: {
+            cs: "Sedace pro vědomí Entonox / Midazolam",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 2 500 Kč + cena výkonu",
+        },
+        {
+          name: {
+            cs: "Ošetření v celkové anestezii",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "cena dle individuální konzultace",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Korunky, můstky, fazety",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Korunka keramická zirkon",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "13 500 Kč",
+        },
+        {
+          name: {
+            cs: "Korunka provizorní frézovaná",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "3 500 Kč",
+        },
+        {
+          name: {
+            cs: "Můstek keramický zirkon",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 35 000 Kč",
+        },
+        {
+          name: {
+            cs: "Fazeta",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "od 12 000 Kč",
+        },
+        {
+          name: {
+            cs: "Fotokompozitní overlay",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "12 000 Kč",
+        },
+        {
+          name: {
+            cs: "Keramická overlay",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "14 000 Kč",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Snímatelné náhrady (protézy)",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Imediátní zubní náhrada",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "9 000 Kč",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Akutní ošetření",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Akutní ošetření neregistrovaného pacienta",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "1 500 Kč",
+        },
+      ],
+    },
+    {
+      name: {
+        cs: "Konzultace",
+        en: "",
+        ru: "",
+        uk: "",
+      },
+      items: [
+        {
+          name: {
+            cs: "Konzultace, 15 min",
+            en: "",
+            ru: "",
+            uk: "",
+          },
+          price: "1 500 Kč",
         },
       ],
     },
