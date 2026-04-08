@@ -14,9 +14,9 @@ export const PricingSection: React.FC = () => {
           {t("pricing.heading")}
         </h2>
         <p className="text-center text-gray-600 mb-12">
-          {t("pricing.description")}{" "}
+          {t("pricing.descriptionBefore")}
           <a href="#contact" className="text-accent hover:underline">
-            Kontaktujte nás
+            {t("pricing.descriptionLink")}
           </a>
           .
         </p>

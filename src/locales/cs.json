@@ -22,7 +22,8 @@
   },
   "pricing": {
     "heading": "Ceník",
-    "description": "Pro konkrétní cenovou nabídku nebo další informace nás prosím kontaktujte.",
+    "descriptionBefore": "Pro konkrétní cenovou nabídku nebo další informace nás prosím ",
+    "descriptionLink": "kontaktujte",
     "bankInfo": {
       "heading": "Bankovní spojení",
       "accountLabel": "Číslo účtu",
