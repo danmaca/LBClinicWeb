@@ -22,7 +22,7 @@
   },
   "pricing": {
     "heading": "Ceník",
-    "description": "Pokud máte dotazy, neváhejte nás kontaktovat.",
+    "description": "Pro konkrétní cenovou nabídku nebo další informace nás prosím kontaktujte.",
     "bankInfo": {
       "heading": "Bankovní spojení",
       "accountLabel": "Číslo účtu",
@@ -31,7 +31,7 @@
       "qrLabel": "Naskenujte QR kód pro platbu"
     },
     "insurance": {
-      "heading": "Spolupracující pojišťovny"
+      "heading": "Spolupracujeme se zdravotními pojišťovnami"
     }
   },
   "faq": {
@@ -63,7 +63,7 @@
     "mapIframeTitle": "Mapa — poloha ordinace LB Clinic",
     "openInGoogleMaps": "Otevřít v Google Maps",
     "form": {
-      "name": "Jméno",
+      "name": "Jméno a příjmení",
       "phone": "Telefon",
       "email": "E-mail",
       "reason": "Důvod objednání",
@@ -71,7 +71,7 @@
       "reasonOptions": {
         "dental_hygiene": "Dentální hygiena",
         "acute_treatment": "Akutní ošetření",
-        "prevention": "Prevence",
+        "prevention": "Preventivní prohlídka",
         "initial_exam": "Vstupní prohlídka",
         "teeth_whitening": "Bělení zubů",
         "filling": "Výplň",

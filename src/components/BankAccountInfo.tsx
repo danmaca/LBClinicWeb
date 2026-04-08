@@ -7,27 +7,31 @@ export const BankAccountInfo: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-gray-50 p-8 rounded-xl flex flex-col items-center border border-gray-100">
-      <h3 className="text-xl font-bold mb-6 text-gray-900">{t("pricing.bankInfo.heading")}</h3>
-      <div className="w-full mb-6 space-y-2 text-gray-600">
-        <div className="flex justify-between">
-          <span>{t("pricing.bankInfo.accountLabel")}:</span>
-          <span className="font-medium text-gray-900">{SITE_CONFIG.bankAccount.number}</span>
+    <div>
+      <h3 className="text-xl font-bold mb-4 text-black">{t("pricing.bankInfo.heading")}</h3>
+      <div className="bg-black p-8 rounded-xl flex flex-col items-center">
+        <div className="w-full mb-6 space-y-2 text-gray-300">
+          <div className="flex justify-between">
+            <span>{t("pricing.bankInfo.accountLabel")}:</span>
+            <span className="font-medium text-white">{SITE_CONFIG.bankAccount.number}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>{t("pricing.bankInfo.bankLabel")}:</span>
+            <span className="font-medium text-white">{SITE_CONFIG.bankAccount.bankName}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>{t("pricing.bankInfo.recipientLabel")}:</span>
+            <span className="font-medium text-white">{SITE_CONFIG.bankAccount.recipientName}</span>
+          </div>
         </div>
-        <div className="flex justify-between">
-          <span>{t("pricing.bankInfo.bankLabel")}:</span>
-          <span className="font-medium text-gray-900">{SITE_CONFIG.bankAccount.bankName}</span>
-        </div>
-        <div className="flex justify-between">
-          <span>{t("pricing.bankInfo.recipientLabel")}:</span>
-          <span className="font-medium text-gray-900">{SITE_CONFIG.bankAccount.recipientName}</span>
-        </div>
-      </div>
 
-      <div className="bg-white p-4 rounded-lg shadow-sm mb-4">
-        <QRCodeSVG value={SITE_CONFIG.bankAccount.spdString} size={160} />
+        <div className="bg-white p-6 rounded-lg">
+          <QRCodeSVG value={SITE_CONFIG.bankAccount.spdString} size={180} />
+          <p className="text-black font-bold text-lg mt-3 border-t-2 border-black pt-1 text-center">
+            QR Platba
+          </p>
+        </div>
       </div>
-      <p className="text-sm text-gray-500">{t("pricing.bankInfo.qrLabel")}</p>
     </div>
   );
 };

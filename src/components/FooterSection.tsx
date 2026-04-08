@@ -11,7 +11,6 @@ export const FooterSection: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-xl font-bold mb-4">{SITE_CONFIG.brandName}</h3>
-            <p className="text-gray-400 text-sm mb-4">Péče o váš úsměv na prvním místě.</p>
             <div className="flex space-x-4">
               <a
                 href={SITE_CONFIG.social.instagram}

@@ -88,7 +88,7 @@ export const pricelist = {
             ru: "",
             uk: "",
           },
-          price: "2 800 Kč",
+          price: "od 2 800 Kč až 3 250 Kč",
         },
       ],
     },
@@ -236,7 +236,7 @@ export const pricelist = {
             ru: "",
             uk: "",
           },
-          price: "od 10 500 Kč až 16 000 Kč dle počtu kanálků",
+          price: "od 8 000 Kč až 16 000 Kč dle počtu kanálků",
         },
       ],
     },
@@ -328,7 +328,7 @@ export const pricelist = {
             ru: "",
             uk: "",
           },
-          price: "13 500 Kč",
+          price: "13 000 Kč",
         },
         {
           name: {
