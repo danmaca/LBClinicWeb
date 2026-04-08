@@ -16,7 +16,7 @@ export const HeroSection: React.FC = () => {
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{t("hero.subtitle")}</p>
         <p className="text-md text-gray-500 mb-4 font-medium">{t("hero.hours")}</p>
 
-        <img src="/images/background/microscope.jpg" alt="" className="mx-auto mb-4 w-1/2" />
+        <img src="/images/background/microscope.jpg" alt="" className="mx-auto mb-10 w-1/2" />
 
         <ReferenceCarousel />
       </div>
