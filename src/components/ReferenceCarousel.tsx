@@ -65,7 +65,7 @@ export const ReferenceCarousel: React.FC = () => {
     t("carousel.slideAlt", { index: index + 1 });
 
   return (
-    <div className="mt-20 max-w-5xl mx-auto w-full">
+    <div className="mt-5 max-w-5xl mx-auto w-full">
       <div className="relative group overflow-hidden rounded-xl shadow-lg bg-gray-50 w-full py-6 px-2 md:px-12 border border-gray-100">
         <div className="overflow-hidden">
           <div
