@@ -48,7 +48,7 @@ export const PricingListInfo: React.FC = () => {
   const { i18n } = useTranslation();
 
   return (
-    <div className="mb-16 bg-gray-50 p-6 rounded-xl border border-gray-100">
+    <div className="mb-5 bg-gray-50 p-6 rounded-xl border border-gray-100">
       {pricelist.categories.map((category, idx) => {
         const lang = i18n.language as string;
         // Bezpečné získání textů; fallback na 'cs'

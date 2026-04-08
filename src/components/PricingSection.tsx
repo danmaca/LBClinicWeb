@@ -23,6 +23,12 @@ export const PricingSection: React.FC = () => {
 
         <PricingListInfo />
 
+        {t("pricing.cancellationNotice") && (
+          <p className="text-center text-sm text-gray-600 mt-6 mb-16">
+            {t("pricing.cancellationNotice")}
+          </p>
+        )}
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Insurance */}
           <div>
