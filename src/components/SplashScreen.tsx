@@ -18,7 +18,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
     const doneTimer = setTimeout(() => {
       setPhase("done");
       onFinished();
-    }, 4000);
+    }, 5000);
 
     return () => {
       clearTimeout(holdTimer);
@@ -37,7 +37,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
         className="absolute inset-0 bg-black"
         style={{
           opacity: isTransitioning ? 0 : 0.9,
-          transition: isTransitioning ? "opacity 3s ease-in-out" : "none",
+          transition: isTransitioning ? "opacity 5s ease-in-out" : "none",
         }}
       />
 
@@ -46,7 +46,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
         className="absolute inset-0 flex items-center justify-center"
         style={{
           opacity: isTransitioning ? 0 : 1,
-          transition: isTransitioning ? "opacity 3s ease-in-out" : "none",
+          transition: isTransitioning ? "opacity 5s ease-in-out" : "none",
         }}
       >
         <div className="text-white" style={{ transform: "scale(2.5)" }}>

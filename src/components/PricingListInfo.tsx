@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { pricelist } from "../data/pricelist";
 
 const AccordionItem = ({
@@ -11,35 +11,69 @@ const AccordionItem = ({
   items: { name: string; price: string }[];
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [isOpen, items]);
 
   return (
     <div className="border-b border-gray-200">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-accent transition-colors focus:outline-none"
+        className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-accent transition-colors focus:outline-none group"
       >
         <span>{title}</span>
-        {isOpen ? (
-          <ChevronUp className="h-5 w-5 text-gray-500" />
-        ) : (
-          <ChevronDown className="h-5 w-5 text-gray-500" />
-        )}
+        <ChevronDown
+          className={`h-5 w-5 text-gray-500 group-hover:text-accent transition-transform duration-500 ease-in-out ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+        />
       </button>
-      {isOpen && (
-        <div className="pb-4 pt-2">
-          <ul className="space-y-3">
+
+      <div
+        className="overflow-hidden transition-all duration-500 ease-in-out"
+        style={{
+          maxHeight: isOpen ? contentHeight : 0,
+          opacity: isOpen ? 1 : 0,
+        }}
+      >
+        <div ref={contentRef} className="pb-4 pt-2">
+          <ul className="space-y-0">
             {items.map((item, index) => (
               <li
                 key={index}
-                className="flex justify-between text-gray-600 border-b border-gray-100 last:border-0 pb-2 last:pb-0"
+                className="flex justify-between text-gray-600 border-b border-gray-100 last:border-0 pb-2 pt-2 last:pb-0"
+                style={{
+                  animation: isOpen ? `pricingSlideIn 0.4s ease-out ${index * 0.07}s both` : "none",
+                  opacity: isOpen ? undefined : 0,
+                }}
               >
                 <span>{item.name}</span>
-                <span className="font-medium">{item.price}</span>
+                <span className="font-medium text-gray-900 whitespace-nowrap ml-4">
+                  {item.price}
+                </span>
               </li>
             ))}
           </ul>
         </div>
-      )}
+      </div>
+
+      <style>{`
+        @keyframes pricingSlideIn {
+          0% {
+            opacity: 0;
+            transform: translateX(-20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      `}</style>
     </div>
   );
 };
