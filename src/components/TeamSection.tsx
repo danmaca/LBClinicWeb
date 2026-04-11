@@ -10,7 +10,7 @@ export const TeamSection: React.FC = () => {
   return (
     <section id="team" className="py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
           {t("team.heading")}
         </h2>
 
@@ -18,7 +18,7 @@ export const TeamSection: React.FC = () => {
           {SITE_CONFIG.teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col">
               {/* Photo card */}
-              <div className="relative overflow-hidden rounded-lg aspect-[3/4] group bg-gray-800">
+              <div className="relative overflow-hidden rounded-lg aspect-[3/4] group bg-gray-200">
                 {/* Photo 1 */}
                 <img
                   src={`./images/team/${member.photo1}`}
@@ -42,8 +42,8 @@ export const TeamSection: React.FC = () => {
 
               {/* Text below photo — mobile only */}
               <div className="mt-2 md:hidden">
-                <h3 className="text-sm font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-gray-400 leading-relaxed whitespace-pre-line text-xs">
+                <h3 className="text-sm font-bold text-gray-900 mb-1">{member.name}</h3>
+                <p className="text-gray-600 leading-relaxed whitespace-pre-line text-xs">
                   {Array.isArray(memberBios) ? (memberBios[index] ?? "") : ""}
                 </p>
               </div>

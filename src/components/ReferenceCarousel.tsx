@@ -66,7 +66,7 @@ export const ReferenceCarousel: React.FC = () => {
 
   return (
     <div className="mt-5 w-full overflow-hidden">
-      <div className="relative group rounded-xl shadow-lg bg-gray-900 w-full py-6 px-2 md:px-12 border border-gray-700 min-w-0 overflow-hidden">
+      <div className="relative group rounded-xl shadow-lg bg-gray-50 w-full py-6 px-2 md:px-12 border border-gray-100 min-w-0 overflow-hidden">
         <div className="overflow-hidden w-full min-w-0">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -84,29 +84,29 @@ export const ReferenceCarousel: React.FC = () => {
                   width: `${slideWidthPercent}%`,
                 }}
               >
-                <div className="rounded-lg overflow-hidden shadow-sm bg-gray-800 lg:relative h-full min-w-0">
+                <div className="rounded-lg overflow-hidden shadow-sm bg-white lg:relative h-full min-w-0">
                   {/* Image: normal block on sm/md, absolute right-aligned on lg */}
                   <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0">
                     <img
                       src={"./images/reference/" + slide.image}
                       alt={getAlt(slide, index)}
-                      className="w-full aspect-[4/3] object-contain bg-gray-700 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
+                      className="w-full aspect-[4/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
                     />
                   </div>
 
                   {/* White fade overlay – only visible on lg */}
-                  <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-gray-800 via-gray-800/80 to-transparent" />
+                  <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-white via-white/80 to-transparent" />
 
                   {/* Text */}
                   {slide.personName || slide.text ? (
                     <div className="p-3 sm:p-4 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[320px] lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-10 xl:px-16 min-w-0 overflow-hidden">
                       {slide.personName && (
-                        <h3 className="text-left text-sm sm:text-lg text-white font-semibold mb-1 sm:mb-2 lg:text-2xl xl:text-3xl lg:font-light lg:mb-4 break-words">
+                        <h3 className="text-left text-sm sm:text-lg text-gray-900 font-semibold mb-1 sm:mb-2 lg:text-2xl xl:text-3xl lg:font-light lg:mb-4 break-words">
                           {slide.personName}
                         </h3>
                       )}
                       {slide.text && (
-                        <p className="text-left text-xs sm:text-base text-gray-300 leading-relaxed lg:text-lg xl:text-xl lg:italic lg:leading-relaxed lg:font-medium break-words">
+                        <p className="text-left text-xs sm:text-base text-gray-700 leading-relaxed lg:text-lg xl:text-xl lg:italic lg:leading-relaxed lg:font-medium break-words">
                           {renderText(slide.text)}
                         </p>
                       )}
@@ -123,14 +123,14 @@ export const ReferenceCarousel: React.FC = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-gray-800/95 hover:bg-gray-700 text-gray-200 p-2 md:p-2.5 rounded-full shadow border border-gray-600 backdrop-blur-sm transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-2 md:p-2.5 rounded-full shadow border border-gray-100 backdrop-blur-sm transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
           aria-label={t("carousel.prev")}
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-gray-800/95 hover:bg-gray-700 text-gray-200 p-2 md:p-2.5 rounded-full shadow border border-gray-600 backdrop-blur-sm transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/95 hover:bg-white text-gray-800 p-2 md:p-2.5 rounded-full shadow border border-gray-100 backdrop-blur-sm transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100 z-10"
           aria-label={t("carousel.next")}
         >
           <ChevronRight size={24} />
@@ -143,7 +143,7 @@ export const ReferenceCarousel: React.FC = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 rounded-full transition-all ${
-                currentSlide === index ? "bg-accent w-4" : "bg-gray-600 hover:bg-gray-400"
+                currentSlide === index ? "bg-black w-4" : "bg-black/30 hover:bg-black/50"
               }`}
               aria-label={t("carousel.goToSlide", { index: index + 1 })}
             />

@@ -10,7 +10,7 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-black">
           {t("contact.heading")}
         </h2>
 
@@ -19,7 +19,7 @@ export const ContactSection: React.FC = () => {
           <div>
             <ContactInfo />
             {t("contact.parkingNotice") && (
-              <p className="text-center text-xl text-gray-300 my-8">{t("contact.parkingNotice")}</p>
+              <p className="text-center text-xl text-gray-800 my-8">{t("contact.parkingNotice")}</p>
             )}
             <AddressMap />
           </div>

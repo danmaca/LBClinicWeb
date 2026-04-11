@@ -7,7 +7,7 @@ export const InsuranceCompaniesInfo: React.FC = () => {
 
   return (
     <div>
-      <h3 className="text-xl font-bold mb-6 text-white text-center md:text-left">
+      <h3 className="text-xl font-bold mb-6 text-gray-900 text-center md:text-left">
         {t("pricing.insurance.heading")}
       </h3>
       <div className="grid grid-cols-2 gap-6">

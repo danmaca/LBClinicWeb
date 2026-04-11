@@ -162,7 +162,7 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-900 p-8 rounded-xl shadow-sm border border-gray-700">
+    <div className="bg-gray-50 p-8 rounded-xl shadow-sm border border-gray-100">
       {status === "success" ? (
         <div className="h-full flex flex-col items-center justify-center text-center py-12">
           <div className="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mb-6">
@@ -175,7 +175,9 @@ export const ContactForm: React.FC = () => {
               ></path>
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-2">{t("contact.form.successMessage")}</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            {t("contact.form.successMessage")}
+          </h3>
         </div>
       ) : (
         <form onSubmit={handleSubmit} noValidate className="space-y-6">
@@ -191,7 +193,7 @@ export const ContactForm: React.FC = () => {
           />
 
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               {t("contact.form.name")} *
             </label>
             <input
@@ -204,7 +206,7 @@ export const ContactForm: React.FC = () => {
               autoComplete="name"
               aria-invalid={fieldErrors.name ? true : undefined}
               aria-describedby={fieldErrors.name ? "name-error" : undefined}
-              className={`mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("name")}`}
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("name")}`}
             />
             {fieldErrors.name && (
               <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -214,7 +216,7 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
               {t("contact.form.phone")} *
             </label>
             <input
@@ -227,7 +229,7 @@ export const ContactForm: React.FC = () => {
               autoComplete="tel"
               aria-invalid={fieldErrors.phone ? true : undefined}
               aria-describedby={fieldErrors.phone ? "phone-error" : undefined}
-              className={`mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("phone")}`}
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("phone")}`}
             />
             {fieldErrors.phone && (
               <p id="phone-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -237,7 +239,7 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               {t("contact.form.email")} *
             </label>
             <input
@@ -250,7 +252,7 @@ export const ContactForm: React.FC = () => {
               autoComplete="email"
               aria-invalid={fieldErrors.email ? true : undefined}
               aria-describedby={fieldErrors.email ? "email-error" : undefined}
-              className={`mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("email")}`}
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("email")}`}
             />
             {fieldErrors.email && (
               <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -260,7 +262,7 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="reason" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="reason" className="block text-sm font-medium text-gray-700">
               {t("contact.form.reason")} *
             </label>
             <select
@@ -270,7 +272,7 @@ export const ContactForm: React.FC = () => {
               onChange={handleChange}
               aria-invalid={fieldErrors.reason ? true : undefined}
               aria-describedby={fieldErrors.reason ? "reason-error" : undefined}
-              className={`mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border bg-gray-800 text-white ${inputErrorClass("reason")}`}
+              className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border bg-white ${inputErrorClass("reason")}`}
             >
               <option value="" disabled>
                 {t("contact.form.reasonPlaceholder")}
@@ -289,7 +291,7 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="preferred_time" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="preferred_time" className="block text-sm font-medium text-gray-700">
               {t("contact.form.preferredTime")} *
             </label>
             <select
@@ -299,7 +301,7 @@ export const ContactForm: React.FC = () => {
               onChange={handleChange}
               aria-invalid={fieldErrors.preferred_time ? true : undefined}
               aria-describedby={fieldErrors.preferred_time ? "preferred_time-error" : undefined}
-              className={`mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border bg-gray-800 text-white ${inputErrorClass("preferred_time")}`}
+              className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border bg-white ${inputErrorClass("preferred_time")}`}
             >
               {TIME_KEYS.map((key) => (
                 <option key={key} value={key}>
@@ -315,7 +317,7 @@ export const ContactForm: React.FC = () => {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
               {t("contact.form.message")}
             </label>
             <textarea
@@ -327,7 +329,7 @@ export const ContactForm: React.FC = () => {
               maxLength={3000}
               aria-invalid={fieldErrors.message ? true : undefined}
               aria-describedby={fieldErrors.message ? "message-error" : undefined}
-              className={`mt-1 block w-full rounded-md border-gray-600 bg-gray-800 text-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("message")}`}
+              className={`mt-1 block w-full rounded-md border-gray-300 bg-white shadow-sm focus:border-accent focus:ring-accent sm:text-sm py-3 px-4 border ${inputErrorClass("message")}`}
             />
             {fieldErrors.message && (
               <p id="message-error" className="mt-1 text-sm text-red-600" role="alert">
@@ -341,7 +343,7 @@ export const ContactForm: React.FC = () => {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-black bg-accent hover:bg-accent/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent disabled:opacity-50 transition-colors"
+            className="w-full flex justify-center py-4 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-accent bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-50 transition-colors"
           >
             {status === "submitting" ? t("contact.form.sending") : t("contact.form.submit")}
           </button>
