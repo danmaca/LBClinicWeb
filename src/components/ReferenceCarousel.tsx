@@ -84,18 +84,32 @@ export const ReferenceCarousel: React.FC = () => {
                   width: `${slideWidthPercent}%`,
                 }}
               >
-                <div className="rounded-lg overflow-hidden shadow-sm bg-white lg:relative h-full min-w-0">
+                <div
+                  className={`rounded-lg overflow-hidden shadow-sm bg-white lg:relative h-full min-w-0 ${!(slide.personName || slide.text) ? "flex items-center justify-center" : ""}`}
+                >
                   {/* Image: normal block on sm/md, absolute right-aligned on lg */}
-                  <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0">
+                  <div
+                    className={
+                      slide.personName || slide.text
+                        ? "lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0"
+                        : ""
+                    }
+                  >
                     <img
                       src={"./images/reference/" + slide.image}
                       alt={getAlt(slide, index)}
-                      className="w-full aspect-[4/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
+                      className={
+                        slide.personName || slide.text
+                          ? "w-full aspect-[4/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
+                          : "w-full aspect-[4/3] object-contain"
+                      }
                     />
                   </div>
 
-                  {/* White fade overlay – only visible on lg */}
-                  <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-white via-white/80 to-transparent" />
+                  {/* White fade overlay – only visible on lg when there's text */}
+                  {(slide.personName || slide.text) && (
+                    <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-white via-white/80 to-transparent" />
+                  )}
 
                   {/* Text */}
                   {slide.personName || slide.text ? (
@@ -111,9 +125,7 @@ export const ReferenceCarousel: React.FC = () => {
                         </p>
                       )}
                     </div>
-                  ) : (
-                    <div className="hidden lg:block lg:min-h-[320px]" />
-                  )}
+                  ) : null}
                 </div>
               </div>
             ))}
