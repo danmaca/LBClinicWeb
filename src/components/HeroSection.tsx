@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { ReferenceCarousel } from "./ReferenceCarousel";
-import { MainLogoImage } from "./MainLogoImage";
 
 export const HeroSection: React.FC = () => {
   const { t } = useTranslation();
