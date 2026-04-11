@@ -76,17 +76,17 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
         aria-controls={listId}
         aria-label={LANGUAGE_NAMES[current]}
         onClick={() => setOpen((o) => !o)}
-        className={`inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white py-1 pl-1.5 pr-1 shadow-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent ${buttonClassName}`}
+        className={`inline-flex items-center gap-1 rounded-md border border-gray-600 bg-gray-800 py-1 pl-1.5 pr-1 shadow-sm focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent ${buttonClassName}`}
       >
         <img
           src={`${FLAGS_BASE}${LANGUAGE_FLAG_SRC[current]}`}
           alt=""
           width={22}
           height={16}
-          className="h-4 w-[22px] shrink-0 rounded-sm object-cover shadow-sm ring-1 ring-black/5"
+          className="h-4 w-[22px] shrink-0 rounded-sm object-cover shadow-sm ring-1 ring-white/10"
         />
         <ChevronDown
-          className={`h-3.5 w-3.5 shrink-0 text-gray-500 transition-transform ${open ? "rotate-180" : ""}`}
+          className={`h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform ${open ? "rotate-180" : ""}`}
           aria-hidden
         />
       </button>
@@ -96,7 +96,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
           id={listId}
           role="listbox"
           aria-labelledby={`${listId}-trigger`}
-          className={`absolute right-0 z-[60] mt-1 max-h-64 min-w-[11rem] overflow-auto rounded-md border border-gray-200 bg-white py-1 shadow-lg ${listClassName}`}
+          className={`absolute right-0 z-[60] mt-1 max-h-64 min-w-[11rem] overflow-auto rounded-md border border-gray-600 bg-gray-800 py-1 shadow-lg ${listClassName}`}
         >
           {SITE_CONFIG.supportedLanguages.map((lng) => (
             <li key={lng} role="presentation">
@@ -105,8 +105,8 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                 role="option"
                 aria-selected={lng === current}
                 onClick={() => select(lng)}
-                className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm hover:bg-gray-50 ${
-                  lng === current ? "bg-gray-50 font-medium" : ""
+                className={`flex w-full items-center gap-2 px-3 py-2 text-left text-sm hover:bg-gray-700 ${
+                  lng === current ? "bg-gray-700 font-medium" : ""
                 }`}
               >
                 <img
@@ -114,7 +114,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
                   alt=""
                   width={22}
                   height={16}
-                  className="h-4 w-[22px] shrink-0 rounded-sm object-cover shadow-sm ring-1 ring-black/5"
+                  className="h-4 w-[22px] shrink-0 rounded-sm object-cover shadow-sm ring-1 ring-white/10"
                 />
                 <span className="whitespace-nowrap">{LANGUAGE_NAMES[lng]}</span>
               </button>

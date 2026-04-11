@@ -2,8 +2,8 @@
 
 @theme {
   --color-primary: #000000;
-  --color-accent: #D4A853;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-accent: #d4a853;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 html {
@@ -12,6 +12,6 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #0a0a0a;
+  color: #e5e5e5;
 }

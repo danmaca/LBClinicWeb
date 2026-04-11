@@ -16,7 +16,7 @@ export const HeaderSection: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <header className="fixed top-0 left-0 w-full bg-[#0a0a0a] shadow-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -24,7 +24,7 @@ export const HeaderSection: React.FC = () => {
             <a
               href="#"
               aria-label={SITE_CONFIG.brandName}
-              className="flex items-center text-[#1d1d1b] hover:text-yellow-600 transition-colors duration-[1000ms] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
+              className="flex items-center text-white hover:text-accent transition-colors duration-[1000ms] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 rounded-sm"
             >
               <MainLogoImage className="h-[4.5rem] w-auto max-w-[510px]" />
             </a>
@@ -36,7 +36,7 @@ export const HeaderSection: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-accent font-medium transition-colors duration-[800ms]"
+                className="text-gray-300 hover:text-accent font-medium transition-colors duration-[800ms]"
               >
                 {link.label}
               </a>
@@ -48,7 +48,7 @@ export const HeaderSection: React.FC = () => {
             <div className="flex items-center space-x-4">
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
-                className="flex items-center gap-2 text-gray-500 hover:text-accent transition-colors duration-[800ms]"
+                className="flex items-center gap-2 text-gray-400 hover:text-accent transition-colors duration-[800ms]"
                 aria-label={SITE_CONFIG.email}
               >
                 <Mail className="h-5 w-5 shrink-0" aria-hidden />
@@ -58,7 +58,7 @@ export const HeaderSection: React.FC = () => {
               </a>
               <a
                 href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, "")}`}
-                className="flex items-center gap-2 text-gray-500 hover:text-accent transition-colors duration-[800ms]"
+                className="flex items-center gap-2 text-gray-400 hover:text-accent transition-colors duration-[800ms]"
                 aria-label={SITE_CONFIG.phone}
               >
                 <Phone className="h-5 w-5 shrink-0" aria-hidden />
@@ -72,7 +72,7 @@ export const HeaderSection: React.FC = () => {
 
             <a
               href="#contact"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-black bg-accent hover:bg-accent/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-colors"
             >
               {t("nav.contact")}
             </a>
@@ -82,7 +82,7 @@ export const HeaderSection: React.FC = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-gray-100 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
@@ -97,24 +97,24 @@ export const HeaderSection: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t">
+        <div className="md:hidden bg-[#0a0a0a] border-t border-gray-700">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-[800ms]"
+                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-colors duration-[800ms]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
           </div>
-          <div className="pt-4 pb-3 border-t border-gray-200">
+          <div className="pt-4 pb-3 border-t border-gray-700">
             <div className="flex items-center px-5 space-x-4">
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
-                className="flex items-center text-gray-500 hover:text-accent transition-colors duration-[800ms]"
+                className="flex items-center text-gray-400 hover:text-accent transition-colors duration-[800ms]"
               >
                 <Mail className="h-5 w-5 mr-2" />
                 <span>{SITE_CONFIG.email}</span>
@@ -123,7 +123,7 @@ export const HeaderSection: React.FC = () => {
             <div className="mt-3 flex items-center px-5 space-x-4">
               <a
                 href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, "")}`}
-                className="flex items-center text-gray-500 hover:text-accent transition-colors duration-[800ms]"
+                className="flex items-center text-gray-400 hover:text-accent transition-colors duration-[800ms]"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 <span>{SITE_CONFIG.phone}</span>
@@ -135,7 +135,7 @@ export const HeaderSection: React.FC = () => {
             <div className="mt-4 flex justify-center px-5">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
+                className="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-black bg-accent hover:bg-accent/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t("nav.contact")}

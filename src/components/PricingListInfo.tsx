@@ -21,14 +21,14 @@ const AccordionItem = ({
   }, [isOpen, items]);
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b border-gray-700">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900 hover:text-accent transition-colors focus:outline-none group"
+        className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-100 hover:text-accent transition-colors focus:outline-none group"
       >
         <span>{title}</span>
         <ChevronDown
-          className={`h-5 w-5 text-gray-500 group-hover:text-accent transition-transform duration-500 ease-in-out ${
+          className={`h-5 w-5 text-gray-400 group-hover:text-accent transition-transform duration-500 ease-in-out ${
             isOpen ? "rotate-180" : "rotate-0"
           }`}
         />
@@ -46,16 +46,14 @@ const AccordionItem = ({
             {items.map((item, index) => (
               <li
                 key={index}
-                className="flex justify-between text-gray-600 border-b border-gray-100 last:border-0 pb-2 pt-2 last:pb-0"
+                className="flex justify-between text-gray-300 border-b border-gray-800 last:border-0 pb-2 pt-2 last:pb-0"
                 style={{
                   animation: isOpen ? `pricingSlideIn 0.4s ease-out ${index * 0.07}s both` : "none",
                   opacity: isOpen ? undefined : 0,
                 }}
               >
                 <span>{item.name}</span>
-                <span className="font-medium text-gray-900 whitespace-nowrap ml-4">
-                  {item.price}
-                </span>
+                <span className="font-medium text-white whitespace-nowrap ml-4">{item.price}</span>
               </li>
             ))}
           </ul>
@@ -82,7 +80,7 @@ export const PricingListInfo: React.FC = () => {
   const { i18n } = useTranslation();
 
   return (
-    <div className="mb-5 bg-gray-50 p-6 rounded-xl border border-gray-100">
+    <div className="mb-5 bg-black p-6 rounded-xl border border-gray-700">
       {pricelist.categories.map((category, idx) => {
         const lang = i18n.language as string;
         // Bezpečné získání textů; fallback na 'cs'

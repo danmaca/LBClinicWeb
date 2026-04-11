@@ -22,7 +22,10 @@ function App() {
           <ScrollRibbon direction="ltr" />
           <ScrollRibbon direction="rtl" />
         </div> */}
-        <div className="min-h-screen flex flex-col font-sans relative" style={{ zIndex: 10 }}>
+        <div
+          className="min-h-screen bg-[#0a0a0a] flex flex-col font-sans relative"
+          style={{ zIndex: 10 }}
+        >
           <HeaderSection />
           <main className="flex-grow">
             <HeroSection />

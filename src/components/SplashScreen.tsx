@@ -34,7 +34,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
     <div className="fixed inset-0 z-[9999] pointer-events-none" aria-hidden="true">
       {/* Dark overlay that fades out */}
       <div
-        className="absolute inset-0 bg-black"
+        className="absolute inset-0 bg-[#0a0a0a]"
         style={{
           opacity: isTransitioning ? 0 : 0.9,
           transition: isTransitioning ? "opacity 5s ease-in-out" : "none",

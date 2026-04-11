@@ -10,10 +10,10 @@ export const PricingSection: React.FC = () => {
   return (
     <section id="pricing" className="py-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-black">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           {t("pricing.heading")}
         </h2>
-        <p className="text-center text-gray-600 mb-12">
+        <p className="text-center text-gray-400 mb-12">
           {t("pricing.descriptionBefore")}
           <a href="#contact" className="text-accent hover:underline">
             {t("pricing.descriptionLink")}
@@ -24,7 +24,7 @@ export const PricingSection: React.FC = () => {
         <PricingListInfo />
 
         {t("pricing.cancellationNotice") && (
-          <p className="text-center text-sm text-gray-600 mt-6 mb-16">
+          <p className="text-center text-sm text-gray-400 mt-6 mb-16">
             {t("pricing.cancellationNotice")}
           </p>
         )}
@@ -32,7 +32,7 @@ export const PricingSection: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Insurance */}
           <div>
-            <h3 className="text-xl font-bold mb-6 text-gray-900 text-center md:text-left">
+            <h3 className="text-xl font-bold mb-6 text-white text-center md:text-left">
               {t("pricing.insurance.heading")}
             </h3>
             <div className="grid grid-cols-2 gap-6">

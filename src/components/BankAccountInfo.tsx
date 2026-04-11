@@ -8,8 +8,8 @@ export const BankAccountInfo: React.FC = () => {
 
   return (
     <div>
-      <h3 className="text-xl font-bold mb-4 text-black">{t("pricing.bankInfo.heading")}</h3>
-      <div className="bg-black p-8 rounded-xl flex flex-col items-center">
+      <h3 className="text-xl font-bold mb-4 text-white">{t("pricing.bankInfo.heading")}</h3>
+      <div className="bg-gray-900 p-8 rounded-xl flex flex-col items-center">
         <div className="w-full mb-6 space-y-2 text-gray-300">
           <div className="flex justify-between">
             <span>{t("pricing.bankInfo.accountLabel")}:</span>

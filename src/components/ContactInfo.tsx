@@ -14,8 +14,8 @@ export const ContactInfo: React.FC = () => {
             <MapPin className="h-6 w-6 text-accent" />
           </div>
           <div className="ml-4">
-            <p className="font-semibold text-lg text-gray-900">{SITE_CONFIG.address.street}</p>
-            <p className="text-gray-600">
+            <p className="font-semibold text-lg text-white">{SITE_CONFIG.address.street}</p>
+            <p className="text-gray-400">
               {SITE_CONFIG.address.zip}, {SITE_CONFIG.address.city}
             </p>
           </div>
@@ -28,7 +28,7 @@ export const ContactInfo: React.FC = () => {
           <div className="ml-4">
             <a
               href={`tel:${SITE_CONFIG.phone.replace(/\s+/g, "")}`}
-              className="font-semibold text-lg text-gray-900 hover:text-accent transition-colors"
+              className="font-semibold text-lg text-white hover:text-accent transition-colors"
             >
               {SITE_CONFIG.phone}
             </a>
@@ -42,7 +42,7 @@ export const ContactInfo: React.FC = () => {
           <div className="ml-4">
             <a
               href={`mailto:${SITE_CONFIG.email}`}
-              className="font-semibold text-lg text-gray-900 hover:text-accent transition-colors"
+              className="font-semibold text-lg text-white hover:text-accent transition-colors"
             >
               {SITE_CONFIG.email}
             </a>
@@ -54,10 +54,8 @@ export const ContactInfo: React.FC = () => {
             <Clock className="h-6 w-6 text-accent mt-1" />
           </div>
           <div className="ml-4">
-            <h4 className="font-semibold text-lg text-gray-900 mb-2">
-              {t("contact.hoursHeading")}
-            </h4>
-            <div className="space-y-1 text-gray-600">
+            <h4 className="font-semibold text-lg text-white mb-2">{t("contact.hoursHeading")}</h4>
+            <div className="space-y-1 text-gray-400">
               <div className="flex space-x-4">
                 <span className="w-16">{t("contact.monThu")}:</span>
                 <span>8:00 – 16:00</span>

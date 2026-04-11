@@ -15,7 +15,7 @@ export const AddressMap: React.FC = () => {
 
   return (
     <>
-      <div className="w-full h-80 rounded-lg overflow-hidden shadow-sm relative bg-gray-100">
+      <div className="w-full h-80 rounded-lg overflow-hidden shadow-sm relative bg-gray-800">
         <iframe
           title={t("contact.mapIframeTitle")}
           width="100%"
@@ -30,7 +30,7 @@ export const AddressMap: React.FC = () => {
           allowFullScreen
         />
       </div>
-      <p className="mt-2 text-center text-sm text-gray-500">
+      <p className="mt-2 text-center text-sm text-gray-400">
         <a
           href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
             `${SITE_CONFIG.address.street}, ${SITE_CONFIG.address.zip} ${SITE_CONFIG.address.city}`,
