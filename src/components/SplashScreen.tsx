@@ -41,17 +41,15 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
         }}
       />
 
-      {/* Centered logo that fades out */}
+      {/* Logo positioned to match Hero section logo */}
       <div
-        className="absolute inset-0 flex items-center justify-center"
+        className="absolute inset-x-0 top-0 flex justify-center pt-28"
         style={{
           opacity: isTransitioning ? 0 : 1,
           transition: isTransitioning ? "opacity 5s ease-in-out" : "none",
         }}
       >
-        <div className="text-white" style={{ transform: "scale(2.5)" }}>
-          <MainLogoImage className="h-[4.5rem] w-auto max-w-[510px]" />
-        </div>
+        <MainLogoImage className="h-[11.25rem] w-auto text-white" />
       </div>
     </div>
   );
