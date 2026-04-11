@@ -2,20 +2,17 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
 import { SITE_CONFIG } from "../config";
-import { HeaderSection } from "./HeaderSection";
-import { FooterSection } from "./FooterSection";
+import { PageLayout } from "../router/PageLayout";
+import { useHashRouter } from "../router/useHashRouter";
 
-interface GalleryPageProps {
-  onBack: () => void;
-}
-
-export const GalleryPage: React.FC<GalleryPageProps> = ({ onBack }) => {
+export const GalleryPage: React.FC = () => {
   const { t } = useTranslation();
+  const { navigate } = useHashRouter();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const photos = Array.from({ length: SITE_CONFIG.gallery.totalPhotos }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
-    return `${SITE_CONFIG.gallery.basePath}${num}.jpg`;
+    return `./images/gallery/${num}.jpg`;
   });
 
   const openPhoto = (index: number) => setSelectedIndex(index);
@@ -26,14 +23,12 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onBack }) => {
     setSelectedIndex((prev) => (prev === null ? null : prev >= photos.length - 1 ? 0 : prev + 1));
 
   return (
-    <div className="min-h-screen flex flex-col font-sans">
-      <HeaderSection />
-
-      <main className="flex-grow pt-28 pb-20">
+    <PageLayout>
+      <div className="pt-28 pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back button */}
           <button
-            onClick={onBack}
+            onClick={() => navigate("/")}
             className="inline-flex items-center gap-2 text-gray-600 hover:text-accent transition-colors mb-8 group"
           >
             <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
@@ -109,9 +104,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onBack }) => {
             />
           </div>
         )}
-      </main>
-
-      <FooterSection />
-    </div>
+      </div>
+    </PageLayout>
   );
 };
