@@ -90,16 +90,14 @@ export const ReferenceCarousel: React.FC = () => {
                   {/* Image: normal block on sm/md, absolute right-aligned on lg */}
                   <div
                     className={
-                      slide.personName || slide.text
-                        ? "lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0"
-                        : ""
+                      slide.text ? "lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0" : ""
                     }
                   >
                     <img
                       src={"./images/reference/" + slide.image}
                       alt={getAlt(slide, index)}
                       className={
-                        slide.personName || slide.text
+                        slide.text
                           ? "w-full aspect-[4/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
                           : "w-full aspect-[4/3] object-contain"
                       }
@@ -107,12 +105,12 @@ export const ReferenceCarousel: React.FC = () => {
                   </div>
 
                   {/* White fade overlay – only visible on lg when there's text */}
-                  {(slide.personName || slide.text) && (
+                  {slide.text && (
                     <div className="hidden lg:block absolute inset-0 z-[1] bg-gradient-to-r from-white via-white/80 to-transparent" />
                   )}
 
                   {/* Text */}
-                  {slide.personName || slide.text ? (
+                  {slide.text ? (
                     <div className="p-3 sm:p-4 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[320px] lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-10 xl:px-16 min-w-0 overflow-hidden">
                       {slide.personName && (
                         <h3 className="text-left text-sm sm:text-lg text-gray-900 font-semibold mb-1 sm:mb-2 lg:text-2xl xl:text-3xl lg:font-light lg:mb-4 break-words">
