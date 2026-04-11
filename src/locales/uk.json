@@ -3,6 +3,7 @@
     "team": "Náš tým",
     "pricing": "Ceník",
     "faq": "FAQ",
+    "gallery": "Фотогалерея",
     "contact": "Kontakt"
   },
   "hero": {
@@ -115,5 +116,10 @@
     "prev": "Попередній приклад",
     "next": "Наступний приклад",
     "goToSlide": "Перейти до слайду {{index}}"
+  },
+  "gallery": {
+    "heading": "Фотогалерея",
+    "closeLabel": "Закрити",
+    "backLabel": "На головну"
   }
 }

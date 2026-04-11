@@ -52,6 +52,10 @@ export const SITE_CONFIG = {
   faqs: {
     count: 7,
   },
+  gallery: {
+    totalPhotos: 20,
+    basePath: "./images/gallery/",
+  },
 };
 
 export const REFERENCE_SLIDES: ReferenceSlide[] = [

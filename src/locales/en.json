@@ -3,6 +3,7 @@
     "team": "Náš tým",
     "pricing": "Ceník",
     "faq": "FAQ",
+    "gallery": "Gallery",
     "contact": "Kontakt"
   },
   "hero": {
@@ -115,5 +116,10 @@
     "prev": "Previous showcase",
     "next": "Next showcase",
     "goToSlide": "Go to slide {{index}}"
+  },
+  "gallery": {
+    "heading": "Gallery",
+    "closeLabel": "Close",
+    "backLabel": "Back to homepage"
   }
 }

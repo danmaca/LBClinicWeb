@@ -3,6 +3,7 @@
     "team": "Náš tým",
     "pricing": "Ceník",
     "faq": "FAQ",
+    "gallery": "Fotogalerie",
     "contact": "Objednat se"
   },
   "hero": {
@@ -122,5 +123,10 @@
     "prev": "Předchozí ukázka",
     "next": "Další ukázka",
     "goToSlide": "Přejít na posuv {{index}}"
+  },
+  "gallery": {
+    "heading": "Fotogalerie",
+    "closeLabel": "Zavřít",
+    "backLabel": "Zpět na hlavní stránku"
   }
 }

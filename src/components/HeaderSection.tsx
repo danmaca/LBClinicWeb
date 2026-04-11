@@ -13,6 +13,7 @@ export const HeaderSection: React.FC = () => {
     { href: "#team", label: t("nav.team") },
     { href: "#pricing", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },
+    { href: "#/gallery", label: t("nav.gallery") },
   ];
 
   return (

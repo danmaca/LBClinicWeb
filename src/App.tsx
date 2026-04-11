@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { HeaderSection } from "./components/HeaderSection";
 import { HeroSection } from "./components/HeroSection";
 import { TeamSection } from "./components/TeamSection";
@@ -9,10 +9,42 @@ import { FooterSection } from "./components/FooterSection";
 //import { ScrollRibbon } from "./components/ScrollRibbon";
 import { TestContactForm } from "./components/TestContactForm";
 import { SplashScreen } from "./components/SplashScreen";
+import { GalleryPage } from "./components/GalleryPage";
+
+type Page = "home" | "gallery";
+
+function getPageFromHash(): Page {
+  const hash = window.location.hash;
+  if (hash === "#/gallery") return "gallery";
+  return "home";
+}
 
 function App() {
   const [splashDone, setSplashDone] = useState(false);
   const handleSplashFinished = useCallback(() => setSplashDone(true), []);
+
+  const [page, setPage] = useState<Page>(getPageFromHash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setPage(getPageFromHash());
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  const navigateTo = useCallback((target: Page) => {
+    if (target === "gallery") {
+      window.location.hash = "#/gallery";
+    } else {
+      window.location.hash = "";
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
+  if (page === "gallery") {
+    return <GalleryPage onBack={() => navigateTo("home")} />;
+  }
 
   return (
     <>
