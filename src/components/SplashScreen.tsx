@@ -43,7 +43,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
 
       {/* Logo positioned to match Hero section logo */}
       <div
-        className="absolute inset-x-0 top-0 flex justify-center pt-28"
+        className="absolute inset-x-0 top-0 flex justify-center pt-55"
         style={{
           opacity: isTransitioning ? 0 : 1,
           transition: isTransitioning ? "opacity 5s ease-in-out" : "none",

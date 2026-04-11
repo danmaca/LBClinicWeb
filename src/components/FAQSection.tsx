@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
+const FaqItem = ({ question, answer }: { question: string; answer: string | string[] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -22,7 +22,11 @@ const FaqItem = ({ question, answer }: { question: string; answer: string }) => 
           )}
         </span>
       </button>
-      {isOpen && <div className="mt-4 text-gray-600 prose prose-slate">{answer}</div>}
+      {isOpen && (
+        <div className="mt-4 text-gray-600 prose prose-slate whitespace-pre-line">
+          {Array.isArray(answer) ? answer.join("\n") : answer}
+        </div>
+      )}
     </div>
   );
 };
@@ -33,9 +37,10 @@ export const FAQSection: React.FC = () => {
   const faqCount = 8;
   const faqs = [];
   for (let i = 1; i <= faqCount; i++) {
+    const answer = t(`faq.a${i}`, { returnObjects: true });
     faqs.push({
       q: t(`faq.q${i}`),
-      a: t(`faq.a${i}`),
+      a: Array.isArray(answer) ? answer.join("\n") : String(answer),
     });
   }
 

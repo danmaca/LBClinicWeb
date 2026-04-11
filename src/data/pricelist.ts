@@ -295,7 +295,7 @@ export const pricelist = {
         },
         {
           name: {
-            cs: "Sedace pro vědomí Entonox / Midazolam",
+            cs: "Sedace při vědomí Entonox / Midazolam",
             en: "",
             ru: "",
             uk: "",
@@ -337,7 +337,7 @@ export const pricelist = {
             ru: "",
             uk: "",
           },
-          price: "3 500 Kč",
+          price: "4 000 Kč",
         },
         {
           name: {

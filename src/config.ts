@@ -2,7 +2,7 @@ import type { ReferenceSlide } from "./TypeDefinitions";
 
 export const SITE_CONFIG = {
   companyName: "LB dental clinic s.r.o.",
-  brandName: "LB Clinic",
+  brandName: "LB DENTAL CLINIC S.R.O.",
   url: "https://www.lbclinic.cz/",
   email: "recepce@lbclinic.cz",
   phone: "+420 776 377 100",
@@ -12,12 +12,12 @@ export const SITE_CONFIG = {
     city: "Praha 9",
   },
   bankAccount: {
-    number: "670100-2200909939/6210",
-    bankName: "mBankX",
-    iban: "CZ1262100000006701002200909939",
+    number: "41419/5500",
+    bankName: "Raiffeisenbank",
+    iban: "CZ2855000000000000041419",
     recipientName: "LB clinic",
     get spdString() {
-      return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:Platba LB Clinic*RN:${this.recipientName}`;
+      return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:Platba LB clinic*RN:${this.recipientName}`;
     },
   },
   supportedLanguages: ["cs", "en", "uk", "ru"] as const,
