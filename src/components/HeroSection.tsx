@@ -13,7 +13,10 @@ export const HeroSection: React.FC = () => {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-0 md:mt-0 min-w-0 w-full">
         <div className="flex justify-center mb-58 mt-28">
-          <MainLogoImage className="h-[11.25rem] w-auto text-black" />
+          <img
+            src="/images/logo_LbClinicDental_pod.svg"
+            className="h-[11.25rem] w-auto text-black"
+          />
         </div>
         <h1 className="text-4xl md:text-6xl font-bold text-black mb-6 leading-tight">
           {t("hero.titleBefore")}

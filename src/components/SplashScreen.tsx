@@ -49,7 +49,7 @@ export const SplashScreen: React.FC<SplashScreenProps> = ({ onFinished }) => {
           transition: isTransitioning ? "opacity 5s ease-in-out" : "none",
         }}
       >
-        <MainLogoImage className="h-[11.25rem] w-auto text-black" />
+        <img src="/images/logo_LbClinicDental_pod.svg" className="h-[11.25rem] w-auto text-black" />
       </div>
     </div>
   );
