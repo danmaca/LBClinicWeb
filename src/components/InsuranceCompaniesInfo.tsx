@@ -14,7 +14,7 @@ export const InsuranceCompaniesInfo: React.FC = () => {
         {SITE_CONFIG.insurance.map((ins) => (
           <div key={ins.key}>
             <img
-              src={`/images/insurance/${ins.logo}`}
+              src={`./images/insurance/${ins.logo}`}
               alt={ins.name}
               title={ins.name}
               className="max-h-12 max-w-full object-contain"

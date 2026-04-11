@@ -84,7 +84,7 @@ export const ReferenceCarousel: React.FC = () => {
                   {/* Image: normal block on sm/md, absolute right-aligned on lg */}
                   <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0">
                     <img
-                      src={"/images/reference/" + slide.image}
+                      src={"./images/reference/" + slide.image}
                       alt={getAlt(slide, index)}
                       className="w-full aspect-[4/3] object-contain bg-gray-700 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
                     />

@@ -21,13 +21,13 @@ export const TeamSection: React.FC = () => {
               <div className="relative overflow-hidden rounded-lg aspect-[3/4] group bg-gray-800">
                 {/* Photo 1 */}
                 <img
-                  src={`/images/team/${member.photo1}`}
+                  src={`./images/team/${member.photo1}`}
                   alt={member.name}
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-0"
                 />
                 {/* Photo 2 (hover) */}
                 <img
-                  src={`/images/team/${member.photo2}`}
+                  src={`./images/team/${member.photo2}`}
                   alt={`${member.name} – hover`}
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
                 />
