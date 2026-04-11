@@ -54,7 +54,6 @@ export const SITE_CONFIG = {
   },
   gallery: {
     totalPhotos: 20,
-    basePath: "./images/gallery/",
   },
 };
 
