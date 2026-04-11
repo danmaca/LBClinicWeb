@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { SITE_CONFIG } from "../config";
 import { BankAccountInfo } from "./BankAccountInfo";
+import { InsuranceCompaniesInfo } from "./InsuranceCompaniesInfo";
 import { PricingListInfo } from "./PricingListInfo";
 
 export const PricingSection: React.FC = () => {
@@ -31,23 +31,7 @@ export const PricingSection: React.FC = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           {/* Insurance */}
-          <div>
-            <h3 className="text-xl font-bold mb-6 text-white text-center md:text-left">
-              {t("pricing.insurance.heading")}
-            </h3>
-            <div className="grid grid-cols-2 gap-6">
-              {SITE_CONFIG.insurance.map((ins) => (
-                <div key={ins.key}>
-                  <img
-                    src={`/images/insurance/${ins.logo}`}
-                    alt={ins.name}
-                    title={ins.name}
-                    className="max-h-12 max-w-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <InsuranceCompaniesInfo />
 
           {/* Bank Info */}
           <BankAccountInfo />
