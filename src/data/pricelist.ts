@@ -74,7 +74,7 @@ export const pricelist = {
         },
         {
           name: {
-            cs: "Dentální hygiena děti do 12 let",
+            cs: "Dentální hygiena děti do 12 let, 30 min",
             en: "",
             ru: "",
             uk: "",
@@ -135,7 +135,7 @@ export const pricelist = {
             ru: "",
             uk: "",
           },
-          price: "2 500 Kč",
+          price: "od 2 500 Kč",
         },
         {
           name: {
@@ -236,7 +236,7 @@ export const pricelist = {
             ru: "",
             uk: "",
           },
-          price: "od 8 000 Kč až 16 000 Kč dle počtu kanálků",
+          price: "od 8 000 až 16 000 Kč dle počtu kanálků",
         },
       ],
     },

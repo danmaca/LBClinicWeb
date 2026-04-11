@@ -53,9 +53,7 @@ const AccordionItem = ({
                 }}
               >
                 <span>{item.name}</span>
-                <span className="font-medium text-gray-900 whitespace-nowrap ml-4">
-                  {item.price}
-                </span>
+                <span className="font-medium text-gray-900 ml-4">{item.price}</span>
               </li>
             ))}
           </ul>

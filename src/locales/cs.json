@@ -6,8 +6,7 @@
     "contact": "Objednat se"
   },
   "hero": {
-    "title": "Péče o váš úsměv na prvním místě.",
-    "titleBefore": "Péče o váš ",
+    "titleBefore": "Péče o Váš ",
     "titleHighlight": "úsměv",
     "titleAfter": " na prvním místě.",
     "subtitle": "Vítejte v ordinaci, kde se snoubí moderní technologie s profesionální péčí a lidským přístupem. Specializujeme se na záchovnou, estetickou i dětskou stomatologii.",
@@ -16,7 +15,7 @@
   "team": {
     "heading": "Náš tým",
     "memberBios": [
-      "Absolventka 1. lékařské fakulty Univerzity Karlovy\nKonzervační stomatologie\nČištění kořenových kanálků pod mikroskopem\nProtetika\nChirurgie\nDětská stomatologie",
+      "Konzervační stomatologie\nEstetické fotokompozitní dostavby\nProtetika\nChirurgie\nDětská stomatologie",
       "Dentální hygiena\nLéčba paradentózy\nBělení zubů"
     ]
   },
