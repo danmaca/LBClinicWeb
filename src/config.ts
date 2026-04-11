@@ -49,6 +49,9 @@ export const SITE_CONFIG = {
       logo: "zpmv.png",
     },
   ],
+  faqs: {
+    count: 7,
+  },
 };
 
 export const REFERENCE_SLIDES: ReferenceSlide[] = [

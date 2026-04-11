@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { SITE_CONFIG } from "../config";
 
-const FaqItem = ({ question, answer }: { question: string; answer: string | string[] }) => {
+const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -23,9 +24,10 @@ const FaqItem = ({ question, answer }: { question: string; answer: string | stri
         </span>
       </button>
       {isOpen && (
-        <div className="mt-4 text-gray-600 prose prose-slate whitespace-pre-line">
-          {Array.isArray(answer) ? answer.join("\n") : answer}
-        </div>
+        <div
+          className="mt-4 text-gray-600 prose prose-slate whitespace-pre-line"
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
       )}
     </div>
   );
@@ -34,13 +36,13 @@ const FaqItem = ({ question, answer }: { question: string; answer: string | stri
 export const FAQSection: React.FC = () => {
   const { t } = useTranslation();
 
-  const faqCount = 8;
+  const faqCount = SITE_CONFIG.faqs.count;
   const faqs = [];
   for (let i = 1; i <= faqCount; i++) {
     const answer = t(`faq.a${i}`, { returnObjects: true });
     faqs.push({
       q: t(`faq.q${i}`),
-      a: Array.isArray(answer) ? answer.join("\n") : String(answer),
+      a: Array.isArray(answer) ? answer.join("<br>") : String(answer),
     });
   }
 
