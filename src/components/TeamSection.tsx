@@ -31,21 +31,15 @@ export const TeamSection: React.FC = () => {
                   alt={`${member.name} – hover`}
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
                 />
-                {/* Text overlay — desktop only */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-5 pb-5 pt-16 pointer-events-none hidden md:block">
-                  <h3 className="text-xl font-bold text-white mb-1">{member.name}</h3>
-                  <p className="text-gray-200 leading-relaxed whitespace-pre-line text-sm">
+                {/* Text overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-2 pb-2 pt-8 md:px-5 md:pb-5 md:pt-16 pointer-events-none">
+                  <h3 className="text-xs sm:text-sm md:text-xl font-bold text-white mb-0.5 md:mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-gray-200 leading-relaxed whitespace-pre-line text-[10px] sm:text-xs md:text-sm">
                     {Array.isArray(memberBios) ? (memberBios[index] ?? "") : ""}
                   </p>
                 </div>
-              </div>
-
-              {/* Text below photo — mobile only */}
-              <div className="mt-2 md:hidden">
-                <h3 className="text-sm font-bold text-gray-900 mb-1">{member.name}</h3>
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line text-xs">
-                  {Array.isArray(memberBios) ? (memberBios[index] ?? "") : ""}
-                </p>
               </div>
             </div>
           ))}
