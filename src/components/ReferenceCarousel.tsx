@@ -65,9 +65,9 @@ export const ReferenceCarousel: React.FC = () => {
     t("carousel.slideAlt", { index: index + 1 });
 
   return (
-    <div className="mt-5 w-full max-w-[100vw] overflow-hidden box-border">
-      <div className="relative group rounded-xl shadow-lg bg-gray-900 w-full max-w-full py-6 px-2 md:px-12 border border-gray-700 min-w-0 overflow-hidden box-border">
-        <div className="overflow-hidden w-full max-w-full min-w-0">
+    <div className="mt-5 w-full overflow-hidden">
+      <div className="relative group rounded-xl shadow-lg bg-gray-900 w-full py-6 px-2 md:px-12 border border-gray-700 min-w-0 overflow-hidden">
+        <div className="overflow-hidden w-full min-w-0">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{
@@ -84,13 +84,13 @@ export const ReferenceCarousel: React.FC = () => {
                   width: `${slideWidthPercent}%`,
                 }}
               >
-                <div className="rounded-lg overflow-hidden shadow-sm bg-gray-800 lg:relative h-full min-w-0 max-w-full">
+                <div className="rounded-lg overflow-hidden shadow-sm bg-gray-800 lg:relative h-full min-w-0">
                   {/* Image: normal block on sm/md, absolute right-aligned on lg */}
                   <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-auto lg:z-0">
                     <img
                       src={"./images/reference/" + slide.image}
                       alt={getAlt(slide, index)}
-                      className="w-full max-w-full aspect-[4/3] object-contain bg-gray-700 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
+                      className="w-full aspect-[4/3] object-contain bg-gray-700 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
                     />
                   </div>
 
@@ -99,7 +99,7 @@ export const ReferenceCarousel: React.FC = () => {
 
                   {/* Text */}
                   {slide.personName || slide.text ? (
-                    <div className="p-3 sm:p-4 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[320px] lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-10 xl:px-16 min-w-0 max-w-full overflow-hidden">
+                    <div className="p-3 sm:p-4 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[320px] lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-10 xl:px-16 min-w-0 overflow-hidden">
                       {slide.personName && (
                         <h3 className="text-left text-sm sm:text-lg text-white font-semibold mb-1 sm:mb-2 lg:text-2xl xl:text-3xl lg:font-light lg:mb-4 break-words">
                           {slide.personName}
