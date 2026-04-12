@@ -58,11 +58,6 @@ export const SITE_CONFIG = {
 
 export const REFERENCE_SLIDES: ReferenceSlide[] = [
   {
-    image: "1.jpg",
-    personName: "",
-    text: "",
-  },
-  {
     image: "2.jpg",
     personName: "",
     text: "",

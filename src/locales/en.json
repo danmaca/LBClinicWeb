@@ -165,6 +165,10 @@
       {
         "personName": "Pavlína Jonáčková",
         "text": "The dental injury was addressed very soon after booking. The doctor carefully treated the damage to the front teeth — one tooth was completely broken off and the other was chipped. After the procedure, the front teeth were restored and were indistinguishable from the rest. Thank you so much for the professionalism, the prompt treatment, and for giving me my smile back."
+      },
+      {
+        "personName": "Sedlácký Martin",
+        "text": "Dear Dr. Vernerová, thank you once again for the amazing work — I can no longer tell the difference between the new teeth and my own, neither visually nor by feel. On top of that, whenever I smile at myself in the mirror, I think of you with gratitude. At the orthodontist's they asked for your contact — I probably don't need to say more :-) Wishing you joy in every moment."
       }
     ]
   },
@@ -200,7 +204,8 @@
       {
         "title": "Dental Implants",
         "desc": "A reliable and permanent replacement for a missing tooth using modern implant systems.",
-        "img": "implants.svg"
+        "img": "implants.svg",
+        "enabled": false
       },
       {
         "title": "Aesthetic Dental Fillings",

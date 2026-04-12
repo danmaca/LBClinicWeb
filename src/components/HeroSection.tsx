@@ -26,7 +26,6 @@ export const HeroSection: React.FC = () => {
             <span className="text-accent tracking-[0.15em]">{t("hero.titleHighlight")}</span>
             {t("hero.titleAfter")}
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">{t("hero.subtitle")}</p>
           <p className="text-md text-gray-500 mb-8 font-medium">{t("hero.hours")}</p>
 
           <ReferenceCarousel />
