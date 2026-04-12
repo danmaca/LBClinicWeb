@@ -57,10 +57,29 @@ export const TreatmentPage: React.FC = () => {
                 {/* Accent top bar */}
                 <div className="absolute top-0 left-6 right-6 h-0.5 bg-accent/60 rounded-b opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-accent transition-colors duration-300">
-                  {t(`treatments.${key}.title`)}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                {/* Icon + Title */}
+                <div className="flex items-center gap-3 mb-2">
+                  <div
+                    className="h-8 w-8 shrink-0 bg-gray-700 group-hover:bg-accent transition-colors duration-300"
+                    role="img"
+                    aria-hidden="true"
+                    style={{
+                      WebkitMaskImage: `url(./images/treatment/${key}.svg)`,
+                      WebkitMaskSize: "contain",
+                      WebkitMaskRepeat: "no-repeat",
+                      WebkitMaskPosition: "center",
+                      maskImage: `url(./images/treatment/${key}.svg)`,
+                      maskSize: "contain",
+                      maskRepeat: "no-repeat",
+                      maskPosition: "center",
+                    }}
+                  />
+                  <h3 className="text-lg font-semibold text-black group-hover:text-accent transition-colors duration-300">
+                    {t(`treatments.${key}.title`)}
+                  </h3>
+                </div>
+
+                <p className="text-gray-500 text-sm leading-relaxed pl-11">
                   {t(`treatments.${key}.desc`)}
                 </p>
               </div>
