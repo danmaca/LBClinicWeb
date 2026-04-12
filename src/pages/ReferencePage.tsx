@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { PageLayout } from "../router/PageLayout";
 
-/** Reference keys matching the localization file. */
-const REFERENCE_KEYS = ["r1", "r2", "r3"] as const;
+interface ReferenceItem {
+  personName: string;
+  text: string;
+}
 
 export const ReferencePage: React.FC = () => {
   const { t } = useTranslation();
@@ -12,6 +14,8 @@ export const ReferencePage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const items = t("references.items", { returnObjects: true }) as ReferenceItem[];
 
   return (
     <PageLayout>
@@ -24,35 +28,32 @@ export const ReferencePage: React.FC = () => {
 
           {/* Testimonial cards grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {REFERENCE_KEYS.map((key) => (
-              <div
-                key={key}
-                className="flex flex-col justify-between bg-gray-50 rounded-2xl p-8 transition-shadow duration-300 hover:shadow-md"
-              >
-                {/* Quote mark */}
-                <div>
-                  <div className="text-8xl font-serif leading-none text-gray-800 select-none overflow-visible">
-                    &ldquo;
+            {Array.isArray(items) &&
+              items.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col justify-between bg-gray-50 rounded-2xl p-8 transition-shadow duration-300 hover:shadow-md"
+                >
+                  {/* Quote mark */}
+                  <div>
+                    <div className="text-8xl font-serif leading-none text-gray-800 select-none overflow-visible">
+                      &ldquo;
+                    </div>
+
+                    {/* Review text */}
+                    <p className="text-gray-700 text-base leading-relaxed -mt-10">{item.text}</p>
+
+                    <div className="text-8xl font-serif leading-none text-gray-800 select-none mt-0 text-right">
+                      &rdquo;
+                    </div>
                   </div>
 
-                  {/* Review text */}
-                  <p className="text-gray-700 text-base leading-relaxed -mt-10">
-                    {t(`references.${key}.text`)}
-                  </p>
-
-                  <div className="text-8xl font-serif leading-none text-gray-800 select-none mt-0 text-right">
-                    &rdquo;
+                  {/* Person name */}
+                  <div className="-mt-10 text-right">
+                    <span className="text-gray-900 font-semibold text-base">{item.personName}</span>
                   </div>
                 </div>
-
-                {/* Person name */}
-                <div className="-mt-10 text-right">
-                  <span className="text-gray-900 font-semibold text-base">
-                    {t(`references.${key}.personName`)}
-                  </span>
-                </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>

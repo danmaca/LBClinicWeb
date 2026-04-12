@@ -38,22 +38,40 @@
   },
   "faq": {
     "heading": "Často kladené dotazy",
-    "q1": "Jak si mohu domluvit termín?",
-    "a1": "Termín si můžete domluvit telefonicky na čísle +420 776 377 100 nebo e-mailem na adrese recepce@lbclinic.cz. Objednat se můžete také prostřednictvím kontaktního formuláře na našem webu.",
-    "q2": "Kudy se k nám dostanete a kde zaparkovat?",
-    "a2": "Naše ordinace se nachází na adrese Vodňanská 1656/5, Praha 9. Dostanete se k nám snadno MHD i autem. V blízkosti ordinace je k dispozici parkování.",
-    "q3": "Jaké platební metody přijímáte?",
-    "a3": "Přijímáme platby v hotovosti, platební kartou i bankovním převodem. QR kód pro platbu najdete v sekci Ceník. Na některé výkony se vztahuje úhrada ze zdravotního pojištění.",
-    "q4": "Přijímáte nové pacienty?",
-    "a4": "Ano, rádi přivítáme nové pacienty. Pro registraci stačí zavolat na naši recepci nebo vyplnit kontaktní formulář.",
-    "q5": "Jak probíhá první návštěva?",
-    "a5": "Při první návštěvě provedeme důkladné vyšetření dutiny ústní včetně rentgenového snímku. Zhodnotíme celkový stav chrupu a dásní a navrhneme individuální plán léčby. Trvá přibližně 30–45 minut.",
-    "q6": "Co dělat v případě akutních bolestí?",
-    "a6": "Kontaktujte nás telefonicky na +420 776 377 100 a pokusíme se vás objednat co nejdříve. Mimo ordinační hodiny doporučujeme pohotovostní zubní službu.",
-    "q7": "Doporučení pro péči po ošetření?",
-    "a7": "Po každém ošetření poskytneme podrobné instrukce. Obecně doporučujeme nejíst a nepít horké nápoje po dobu 2 hodin po zákroku.",
-    "q8": "Jaké pomůcky doporučujete pro domácí péči?",
-    "a8": "Měkký nebo středně tvrdý kartáček, mezizubní kartáčky nebo zubní nit a ústní vodu bez alkoholu. Naše hygienistka vám doporučí konkrétní pomůcky."
+    "items": [
+      {
+        "question": "Jak si mohu domluvit termín?",
+        "answer": "Termín si můžete domluvit telefonicky na čísle +420 776 377 100 nebo e-mailem na adrese recepce@lbclinic.cz. Objednat se můžete také prostřednictvím kontaktního formuláře na našem webu."
+      },
+      {
+        "question": "Kudy se k nám dostanete a kde zaparkovat?",
+        "answer": "Naše ordinace se nachází na adrese Vodňanská 1656/5, Praha 9. Dostanete se k nám snadno MHD i autem. V blízkosti ordinace je k dispozici parkování."
+      },
+      {
+        "question": "Jaké platební metody přijímáte?",
+        "answer": "Přijímáme platby v hotovosti, platební kartou i bankovním převodem. QR kód pro platbu najdete v sekci Ceník. Na některé výkony se vztahuje úhrada ze zdravotního pojištění."
+      },
+      {
+        "question": "Přijímáte nové pacienty?",
+        "answer": "Ano, rádi přivítáme nové pacienty. Pro registraci stačí zavolat na naši recepci nebo vyplnit kontaktní formulář."
+      },
+      {
+        "question": "Jak probíhá první návštěva?",
+        "answer": "Při první návštěvě provedeme důkladné vyšetření dutiny ústní včetně rentgenového snímku. Zhodnotíme celkový stav chrupu a dásní a navrhneme individuální plán léčby. Trvá přibližně 30–45 minut."
+      },
+      {
+        "question": "Co dělat v případě akutních bolestí?",
+        "answer": "Kontaktujte nás telefonicky na +420 776 377 100 a pokusíme se vás objednat co nejdříve. Mimo ordinační hodiny doporučujeme pohotovostní zubní službu."
+      },
+      {
+        "question": "Doporučení pro péči po ošetření?",
+        "answer": "Po každém ošetření poskytneme podrobné instrukce. Obecně doporučujeme nejíst a nepít horké nápoje po dobu 2 hodin po zákroku."
+      },
+      {
+        "question": "Jaké pomůcky doporučujete pro domácí péči?",
+        "answer": "Měkký nebo středně tvrdý kartáček, mezizubní kartáčky nebo zubní nit a ústní vodu bez alkoholu. Naše hygienistka vám doporučí konkrétní pomůcky."
+      }
+    ]
   },
   "contact": {
     "heading": "Kontakt",

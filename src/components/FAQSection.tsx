@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { SITE_CONFIG } from "../config";
 
 const FaqItem = ({ question, answer }: { question: string; answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,18 +32,15 @@ const FaqItem = ({ question, answer }: { question: string; answer: string }) => 
   );
 };
 
+interface FaqItemData {
+  question: string;
+  answer: string | string[];
+}
+
 export const FAQSection: React.FC = () => {
   const { t } = useTranslation();
 
-  const faqCount = SITE_CONFIG.faqs.count;
-  const faqs = [];
-  for (let i = 1; i <= faqCount; i++) {
-    const answer = t(`faq.a${i}`, { returnObjects: true });
-    faqs.push({
-      q: t(`faq.q${i}`),
-      a: Array.isArray(answer) ? answer.join("<br>") : String(answer),
-    });
-  }
+  const items = t("faq.items", { returnObjects: true }) as FaqItemData[];
 
   return (
     <section id="faq" className="py-20">
@@ -54,9 +50,14 @@ export const FAQSection: React.FC = () => {
         </h2>
 
         <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-gray-100">
-          {faqs.map((faq, index) => (
-            <FaqItem key={index} question={faq.q} answer={faq.a} />
-          ))}
+          {Array.isArray(items) &&
+            items.map((faq, index) => (
+              <FaqItem
+                key={index}
+                question={faq.question}
+                answer={Array.isArray(faq.answer) ? faq.answer.join("<br>") : String(faq.answer)}
+              />
+            ))}
         </div>
       </div>
     </section>

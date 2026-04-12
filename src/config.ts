@@ -49,9 +49,6 @@ export const SITE_CONFIG = {
       logo: "zpmv.png",
     },
   ],
-  faqs: {
-    count: 7,
-  },
   gallery: {
     totalPhotos: 20,
   },
