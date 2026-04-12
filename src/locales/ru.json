@@ -1,130 +1,139 @@
 {
   "nav": {
-    "team": "Náš tým",
-    "pricing": "Ceník",
+    "team": "Наша команда",
+    "pricing": "Прайс-лист",
     "faq": "FAQ",
     "gallery": "Фотогалерея",
-    "contact": "Kontakt"
+    "treatments": "Услуги",
+    "references": "Отзывы о нас",
+    "contact": "Записаться"
   },
   "hero": {
-    "titleBefore": "Péče o váš ",
-    "titleHighlight": "úsměv",
-    "titleAfter": " na prvním místě.",
-    "subtitle": "Vítejte v zubní ordinaci, kde se spojuje moderní technika s profesionální péčí.",
-    "hours": "Ordinační hodiny: Po–Čt 8:00–16:00 | Pá 8:00–13:00"
+    "titleBefore": "Забота о Вашей ",
+    "titleHighlight": "улыбке",
+    "titleAfter": " на первом месте.",
+    "subtitle": "Добро пожаловать в клинику, где современные технологии сочетаются с профессиональным уходом и человечным подходом. Мы специализируемся на терапевтической, эстетической и детской стоматологии.",
+    "hours": "Часы работы: Пн–Чт 8:00–16:00 | Пт 8:00–13:00"
   },
   "team": {
-    "heading": "Náš tým",
+    "heading": "Наша команда",
     "memberBios": [
-      "Absolventka 1. lékařské fakulty Univerzity Karlovy\nKonzervační stomatologie\nČištění kořenových kanálků pod mikroskopem\nProtetika\nChirurgie\nDětská stomatologie",
-      "Diplomovaná dentální hygienistka s bakalářským vzděláním v oboru dentální hygiena. Zaměřuje se na preventivní péči, profesionální čištění zubů, instruktáž správné ústní hygieny a ošetření dásní. Pacientům pomáhá s prevencí paradontózy a správným výběrem pomůcek pro domácí péči. Věří, že zdravý úsměv začíná pravidelnou hygienou."
+      "Терапевтическая стоматология\nЭстетические фотокомпозитные реставрации\nПротезирование\nХирургия\nДетская стоматология",
+      "Стоматологическая гигиена\nЛечение пародонтоза\nОтбеливание зубов"
     ]
   },
   "pricing": {
-    "heading": "Ceník",
-    "descriptionBefore": "Pokud máte dotazy, neváhejte nás ",
-    "descriptionLink": "kontaktovat",
-    "cancellationNotice": ""
+    "heading": "Прайс-лист",
+    "descriptionBefore": "Для получения конкретного ценового предложения или дополнительной информации, пожалуйста, ",
+    "descriptionLink": "свяжитесь с нами",
+    "cancellationNotice": "При неявке на приём без предупреждения более чем за 24 часа до запланированного времени взимается штраф в размере 750 Kč за 30 мин. Благодарим за понимание."
   },
   "bankInfo": {
-    "heading": "Bankovní spojení",
-    "accountLabel": "Číslo účtu",
-    "bankLabel": "Banka",
-    "recipientLabel": "Příjemce",
-    "qrLabel": "Naskenujte QR kód pro platbu"
+    "heading": "Банковские реквизиты",
+    "accountLabel": "Номер счёта",
+    "bankLabel": "Банк",
+    "recipientLabel": "Получатель",
+    "qrLabel": "Отсканируйте QR-код для оплаты",
+    "identNumber": "ИН",
+    "registerInfo": "Компания зарегистрирована в торговом реестре, который ведёт городской суд Праги, раздел C, вкладыш C113832."
   },
   "insurance": {
-    "heading": "Spolupracující pojišťovny"
+    "heading": "Мы сотрудничаем со страховыми компаниями"
   },
   "faq": {
-    "heading": "Často kladené dotazy",
+    "heading": "Часто задаваемые вопросы",
     "items": [
       {
-        "question": "Jak si mohu domluvit termín?",
-        "answer": "Termín si můžete domluvit telefonicky na čísle +420 776 377 100 nebo e-mailem na adrese recepce@lbclinic.cz. Objednat se můžete také prostřednictvím kontaktního formuláře na našem webu."
+        "question": "Как записаться на приём?",
+        "answer": "Записаться на приём можно по телефону +420 776 377 100 или по электронной почте recepce@lbclinic.cz. Также вы можете записаться через контактную форму на нашем сайте."
       },
       {
-        "question": "Kudy se k nám dostanete a kde zaparkovat?",
-        "answer": "Naše ordinace se nachází na adrese Vodňanská 1656/5, Praha 9. Dostanete se k nám snadno MHD i autem. V blízkosti ordinace je k dispozici parkování."
+        "question": "Как до нас добраться и где припарковаться?",
+        "answer": [
+          "<b>Общественный транспорт:</b> Мы находимся всего в 5 минутах ходьбы от станции метро Rajská zahrada (линия B), воспользуйтесь подземным переходом.",
+          "<b>На автомобиле:</b> Для наших пациентов предусмотрена парковка прямо в частном дворе здания."
+        ]
       },
       {
-        "question": "Jaké platební metody přijímáte?",
-        "answer": "Přijímáme platby v hotovosti, platební kartou i bankovním převodem. QR kód pro platbu najdete v sekci Ceník. Na některé výkony se vztahuje úhrada ze zdravotního pojištění."
+        "question": "Какие способы оплаты вы принимаете?",
+        "answer": "Мы принимаем оплату наличными, банковской картой и банковским переводом. QR-код для оплаты вы найдёте в разделе «Прайс-лист»."
       },
       {
-        "question": "Přijímáte nové pacienty?",
-        "answer": "Ano, rádi přivítáme nové pacienty. Pro registraci stačí zavolat na naši recepci nebo vyplnit kontaktní formulář."
+        "question": "Как проходит первый визит?",
+        "answer": "При первом посещении мы проведём тщательное обследование полости рта, включая рентгеновский снимок и входную фотодокументацию. Оценим общее состояние зубов и дёсен и предложим индивидуальный план лечения. Приём длится примерно 30–45 минут."
       },
       {
-        "question": "Jak probíhá první návštěva?",
-        "answer": "Při první návštěvě provedeme důkladné vyšetření dutiny ústní včetně rentgenového snímku. Zhodnotíme celkový stav chrupu a dásní a navrhneme individuální plán léčby. Trvá přibližně 30–45 minut."
+        "question": "Что делать при острой зубной боли?",
+        "answer": [
+          "Свяжитесь с нами по телефону +420 776 377 100, мы постараемся записать Вас как можно скорее. В нерабочее время рекомендуем обратиться в стоматологическую неотложную помощь:",
+          "<b>Nemocnice Na Františku, Praha 1</b>, тел. 222 924 268, Spálená 12, Praha 1, тел. 222 924 268",
+          "<b>VFN, U Nemocnice 2, Praha 2</b> тел. 224 962 723; 224 962 725; 224 963 138",
+          "<b>Fakultní Thomayerova nemocnice s poliklinikou, Vídeňská 800, Praha 4</b>, павильон B1, тел. 261 083 546",
+          "<b>Dětská zubní pohotovost Fakultní nemocnice v Motole, V Úvalu 84, Praha 5</b> контакт: тел. 224 433 653; 224 433 652, 224 433 101, 224 433 120"
+        ]
       },
       {
-        "question": "Co dělat v případě akutních bolestí?",
-        "answer": "Kontaktujte nás telefonicky na +420 776 377 100 a pokusíme se vás objednat co nejdříve. Mimo ordinační hodiny doporučujeme pohotovostní zubní službu."
+        "question": "Рекомендации по уходу после лечения?",
+        "answer": "После каждого лечения мы предоставим подробные инструкции."
       },
       {
-        "question": "Doporučení pro péči po ošetření?",
-        "answer": "Po každém ošetření poskytneme podrobné instrukce. Obecně doporučujeme nejíst a nepít horké nápoje po dobu 2 hodin po zákroku."
-      },
-      {
-        "question": "Jaké pomůcky doporučujete pro domácí péči?",
-        "answer": "Měkký nebo středně tvrdý kartáček, mezizubní kartáčky nebo zubní nit a ústní vodu bez alkoholu. Naše hygienistka vám doporučí konkrétní pomůcky."
+        "question": "Какие стоматологические принадлежности вы рекомендуете для домашнего ухода?",
+        "answer": "Наиболее эффективны, как правило, мягкие зубные щётки. Мягкие щетинки наиболее эффективно удаляют зубной налёт и при этом бережно относятся к дёснам. Жёсткая же щётка может значительно повредить дёсны и сами зубы. Ежедневное использование межзубной щётки также является важным условием полного очищения зубов. Обычная щётка не может проникнуть в межзубные промежутки, где тоже образуется налёт. Размеры межзубных щёток различаются по цвету — с подбором правильного размера Вам поможет наш стоматологический гигиенист."
       }
     ]
   },
   "contact": {
-    "heading": "Kontakt",
-    "addressHeading": "Adresa",
-    "hoursHeading": "Ordinační hodiny",
-    "monThu": "Po–Čt",
-    "fri": "Pá",
-    "closed": "Zavřeno",
-    "mapIframeTitle": "Карта — расположение клиники LB Clinic",
+    "heading": "Контакты",
+    "addressHeading": "Адрес",
+    "hoursHeading": "Часы работы",
+    "monThu": "Пн–Чт",
+    "fri": "Пт",
+    "closed": "Закрыто",
+    "mapIframeTitle": "Карта — расположение клиники LB clinic",
     "openInGoogleMaps": "Открыть в Google Maps",
     "form": {
-      "name": "Jméno",
-      "phone": "Telefon",
-      "email": "E-mail",
-      "reason": "Důvod objednání",
-      "reasonPlaceholder": "– Vyberte důvod –",
+      "name": "Имя и фамилия",
+      "phone": "Телефон",
+      "email": "Эл. почта",
+      "reason": "Причина записи",
+      "reasonPlaceholder": "– Выберите причину –",
       "reasonOptions": {
-        "dental_hygiene": "Dentální hygiena",
-        "acute_treatment": "Akutní ošetření",
-        "prevention": "Prevence",
-        "initial_exam": "Vstupní prohlídka",
-        "teeth_whitening": "Bělení zubů",
-        "filling": "Výplň",
-        "root_canal": "Ošetření kořenových kanálků",
-        "prosthetics": "Protetická práce",
-        "extraction": "Extrakce",
-        "consultation": "Konzultace",
-        "other": "Jiné"
+        "dental_hygiene": "Стоматологическая гигиена",
+        "acute_treatment": "Неотложное лечение",
+        "prevention": "Профилактический осмотр",
+        "initial_exam": "Первичный осмотр",
+        "teeth_whitening": "Отбеливание зубов",
+        "filling": "Пломба",
+        "root_canal": "Лечение корневых каналов",
+        "prosthetics": "Протезирование",
+        "extraction": "Удаление зуба",
+        "consultation": "Консультация",
+        "other": "Другое"
       },
-      "preferredTime": "Preferuji čas",
+      "preferredTime": "Предпочтительное время",
       "timeOptions": {
-        "any": "Nerozhoduje",
-        "morning": "Dopoledne",
-        "afternoon": "Odpoledne"
+        "any": "Не имеет значения",
+        "morning": "Первая половина дня",
+        "afternoon": "Вторая половина дня"
       },
-      "message": "Vaše zpráva",
-      "submit": "Odeslat",
-      "sending": "Odesílání...",
-      "successMessage": "Zpráva byla úspěšně odeslána. Brzy se vám ozveme.",
-      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později.",
+      "message": "Ваше сообщение",
+      "submit": "Отправить",
+      "sending": "Отправка...",
+      "successMessage": "Сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.",
+      "errorMessage": "Отправка не удалась. Пожалуйста, попробуйте позже.",
       "validation": {
-        "nameRequired": "Пожалуйста, укажите имя.",
+        "nameRequired": "Пожалуйста, введите имя.",
         "nameMinLength": "Имя должно содержать не менее {{min}} символов.",
-        "nameMaxLength": "Имя не должно превышать {{max}} символов.",
-        "phoneRequired": "Пожалуйста, укажите телефон.",
+        "nameMaxLength": "Имя может содержать не более {{max}} символов.",
+        "phoneRequired": "Пожалуйста, введите номер телефона.",
         "phoneMinLength": "Телефон должен содержать не менее {{min}} символов.",
-        "phoneMaxLength": "Телефон не должен превышать {{max}} символов.",
-        "emailRequired": "Пожалуйста, укажите электронную почту.",
+        "phoneMaxLength": "Телефон может содержать не более {{max}} символов.",
+        "emailRequired": "Пожалуйста, введите адрес эл. почты.",
         "emailInvalid": "Введите корректный адрес электронной почты.",
-        "emailMaxLength": "Адрес почты не должен превышать {{max}} символов.",
+        "emailMaxLength": "Адрес эл. почты может содержать не более {{max}} символов.",
         "reasonRequired": "Пожалуйста, выберите причину записи.",
-        "preferredTimeRequired": "Пожалуйста, выберите удобное время.",
-        "messageMaxLength": "Сообщение не должно превышать {{max}} символов."
+        "preferredTimeRequired": "Пожалуйста, выберите предпочтительное время.",
+        "messageMaxLength": "Сообщение может содержать не более {{max}} символов."
       }
     }
   },
@@ -134,8 +143,123 @@
     "next": "Следующий пример",
     "goToSlide": "Перейти к слайду {{index}}"
   },
-  "gallery": {
-    "heading": "Фотогалерея",
-    "closeLabel": "Закрыть"
+  "gallery": { "heading": "Фотогалерея", "closeLabel": "Закрыть" },
+  "references": {
+    "heading": "Отзывы о нас",
+    "items": [
+      {
+        "personName": "Veronika Moserová",
+        "text": "Полностью довольна. Доктор Vernerová очень приятная и прекрасно относится к пациентам, что я, как человек, испытывающий панический страх перед стоматологом, очень ценю."
+      },
+      {
+        "personName": "Alex Cuker",
+        "text": "Доктор была очень приятной и профессиональной. Точно определила проблемы в полости рта и с готовностью помогла в их решении."
+      },
+      {
+        "personName": "Barbora Kosinová",
+        "text": "Все приветливые и отзывчивые. Доктор Vernerová доброжелательная, милая и прекрасно ладит с детьми."
+      }
+    ]
+  },
+  "treatments": {
+    "heading": "Наши услуги",
+    "intro": "Наша клиника предоставляет полный спектр стоматологических услуг под одной крышей. Команда специализированных врачей охватывает все направления современной стоматологии. Мы делаем ставку на точную работу, индивидуальный подход к лечению и открытое общение с пациентом. Мы убеждены, что первоклассная стоматология и доброжелательная атмосфера неразрывно связаны.",
+    "items": [
+      {
+        "title": "Профилактический осмотр",
+        "desc": "Тщательное обследование, направленное на раннее выявление проблем и поддержание здоровья зубов на долгие годы.",
+        "img": "preventive_exam.svg"
+      },
+      {
+        "title": "Стоматологическая гигиена",
+        "desc": "Профессиональная чистка зубов как основа профилактики — эффективная защита от кариеса и заболеваний дёсен.",
+        "img": "dental_hygiene.svg"
+      },
+      {
+        "title": "Отбеливание зубов",
+        "desc": "Бережное осветление зубов для более яркой улыбки и устранение нежелательной пигментации эмали.",
+        "img": "teeth_whitening.svg"
+      },
+      {
+        "title": "Детская стоматология",
+        "desc": "Мы заботимся о детских зубах с самого первого зубика. Регулярная профилактика закладывает основу красивой улыбки на всю жизнь.",
+        "img": "pediatric_dentistry.svg"
+      },
+      {
+        "title": "Удаление зубов мудрости",
+        "desc": "Безопасное и бережное удаление зубов мудрости с акцентом на минимальные послеоперационные осложнения.",
+        "img": "wisdom_teeth.svg"
+      },
+      {
+        "title": "Зубные имплантаты",
+        "desc": "Надёжная и долговечная замена отсутствующего зуба с использованием современных имплантационных систем.",
+        "img": "implants.svg"
+      },
+      {
+        "title": "Эстетические пломбы",
+        "desc": "Пломбы в цвет зуба для лечения кариеса и восстановления естественного внешнего вида и функции.",
+        "img": "fillings.svg"
+      },
+      {
+        "title": "Ортодонтия",
+        "desc": "Коррекция положения зубов и челюстей для здорового прикуса и эстетически ровной улыбки.",
+        "img": "orthodontics.svg"
+      },
+      {
+        "title": "Эндодонтия",
+        "desc": "Лечение корневых каналов позволяет сохранить зуб и избежать его удаления.",
+        "img": "endodontics.svg"
+      },
+      {
+        "title": "Лечение пародонтита",
+        "desc": "Эффективное лечение воспаления дёсен и пародонтита с целью остановить убыль тканей и стабилизировать зубной ряд.",
+        "img": "periodontics.svg"
+      },
+      {
+        "title": "Зубные протезы",
+        "desc": "Качественные съёмные протезы, изготовленные по индивидуальным меркам для комфортного и надёжного ежедневного ношения.",
+        "img": "dentures.svg"
+      },
+      {
+        "title": "Керамические виниры",
+        "desc": "Тонкие керамические накладки на переднюю поверхность зубов для идеальной формы, цвета и сияющей улыбки.",
+        "img": "veneers.svg"
+      },
+      {
+        "title": "Зубной мост",
+        "desc": "Несъёмное решение для замены одного или нескольких отсутствующих зубов с опорой на соседние зубы.",
+        "img": "bridge.svg"
+      },
+      {
+        "title": "Зубная коронка",
+        "desc": "Индивидуально изготовленная коронка, которая восстанавливает форму, прочность и естественный вид зуба.",
+        "img": "crown.svg"
+      },
+      {
+        "title": "Лечение под седацией и наркозом",
+        "desc": "Процедуры под седацией или общим наркозом обеспечивают спокойное лечение без боли и тревоги.",
+        "img": "sedation.svg"
+      },
+      {
+        "title": "Полная реконструкция улыбки",
+        "desc": "Комплексное преображение улыбки, сочетающее эстетические и функциональные решения для совершенно нового начала.",
+        "img": "smile_makeover.svg"
+      },
+      {
+        "title": "Челюстно-лицевая хирургия",
+        "desc": "Хирургические вмешательства в полости рта, выполняемые с максимальной точностью и акцентом на бережный подход.",
+        "img": "oral_surgery.svg"
+      },
+      {
+        "title": "Экстренная стоматологическая помощь",
+        "desc": "Быстрая помощь при острой зубной боли, направленная на немедленное облегчение и предотвращение дальнейших осложнений.",
+        "img": "emergency.svg"
+      },
+      {
+        "title": "Рентген-диагностика",
+        "desc": "Современное 2D и 3D рентгеновское обследование для точного планирования лечения и надёжной диагностики.",
+        "img": "xray.svg"
+      }
+    ]
   }
 }

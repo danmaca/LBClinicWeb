@@ -1,117 +1,126 @@
 {
   "nav": {
-    "team": "Náš tým",
-    "pricing": "Ceník",
+    "team": "Our Team",
+    "pricing": "Pricing",
     "faq": "FAQ",
-    "gallery": "Gallery",
-    "contact": "Kontakt"
+    "gallery": "Photo Gallery",
+    "treatments": "Treatments",
+    "references": "Testimonials",
+    "contact": "Book an Appointment"
   },
   "hero": {
-    "titleBefore": "Péče o váš ",
-    "titleHighlight": "úsměv",
-    "titleAfter": " na prvním místě.",
-    "subtitle": "Vítejte v zubní ordinaci, kde se spojuje moderní technika s profesionální péčí.",
-    "hours": "Ordinační hodiny: Po–Čt 8:00–16:00 | Pá 8:00–13:00"
+    "titleBefore": "Your ",
+    "titleHighlight": "smile",
+    "titleAfter": " is our top priority.",
+    "subtitle": "Welcome to a practice where modern technology meets professional care and a personal approach. We specialize in restorative, aesthetic, and pediatric dentistry.",
+    "hours": "Office hours: Mon–Thu 8:00–16:00 | Fri 8:00–13:00"
   },
   "team": {
-    "heading": "Náš tým",
+    "heading": "Our Team",
     "memberBios": [
-      "Absolventka 1. lékařské fakulty Univerzity Karlovy\nKonzervační stomatologie\nČištění kořenových kanálků pod mikroskopem\nProtetika\nChirurgie\nDětská stomatologie",
-      "Diplomovaná dentální hygienistka s bakalářským vzděláním v oboru dentální hygiena. Zaměřuje se na preventivní péči, profesionální čištění zubů, instruktáž správné ústní hygieny a ošetření dásní. Pacientům pomáhá s prevencí paradontózy a správným výběrem pomůcek pro domácí péči. Věří, že zdravý úsměv začíná pravidelnou hygienou."
+      "Restorative Dentistry\nAesthetic Photocomposite Restorations\nProsthodontics\nOral Surgery\nPediatric Dentistry",
+      "Dental Hygiene\nPeriodontal Disease Treatment\nTeeth Whitening"
     ]
   },
   "pricing": {
-    "heading": "Ceník",
-    "descriptionBefore": "Pokud máte dotazy, neváhejte nás ",
-    "descriptionLink": "kontaktovat",
-    "cancellationNotice": ""
+    "heading": "Pricing",
+    "descriptionBefore": "For a specific price quote or more information, please ",
+    "descriptionLink": "contact us",
+    "cancellationNotice": "If an appointment is not cancelled more than 24 hours before the scheduled time, a cancellation fee of 750 CZK per 30 min will be charged. Thank you for your understanding."
   },
   "bankInfo": {
-    "heading": "Bankovní spojení",
-    "accountLabel": "Číslo účtu",
-    "bankLabel": "Banka",
+    "heading": "Bank Details",
+    "accountLabel": "Account number",
+    "bankLabel": "Bank",
     "recipientLabel": "Recipient",
-    "qrLabel": "Naskenujte QR kód pro platbu"
+    "qrLabel": "Scan the QR code to make a payment",
+    "identNumber": "ID No.",
+    "registerInfo": "The company is registered in the Commercial Register maintained by the Municipal Court in Prague, Section C, File C113832."
   },
   "insurance": {
-    "heading": "Spolupracující pojišťovny"
+    "heading": "We cooperate with health insurance companies"
   },
   "faq": {
-    "heading": "Často kladené dotazy",
+    "heading": "Frequently Asked Questions",
     "items": [
       {
-        "question": "Jak si mohu domluvit termín?",
-        "answer": "Termín si můžete domluvit telefonicky na čísle +420 776 377 100 nebo e-mailem na adrese recepce@lbclinic.cz. Objednat se můžete také prostřednictvím kontaktního formuláře na našem webu."
+        "question": "How can I book an appointment?",
+        "answer": "You can book an appointment by phone at +420 776 377 100 or by email at recepce@lbclinic.cz. You can also book through the contact form on our website."
       },
       {
-        "question": "Kudy se k nám dostanete a kde zaparkovat?",
-        "answer": "Naše ordinace se nachází na adrese Vodňanská 1656/5, Praha 9. Dostanete se k nám snadno MHD i autem. V blízkosti ordinace je k dispozici parkování."
+        "question": "How to get to us and where to park?",
+        "answer": [
+          "<b>Public transport:</b> We are located just a 5-minute walk from the Rajská zahrada metro station (line B) — use the underpass.",
+          "<b>By car:</b> Parking is available for our patients directly in the private courtyard of the building."
+        ]
       },
       {
-        "question": "Jaké platební metody přijímáte?",
-        "answer": "Přijímáme platby v hotovosti, platební kartou i bankovním převodem. QR kód pro platbu najdete v sekci Ceník. Na některé výkony se vztahuje úhrada ze zdravotního pojištění."
+        "question": "What payment methods do you accept?",
+        "answer": "We accept cash, credit/debit cards, and bank transfers. You can find a QR code for payment below the Pricing section."
       },
       {
-        "question": "Přijímáte nové pacienty?",
-        "answer": "Ano, rádi přivítáme nové pacienty. Pro registraci stačí zavolat na naši recepci nebo vyplnit kontaktní formulář."
+        "question": "What happens during the first visit?",
+        "answer": "During the first visit, we perform a thorough examination of the oral cavity, including an X-ray and initial photo documentation. We assess the overall condition of the teeth and gums and propose an individual treatment plan. It takes approximately 30–45 minutes."
       },
       {
-        "question": "Jak probíhá první návštěva?",
-        "answer": "Při první návštěvě provedeme důkladné vyšetření dutiny ústní včetně rentgenového snímku. Zhodnotíme celkový stav chrupu a dásní a navrhneme individuální plán léčby. Trvá přibližně 30–45 minut."
+        "question": "What to do in case of acute pain?",
+        "answer": [
+          "Contact us by phone at +420 776 377 100 and we will try to schedule you as soon as possible. Outside our office hours, we recommend the dental emergency services:",
+          "<b>Nemocnice Na Františku, Praha 1</b>, tel. 222 924 268, Spálená 12, Praha 1, tel. 222 924 268",
+          "<b>VFN, U Nemocnice 2, Praha 2</b> tel. 224 962 723; 224 962 725; 224 963 138",
+          "<b>Fakultní Thomayerova nemocnice s poliklinikou, Vídeňská 800, Praha 4</b>, pavilon B1, tel. 261 083 546",
+          "<b>Children's dental emergency at Motol University Hospital, V Úvalu 84, Praha 5</b> contact: tel. 224 433 653; 224 433 652, 224 433 101, 224 433 120"
+        ]
       },
       {
-        "question": "Co dělat v případě akutních bolestí?",
-        "answer": "Kontaktujte nás telefonicky na +420 776 377 100 a pokusíme se vás objednat co nejdříve. Mimo ordinační hodiny doporučujeme pohotovostní zubní službu."
+        "question": "Post-treatment care recommendations?",
+        "answer": "After each treatment, we provide detailed aftercare instructions."
       },
       {
-        "question": "Doporučení pro péči po ošetření?",
-        "answer": "Po každém ošetření poskytneme podrobné instrukce. Obecně doporučujeme nejíst a nepít horké nápoje po dobu 2 hodin po zákroku."
-      },
-      {
-        "question": "Jaké pomůcky doporučujete pro domácí péči?",
-        "answer": "Měkký nebo středně tvrdý kartáček, mezizubní kartáčky nebo zubní nit a ústní vodu bez alkoholu. Naše hygienistka vám doporučí konkrétní pomůcky."
+        "question": "What dental tools do you recommend for home care?",
+        "answer": "Soft toothbrushes are generally the most effective. Soft bristles are the most efficient against dental plaque while being gentle on the gums. In contrast, a hard toothbrush can significantly damage both the gums and the teeth themselves. Daily use of an interdental brush is also an important prerequisite for thorough cleaning of the teeth. A regular toothbrush cannot reach the interdental spaces where plaque also forms. Interdental brushes come in different sizes distinguished by color — our dental hygienist will help you choose the right ones."
       }
     ]
   },
   "contact": {
-    "heading": "Kontakt",
-    "addressHeading": "Adresa",
-    "hoursHeading": "Ordinační hodiny",
-    "monThu": "Po–Čt",
-    "fri": "Pá",
-    "closed": "Zavřeno",
-    "mapIframeTitle": "Map — LB Clinic location",
+    "heading": "Contact",
+    "addressHeading": "Address",
+    "hoursHeading": "Office Hours",
+    "monThu": "Mon–Thu",
+    "fri": "Fri",
+    "closed": "Closed",
+    "mapIframeTitle": "Map — LB clinic office location",
     "openInGoogleMaps": "Open in Google Maps",
     "form": {
-      "name": "Jméno",
-      "phone": "Telefon",
-      "email": "E-mail",
-      "reason": "Důvod objednání",
-      "reasonPlaceholder": "– Vyberte důvod –",
+      "name": "Full name",
+      "phone": "Phone",
+      "email": "Email",
+      "reason": "Reason for booking",
+      "reasonPlaceholder": "– Select a reason –",
       "reasonOptions": {
-        "dental_hygiene": "Dental hygiene",
-        "acute_treatment": "Akutní ošetření",
-        "prevention": "Prevence",
-        "initial_exam": "Vstupní prohlídka",
-        "teeth_whitening": "Bělení zubů",
-        "filling": "Výplň",
-        "root_canal": "Ošetření kořenových kanálků",
-        "prosthetics": "Protetická práce",
-        "extraction": "Extrakce",
-        "consultation": "Konzultace",
-        "other": "Jiné"
+        "dental_hygiene": "Dental Hygiene",
+        "acute_treatment": "Acute Treatment",
+        "prevention": "Preventive Checkup",
+        "initial_exam": "Initial Examination",
+        "teeth_whitening": "Teeth Whitening",
+        "filling": "Filling",
+        "root_canal": "Root Canal Treatment",
+        "prosthetics": "Prosthetic Work",
+        "extraction": "Extraction",
+        "consultation": "Consultation",
+        "other": "Other"
       },
-      "preferredTime": "Preferuji čas",
+      "preferredTime": "Preferred time",
       "timeOptions": {
-        "any": "Nerozhoduje",
-        "morning": "Dopoledne",
-        "afternoon": "Odpoledne"
+        "any": "No preference",
+        "morning": "Morning",
+        "afternoon": "Afternoon"
       },
-      "message": "Vaše zpráva",
-      "submit": "Odeslat",
-      "sending": "Odesílání...",
-      "successMessage": "Zpráva byla úspěšně odeslána. Brzy se vám ozveme.",
-      "errorMessage": "Odeslání se nezdařilo. Zkuste to prosím později.",
+      "message": "Your message",
+      "submit": "Submit",
+      "sending": "Sending...",
+      "successMessage": "Your message has been sent successfully. We will get back to you soon.",
+      "errorMessage": "Sending failed. Please try again later.",
       "validation": {
         "nameRequired": "Please enter your name.",
         "nameMinLength": "Name must be at least {{min}} characters long.",
@@ -119,23 +128,141 @@
         "phoneRequired": "Please enter your phone number.",
         "phoneMinLength": "Phone number must be at least {{min}} characters long.",
         "phoneMaxLength": "Phone number must be at most {{max}} characters long.",
-        "emailRequired": "Please enter your email address.",
+        "emailRequired": "Please enter your email.",
         "emailInvalid": "Please enter a valid email address.",
         "emailMaxLength": "Email must be at most {{max}} characters long.",
-        "reasonRequired": "Please select a reason for your appointment.",
+        "reasonRequired": "Please select a reason for booking.",
         "preferredTimeRequired": "Please select a preferred time.",
         "messageMaxLength": "Message must be at most {{max}} characters long."
       }
     }
   },
   "carousel": {
-    "slideAlt": "Showcase {{index}}",
-    "prev": "Previous showcase",
-    "next": "Next showcase",
+    "slideAlt": "Example {{index}}",
+    "prev": "Previous example",
+    "next": "Next example",
     "goToSlide": "Go to slide {{index}}"
   },
   "gallery": {
-    "heading": "Gallery",
+    "heading": "Photo Gallery",
     "closeLabel": "Close"
+  },
+  "references": {
+    "heading": "Testimonials",
+    "items": [
+      {
+        "personName": "Veronika Moserová",
+        "text": "Absolute satisfaction. Dr. Vernerová is very kind and has a wonderful approach to patients, which I really appreciate as someone who has panic attacks at the dentist."
+      },
+      {
+        "personName": "Alex Cuker",
+        "text": "The dentist was very kind and professional. She correctly identified the issues in the oral cavity and was happy to accommodate their resolution."
+      },
+      {
+        "personName": "Barbora Kosinová",
+        "text": "Everyone was pleasant and helpful. Dr. Vernerová was accommodating, kind, and has a wonderful approach with children."
+      }
+    ]
+  },
+  "treatments": {
+    "heading": "Our Treatments",
+    "intro": "Our clinic provides a comprehensive range of dental services under one roof. A team of specialized professionals covers all areas of modern dental care. We rely on precision, an individual approach to treatment, and open communication with patients. We believe that top-quality dentistry and a welcoming environment go hand in hand.",
+    "items": [
+      {
+        "title": "Preventive Checkup",
+        "desc": "A thorough examination focused on early detection of problems and maintaining healthy teeth for years to come.",
+        "img": "preventive_exam.svg"
+      },
+      {
+        "title": "Dental Hygiene",
+        "desc": "Professional teeth cleaning as the foundation of prevention — effective protection against cavities and gum disease.",
+        "img": "dental_hygiene.svg"
+      },
+      {
+        "title": "Teeth Whitening",
+        "desc": "Gentle teeth whitening for a brighter smile and removal of unwanted enamel discolorations.",
+        "img": "teeth_whitening.svg"
+      },
+      {
+        "title": "Pediatric Dentistry",
+        "desc": "We take care of children's teeth from the very first tooth. Regular prevention lays the foundation for a beautiful smile for life.",
+        "img": "pediatric_dentistry.svg"
+      },
+      {
+        "title": "Wisdom Teeth Extraction",
+        "desc": "Safe and gentle removal of wisdom teeth with an emphasis on minimal post-operative discomfort.",
+        "img": "wisdom_teeth.svg"
+      },
+      {
+        "title": "Dental Implants",
+        "desc": "A reliable and permanent replacement for a missing tooth using modern implant systems.",
+        "img": "implants.svg"
+      },
+      {
+        "title": "Aesthetic Dental Fillings",
+        "desc": "Tooth-colored fillings for treating cavities and restoring the natural appearance and function of teeth.",
+        "img": "fillings.svg"
+      },
+      {
+        "title": "Orthodontics",
+        "desc": "Correction of tooth and jaw alignment for a healthy bite and an aesthetically even smile.",
+        "img": "orthodontics.svg"
+      },
+      {
+        "title": "Endodontics",
+        "desc": "Root canal treatment that can save a tooth and prevent the need for extraction.",
+        "img": "endodontics.svg"
+      },
+      {
+        "title": "Periodontitis Treatment",
+        "desc": "Effective treatment of gum inflammation and periodontitis aimed at stopping tissue loss and stabilizing teeth.",
+        "img": "periodontics.svg"
+      },
+      {
+        "title": "Dentures and Prostheses",
+        "desc": "High-quality removable prostheses custom-made for comfortable and reliable daily wear.",
+        "img": "dentures.svg"
+      },
+      {
+        "title": "Ceramic Veneers",
+        "desc": "Thin ceramic shells bonded to the front of teeth for a perfect shape, color, and radiant smile.",
+        "img": "veneers.svg"
+      },
+      {
+        "title": "Dental Bridge",
+        "desc": "A fixed solution for replacing one or more missing teeth, supported by adjacent abutment teeth.",
+        "img": "bridge.svg"
+      },
+      {
+        "title": "Dental Crown",
+        "desc": "An individually crafted crown that restores the shape, strength, and natural appearance of a tooth.",
+        "img": "crown.svg"
+      },
+      {
+        "title": "Sedation and Anesthesia Treatment",
+        "desc": "Procedures under conscious sedation or general anesthesia ensure a calm, pain-free, and anxiety-free experience.",
+        "img": "sedation.svg"
+      },
+      {
+        "title": "Complete Smile Makeover",
+        "desc": "A total smile transformation combining aesthetic and functional solutions for an entirely new beginning.",
+        "img": "smile_makeover.svg"
+      },
+      {
+        "title": "Oral Surgery",
+        "desc": "Surgical procedures in the oral cavity performed with maximum precision and a focus on a gentle approach.",
+        "img": "oral_surgery.svg"
+      },
+      {
+        "title": "Dental Emergency",
+        "desc": "Prompt help for acute toothache focused on immediate relief and prevention of further complications.",
+        "img": "emergency.svg"
+      },
+      {
+        "title": "X-Ray Diagnostics",
+        "desc": "Modern 2D and 3D X-ray imaging for precise treatment planning and reliable diagnostics.",
+        "img": "xray.svg"
+      }
+    ]
   }
 }
