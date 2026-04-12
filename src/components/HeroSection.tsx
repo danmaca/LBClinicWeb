@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { ReferenceCarousel } from "./ReferenceCarousel";
 
 export const HeroSection: React.FC = () => {
   const { t } = useTranslation();
@@ -27,8 +26,6 @@ export const HeroSection: React.FC = () => {
             {t("hero.titleAfter")}
           </h1>
           <p className="text-md text-gray-500 mb-8 font-medium">{t("hero.hours")}</p>
-
-          <ReferenceCarousel />
         </div>
       </div>
     </section>
