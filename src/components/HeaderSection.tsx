@@ -48,7 +48,7 @@ export const HeaderSection: React.FC = () => {
 
           {/* Desktop Right */}
           <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 lg:flex-col lg:items-start lg:space-x-0 lg:space-y-1">
               <a
                 href={`mailto:${SITE_CONFIG.email}`}
                 className="flex items-center gap-2 text-gray-500 hover:text-accent transition-colors duration-[800ms]"
