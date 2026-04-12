@@ -66,7 +66,7 @@ export const ReferenceCarousel: React.FC = () => {
 
   return (
     <div className="mt-5 w-full overflow-hidden">
-      <div className="relative group rounded-xl shadow-lg bg-gray-50 w-full py-6 px-2 md:px-12 border border-gray-100 min-w-0 overflow-hidden">
+      <div className="relative group rounded-xl shadow-lg bg-gray-50 w-full py-5 px-2 md:px-10 border border-gray-100 min-w-0 overflow-hidden">
         <div className="overflow-hidden w-full min-w-0">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -98,8 +98,8 @@ export const ReferenceCarousel: React.FC = () => {
                       alt={getAlt(slide, index)}
                       className={
                         slide.text
-                          ? "w-full aspect-[4/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
-                          : "w-full aspect-[4/3] object-contain"
+                          ? "w-full aspect-[5/3] object-contain bg-gray-100 lg:aspect-auto lg:h-full lg:w-auto lg:object-contain lg:bg-transparent lg:ml-auto"
+                          : "w-full aspect-[5/3] object-contain"
                       }
                     />
                   </div>
@@ -111,14 +111,14 @@ export const ReferenceCarousel: React.FC = () => {
 
                   {/* Text */}
                   {slide.text ? (
-                    <div className="p-3 sm:p-4 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[320px] lg:flex lg:flex-col lg:justify-center lg:px-12 lg:py-10 xl:px-16 min-w-0 overflow-hidden">
+                    <div className="p-2.5 sm:p-3 lg:relative lg:z-[2] lg:w-3/5 lg:min-h-[256px] lg:flex lg:flex-col lg:justify-center lg:px-10 lg:py-8 xl:px-12 min-w-0 overflow-hidden">
                       {slide.personName && (
-                        <h3 className="text-left text-sm sm:text-lg text-gray-900 font-semibold mb-1 sm:mb-2 lg:text-2xl xl:text-3xl lg:font-light lg:mb-4 break-words">
+                        <h3 className="text-left text-sm sm:text-base text-gray-900 font-semibold mb-1 sm:mb-1.5 lg:text-xl xl:text-2xl lg:font-light lg:mb-3 break-words">
                           {slide.personName}
                         </h3>
                       )}
                       {slide.text && (
-                        <p className="text-left text-xs sm:text-base text-gray-700 leading-relaxed lg:text-lg xl:text-xl lg:italic lg:leading-relaxed lg:font-medium break-words">
+                        <p className="text-left text-xs sm:text-sm text-gray-700 leading-relaxed lg:text-base xl:text-lg lg:italic lg:leading-relaxed lg:font-medium break-words">
                           {renderText(slide.text)}
                         </p>
                       )}
