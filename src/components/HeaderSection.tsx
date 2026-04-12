@@ -10,6 +10,7 @@ export const HeaderSection: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
+    { href: "#/treatments", label: t("nav.treatments") },
     { href: "#team", label: t("nav.team") },
     { href: "#pricing", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },

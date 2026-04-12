@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { HomePage } from "../pages/HomePage";
 import { GalleryPage } from "../pages/GalleryPage";
+import { TreatmentPage } from "../pages/TreatmentPage";
 
 export interface RouteDefinition {
   /** Hash-based path, e.g. "/" or "/gallery" */
@@ -28,6 +29,10 @@ export const routes: RouteDefinition[] = [
   {
     path: "/gallery",
     component: GalleryPage,
+  },
+  {
+    path: "/treatments",
+    component: TreatmentPage,
   },
 ];
 
