@@ -18,9 +18,6 @@ export const ContactSection: React.FC = () => {
           {/* Contact Info & Map */}
           <div>
             <ContactInfo />
-            {t("contact.parkingNotice") && (
-              <p className="text-center text-xl text-gray-800 my-8">{t("contact.parkingNotice")}</p>
-            )}
             <AddressMap />
           </div>
 
