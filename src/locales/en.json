@@ -24,17 +24,17 @@
     "heading": "Ceník",
     "descriptionBefore": "Pokud máte dotazy, neváhejte nás ",
     "descriptionLink": "kontaktovat",
-    "bankInfo": {
-      "heading": "Bankovní spojení",
-      "accountLabel": "Číslo účtu",
-      "bankLabel": "Banka",
-      "recipientLabel": "Recipient",
-      "qrLabel": "Naskenujte QR kód pro platbu"
-    },
-    "insurance": {
-      "heading": "Spolupracující pojišťovny"
-    },
     "cancellationNotice": ""
+  },
+  "bankInfo": {
+    "heading": "Bankovní spojení",
+    "accountLabel": "Číslo účtu",
+    "bankLabel": "Banka",
+    "recipientLabel": "Recipient",
+    "qrLabel": "Naskenujte QR kód pro platbu"
+  },
+  "insurance": {
+    "heading": "Spolupracující pojišťovny"
   },
   "faq": {
     "heading": "Často kladené dotazy",

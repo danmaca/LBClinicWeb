@@ -8,25 +8,25 @@ export const BankAccountInfo: React.FC = () => {
 
   return (
     <div>
-      <h3 className="text-xl font-bold mb-4 text-black">{t("pricing.bankInfo.heading")}</h3>
+      <h3 className="text-xl font-bold mb-4 text-black">{t("bankInfo.heading")}</h3>
       <div className="bg-black p-8 rounded-xl flex flex-col items-center">
         <div className="w-full mb-6 space-y-2 text-gray-300">
           <div className="flex justify-between">
-            <span>{t("pricing.bankInfo.accountLabel")}:</span>
+            <span>{t("bankInfo.accountLabel")}:</span>
             <span className="font-medium text-white">{SITE_CONFIG.bankAccount.number}</span>
           </div>
           <div className="flex justify-between">
-            <span>{t("pricing.bankInfo.bankLabel")}:</span>
+            <span>{t("bankInfo.bankLabel")}:</span>
             <span className="font-medium text-white">{SITE_CONFIG.bankAccount.bankName}</span>
           </div>
           <div className="flex justify-between">
-            <span>{t("pricing.bankInfo.recipientLabel")}:</span>
+            <span>{t("bankInfo.recipientLabel")}:</span>
             <span className="font-medium text-white text-right">
               {SITE_CONFIG.bankAccount.recipientName}
             </span>
           </div>
           <div className="flex justify-between">
-            <span>{t("pricing.bankInfo.identNumber")}:</span>
+            <span>{t("bankInfo.identNumber")}:</span>
             <span className="font-medium text-white">{SITE_CONFIG.identNumber}</span>
           </div>
           <div className="flex justify-between">
@@ -47,7 +47,7 @@ export const BankAccountInfo: React.FC = () => {
         </div>
 
         <div className="flex justify-between mt-3">
-          <span className="font-medium text-white">{t("pricing.bankInfo.registerInfo")}</span>
+          <span className="font-medium text-white">{t("bankInfo.registerInfo")}</span>
         </div>
       </div>
     </div>

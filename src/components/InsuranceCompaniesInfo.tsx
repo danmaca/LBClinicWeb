@@ -8,7 +8,7 @@ export const InsuranceCompaniesInfo: React.FC = () => {
   return (
     <div>
       <h3 className="text-xl font-bold mb-6 text-gray-900 text-center md:text-left">
-        {t("pricing.insurance.heading")}
+        {t("insurance.heading")}
       </h3>
       <div className="grid grid-cols-2 gap-6">
         {SITE_CONFIG.insurance.map((ins) => (

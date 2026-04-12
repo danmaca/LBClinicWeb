@@ -26,19 +26,19 @@
     "heading": "Ceník",
     "descriptionBefore": "Pro konkrétní cenovou nabídku nebo další informace nás prosím ",
     "descriptionLink": "kontaktujte",
-    "bankInfo": {
-      "heading": "Bankovní spojení",
-      "accountLabel": "Číslo účtu",
-      "bankLabel": "Banka",
-      "recipientLabel": "Příjemce",
-      "qrLabel": "Naskenujte QR kód pro platbu",
-      "identNumber": "IČ",
-      "registerInfo": "Společnost je zapsána v obchodním rejstříku vedeném městským soudem v Praze, oddíl C, vložka C113832."
-    },
-    "insurance": {
-      "heading": "Spolupracujeme se zdravotními pojišťovnami"
-    },
     "cancellationNotice": "Při neomluvení návštěvy více než 24 hod před plánovaným termínem účtujeme storno poplatek ve výši 750 Kč za 30 min. Děkujeme za pochopení."
+  },
+  "bankInfo": {
+    "heading": "Bankovní spojení",
+    "accountLabel": "Číslo účtu",
+    "bankLabel": "Banka",
+    "recipientLabel": "Příjemce",
+    "qrLabel": "Naskenujte QR kód pro platbu",
+    "identNumber": "IČ",
+    "registerInfo": "Společnost je zapsána v obchodním rejstříku vedeném městským soudem v Praze, oddíl C, vložka C113832."
+  },
+  "insurance": {
+    "heading": "Spolupracujeme se zdravotními pojišťovnami"
   },
   "faq": {
     "heading": "Často kladené dotazy",
