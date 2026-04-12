@@ -19,7 +19,7 @@ export const SITE_CONFIG = {
     swift: "RZBCCZPP",
     recipientName: "LB dental clinic,  s.r.o. Vodňanská 1656/5, 198 00, Praha 9",
     get spdString() {
-      return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:Platba LB clinic*RN:${this.recipientName}`;
+      return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:LB dental clinic s.r.o.*RN:${this.recipientName}`;
     },
   },
   supportedLanguages: ["cs", "en", "uk", "ru"] as const,
