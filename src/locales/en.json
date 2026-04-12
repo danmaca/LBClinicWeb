@@ -3,7 +3,7 @@
     "team": "Our Team",
     "pricing": "Pricing",
     "faq": "FAQ",
-    "gallery": "Photo Gallery",
+    "gallery": "Gallery",
     "treatments": "Treatments",
     "references": "Testimonials",
     "contact": "Book an Appointment"
@@ -144,7 +144,7 @@
     "goToSlide": "Go to slide {{index}}"
   },
   "gallery": {
-    "heading": "Photo Gallery",
+    "heading": "Gallery",
     "closeLabel": "Close"
   },
   "references": {

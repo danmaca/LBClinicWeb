@@ -14,7 +14,7 @@ export const HeaderSection: React.FC = () => {
     { href: "#/reference", label: t("nav.references") },
     { href: "#team", label: t("nav.team") },
     { href: "#pricing", label: t("nav.pricing") },
-    { href: "#faq", label: t("nav.faq") },
+    { href: "#faq", label: t("nav.faq"), mobileOnly: true },
     { href: "#/galerie", label: t("nav.gallery") },
   ];
 
@@ -35,15 +35,17 @@ export const HeaderSection: React.FC = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-gray-700 hover:text-accent font-medium transition-colors duration-[800ms]"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks
+              .filter((link) => !link.mobileOnly)
+              .map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-700 hover:text-accent font-medium transition-colors duration-[800ms]"
+                >
+                  {link.label}
+                </a>
+              ))}
           </nav>
 
           {/* Desktop Right */}

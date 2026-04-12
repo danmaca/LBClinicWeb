@@ -3,7 +3,7 @@
     "team": "Наша команда",
     "pricing": "Прайс",
     "faq": "FAQ",
-    "gallery": "Фотогалерея",
+    "gallery": "Галерея",
     "treatments": "Послуги",
     "references": "Написали про нас",
     "contact": "Записатися"
@@ -143,7 +143,7 @@
     "next": "Наступний приклад",
     "goToSlide": "Перейти до слайда {{index}}"
   },
-  "gallery": { "heading": "Фотогалерея", "closeLabel": "Закрити" },
+  "gallery": { "heading": "Галерея", "closeLabel": "Закрити" },
   "references": {
     "heading": "Написали про нас",
     "items": [

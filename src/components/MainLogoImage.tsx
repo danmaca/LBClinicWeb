@@ -21,7 +21,7 @@ const HorizontalLogo: React.FC<{ className?: string }> = ({ className }) => (
     </g>
 
     {/* DENTAL CLINIC text — repositioned to the right of icon, vertically centered */}
-    <g transform="translate(1050, -853) scale(0.75)">
+    <g transform="translate(1050, -823) scale(0.75)">
       <path d="M445.07,2277.23c23.51,0,44.22-4.52,62.08-13.52,17.86-9.01,31.61-21.85,41.24-38.5,9.62-16.65,14.44-35.96,14.44-57.96s-4.82-41.3-14.44-57.95c-9.62-16.65-23.38-29.47-41.24-38.49-17.86-9.01-38.57-13.52-62.08-13.52h-77.89v219.94h77.89ZM307.6,2006.89h140.2c34.21,0,64.64,6.64,91.19,19.93,26.6,13.29,47.22,32.06,61.87,56.35,14.65,24.28,22,52.32,22,84.07s-7.35,59.81-22,84.08c-14.65,24.29-35.27,43.07-61.87,56.36-26.55,13.29-56.98,19.93-91.19,19.93h-140.2v-320.74Z" />
       <polygon points="686.1 2006.9 686.1 2327.63 926.64 2327.63 926.64 2277.67 745.64 2277.67 745.64 2189.26 900.53 2189.26 900.53 2140.22 745.64 2140.22 745.64 2056.83 920.23 2056.83 920.23 2006.9 686.1 2006.9" />
       <polygon points="1218.97 2006.9 1218.97 2224.08 1042.1 2006.9 993.09 2006.9 993.09 2327.63 1052.19 2327.63 1052.19 2110.44 1229.04 2327.63 1278.08 2327.63 1278.08 2006.9 1218.97 2006.9" />
@@ -75,8 +75,8 @@ const VerticalLogo: React.FC<{ className?: string }> = ({ className }) => (
 export const MainLogoImage: React.FC<MainLogoImageProps> = ({ className }) => (
   <>
     {/* Mobile: horizontal logo */}
-    <HorizontalLogo className={`md:hidden ${className ?? ""}`} />
+    <HorizontalLogo className={`${className ?? ""}`} />
     {/* Desktop: vertical stacked logo */}
-    <VerticalLogo className={`hidden md:block ${className ?? ""}`} />
+    {/*<VerticalLogo className={`hidden md:block ${className ?? ""}`} />*/}
   </>
 );

@@ -3,7 +3,7 @@
     "team": "Náš tým",
     "pricing": "Ceník",
     "faq": "FAQ",
-    "gallery": "Fotogalerie",
+    "gallery": "Galerie",
     "treatments": "Ošetření",
     "references": "Napsali o nás",
     "contact": "Objednat se"
@@ -144,7 +144,7 @@
     "goToSlide": "Přejít na posuv {{index}}"
   },
   "gallery": {
-    "heading": "Fotogalerie",
+    "heading": "Galerie",
     "closeLabel": "Zavřít"
   },
   "references": {
