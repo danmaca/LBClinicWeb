@@ -42,7 +42,9 @@
   },
   "faq": {
     "heading": "Často kladené dotazy",
-    "contactPrompt": "V případě nezodpovězeného dotazu nás neváhejte kontaktovat.",
+    "contactPromptBefore": "V případě nezodpovězeného dotazu nás neváhejte ",
+    "contactPromptLink": "kontaktovat",
+    "contactPromptAfter": ".",
     "items": [
       {
         "question": "Jak si mohu domluvit termín?",

@@ -60,7 +60,13 @@ export const FAQSection: React.FC = () => {
             ))}
         </div>
 
-        <p className="text-center text-gray-500 mt-8">{t("faq.contactPrompt")}</p>
+        <p className="text-center text-gray-500 mt-8">
+          {t("faq.contactPromptBefore")}
+          <a href="#contact" className="text-accent hover:underline font-medium">
+            {t("faq.contactPromptLink")}
+          </a>
+          {t("faq.contactPromptAfter")}
+        </p>
       </div>
     </section>
   );

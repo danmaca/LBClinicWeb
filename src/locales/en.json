@@ -42,7 +42,9 @@
   },
   "faq": {
     "heading": "Frequently Asked Questions",
-    "contactPrompt": "If you haven't found the answer to your question, don't hesitate to contact us.",
+    "contactPromptBefore": "If you haven't found the answer to your question, don't hesitate to ",
+    "contactPromptLink": "contact us",
+    "contactPromptAfter": ".",
     "items": [
       {
         "question": "How can I book an appointment?",
