@@ -31,7 +31,9 @@
       "accountLabel": "Číslo účtu",
       "bankLabel": "Banka",
       "recipientLabel": "Příjemce",
-      "qrLabel": "Naskenujte QR kód pro platbu"
+      "qrLabel": "Naskenujte QR kód pro platbu",
+      "identNumber": "IČ",
+      "registerInfo": "Společnost je zapsána v obchodním rejstříku vedeném městským soudem v Praze, oddíl C, vložka C113832."
     },
     "insurance": {
       "heading": "Spolupracujeme se zdravotními pojišťovnami"

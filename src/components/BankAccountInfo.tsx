@@ -21,7 +21,21 @@ export const BankAccountInfo: React.FC = () => {
           </div>
           <div className="flex justify-between">
             <span>{t("pricing.bankInfo.recipientLabel")}:</span>
-            <span className="font-medium text-white">{SITE_CONFIG.bankAccount.recipientName}</span>
+            <span className="font-medium text-white text-right">
+              {SITE_CONFIG.bankAccount.recipientName}
+            </span>
+          </div>
+          <div className="flex justify-between">
+            <span>{t("pricing.bankInfo.identNumber")}:</span>
+            <span className="font-medium text-white">{SITE_CONFIG.identNumber}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>IBAN:</span>
+            <span className="font-medium text-white">{SITE_CONFIG.bankAccount.iban}</span>
+          </div>
+          <div className="flex justify-between">
+            <span>SWIFT:</span>
+            <span className="font-medium text-white">{SITE_CONFIG.bankAccount.swift}</span>
           </div>
         </div>
 
@@ -30,6 +44,10 @@ export const BankAccountInfo: React.FC = () => {
           <p className="text-black font-bold text-lg mt-3 border-t-2 border-black pt-1 text-center">
             QR Platba
           </p>
+        </div>
+
+        <div className="flex justify-between mt-3">
+          <span className="font-medium text-white">{t("pricing.bankInfo.registerInfo")}</span>
         </div>
       </div>
     </div>

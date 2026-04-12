@@ -6,6 +6,7 @@ export const SITE_CONFIG = {
   url: "https://www.lbclinic.cz/",
   email: "recepce@lbclinic.cz",
   phone: "+420 776 377 100",
+  identNumber: "27452310",
   address: {
     street: "Vodňanská 1656/5",
     zip: "198 00",
@@ -15,7 +16,8 @@ export const SITE_CONFIG = {
     number: "41419/5500",
     bankName: "Raiffeisenbank",
     iban: "CZ2855000000000000041419",
-    recipientName: "LB clinic",
+    swift: "RZBCCZPP",
+    recipientName: "LB dental clinic,  s.r.o. Vodňanská 1656/5, 198 00, Praha 9",
     get spdString() {
       return `SPD*1.0*ACC:${this.iban}*CC:CZK*MSG:Platba LB clinic*RN:${this.recipientName}`;
     },
