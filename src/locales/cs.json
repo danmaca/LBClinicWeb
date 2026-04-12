@@ -210,7 +210,8 @@
       {
         "title": "Ortodoncie",
         "desc": "Korekce postavení zubů a čelistí pro zdravý skus i esteticky vyrovnaný úsměv.",
-        "img": "orthodontics.svg"
+        "img": "orthodontics.svg",
+        "enabled": false
       },
       {
         "title": "Endodoncie",
@@ -264,7 +265,7 @@
       },
       {
         "title": "Rentgenová diagnostika",
-        "desc": "Moderní 2D a 3D rentgenové vyšetření pro přesné plánování léčby a spolehlivou diagnostiku.",
+        "desc": "Moderní 2D rentgenové vyšetření pro přesné plánování léčby a spolehlivou diagnostiku.",
         "img": "xray.svg"
       }
     ]

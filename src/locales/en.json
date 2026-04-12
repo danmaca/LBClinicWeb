@@ -210,7 +210,8 @@
       {
         "title": "Orthodontics",
         "desc": "Correction of tooth and jaw alignment for a healthy bite and an aesthetically even smile.",
-        "img": "orthodontics.svg"
+        "img": "orthodontics.svg",
+        "enabled": false
       },
       {
         "title": "Endodontics",
@@ -264,7 +265,7 @@
       },
       {
         "title": "X-Ray Diagnostics",
-        "desc": "Modern 2D and 3D X-ray imaging for precise treatment planning and reliable diagnostics.",
+        "desc": "Modern 2D X-ray imaging for precise treatment planning and reliable diagnostics.",
         "img": "xray.svg"
       }
     ]

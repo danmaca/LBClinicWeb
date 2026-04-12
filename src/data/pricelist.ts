@@ -35,15 +35,6 @@ export const pricelist = {
           },
           price: "hradí ZP 1x za 2 roky",
         },
-        {
-          name: {
-            cs: "CBCT 3D rentgen",
-            en: "",
-            ru: "",
-            uk: "",
-          },
-          price: 1500,
-        },
       ],
     },
     {

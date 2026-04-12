@@ -39,6 +39,7 @@ const HorizontalLogo: React.FC<{ className?: string }> = ({ className }) => (
 );
 
 /** Vertical stacked logo: icon on top + "DENTAL CLINIC" text below (desktop) */
+/**
 const VerticalLogo: React.FC<{ className?: string }> = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +65,7 @@ const VerticalLogo: React.FC<{ className?: string }> = ({ className }) => (
     <polygon points="2094.36 1217.06 2094.36 1386.74 1700.63 1386.74 1700.63 804.52 1897.49 804.52 1897.49 1217.06 2094.36 1217.06" />
   </svg>
 );
-
+*/
 /**
  * Responsive main logo.
  *

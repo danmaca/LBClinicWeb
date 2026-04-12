@@ -52,7 +52,7 @@ export const SITE_CONFIG = {
     },
   ],
   gallery: {
-    totalPhotos: 23,
+    totalPhotos: 20,
   },
 };
 

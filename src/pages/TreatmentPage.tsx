@@ -6,6 +6,7 @@ interface TreatmentItem {
   title: string;
   desc: string;
   img: string;
+  enabled: boolean;
 }
 
 export const TreatmentPage: React.FC = () => {
@@ -16,7 +17,8 @@ export const TreatmentPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const items = t("treatments.items", { returnObjects: true }) as TreatmentItem[];
+  let items = t("treatments.items", { returnObjects: true }) as TreatmentItem[];
+  items = items.filter((item) => item.enabled !== false);
 
   return (
     <PageLayout>
