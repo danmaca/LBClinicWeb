@@ -18,14 +18,6 @@ export default defineConfig({
       ],
     }),
   ],
-  build: {
-    rollupOptions: {
-      input: {
-        main: "index.html",
-        app: "index2.html",
-      },
-    },
-  },
   server: {
     proxy: {
       "/api": {
