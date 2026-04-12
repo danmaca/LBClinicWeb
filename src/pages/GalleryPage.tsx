@@ -3,11 +3,9 @@ import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SITE_CONFIG } from "../config";
 import { PageLayout } from "../router/PageLayout";
-import { useHashRouter } from "../router/useHashRouter";
 
 export const GalleryPage: React.FC = () => {
   const { t } = useTranslation();
-  const { navigate } = useHashRouter();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   // Scroll to top when the gallery page mounts
