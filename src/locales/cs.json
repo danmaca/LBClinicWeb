@@ -42,6 +42,7 @@
   },
   "faq": {
     "heading": "Často kladené dotazy",
+    "contactPrompt": "V případě nezodpovězeného dotazu nás neváhejte kontaktovat.",
     "items": [
       {
         "question": "Jak si mohu domluvit termín?",
@@ -167,8 +168,8 @@
         "text": "Řešení úrazu zubů proběhlo velmi brzy od objednání, paní doktorka pečlivě ošetřila stopy úrazu předních zubů, kdy jeden zub byl celkově ulomený a druhý uštípnutý. Po zákroku byly přední zuby vyspravené a neodlišovaly se od ostatních. Moc děkuji za profesionalitu, včasný zákrok a vrácení úsměvu."
       },
       {
-        "personName": "Sedlácký Martin",
-        "text": "Milá pani doktorka Vernerová, ešte raz ďakujem za úžasnú prácu, zuby už ani vizuálne, ani pocitovo, nerozoznám od vlastných. K tomu, keď sa v zrkadle na seba usmiejem, spomínam si s vďakou na Vás. Na ortodoncii sa pýtali na Váš kontakt, viac snáď nemusím dodávať :-) Prajem Vám radosť z každého momentu."
+        "personName": "Martin Sedlácký",
+        "text": "Milá pani doktorka Vernerová, ešte raz ďakujem za úžasnú prácu, zuby už ani vizuálne, ani pocitovo, nerozoznám od vlastných. K tomu, keď sa v zrkadle na seba usmiejem, spomínam si s vďakou na Vás."
       }
     ]
   },

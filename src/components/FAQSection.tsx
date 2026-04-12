@@ -59,6 +59,8 @@ export const FAQSection: React.FC = () => {
               />
             ))}
         </div>
+
+        <p className="text-center text-gray-500 mt-8">{t("faq.contactPrompt")}</p>
       </div>
     </section>
   );

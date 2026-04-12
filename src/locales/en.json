@@ -42,6 +42,7 @@
   },
   "faq": {
     "heading": "Frequently Asked Questions",
+    "contactPrompt": "If you haven't found the answer to your question, don't hesitate to contact us.",
     "items": [
       {
         "question": "How can I book an appointment?",
@@ -168,7 +169,7 @@
       },
       {
         "personName": "Sedlácký Martin",
-        "text": "Dear Dr. Vernerová, thank you once again for the amazing work — I can no longer tell the difference between the new teeth and my own, neither visually nor by feel. On top of that, whenever I smile at myself in the mirror, I think of you with gratitude. At the orthodontist's they asked for your contact — I probably don't need to say more :-) Wishing you joy in every moment."
+        "text": "Dear Dr. Vernerová, thank you once again for the amazing work — I can no longer tell the difference between the new teeth and my own, neither visually nor by feel. On top of that, whenever I smile at myself in the mirror, I think of you with gratitude."
       }
     ]
   },
