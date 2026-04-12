@@ -119,7 +119,6 @@
   },
   "gallery": {
     "heading": "Фотогалерея",
-    "closeLabel": "Закрыть",
-    "backLabel": "На главную"
+    "closeLabel": "Закрыть"
   }
 }

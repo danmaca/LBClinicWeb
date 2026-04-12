@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { X, ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SITE_CONFIG } from "../config";
 import { PageLayout } from "../router/PageLayout";
 import { useHashRouter } from "../router/useHashRouter";
@@ -9,6 +9,11 @@ export const GalleryPage: React.FC = () => {
   const { t } = useTranslation();
   const { navigate } = useHashRouter();
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  // Scroll to top when the gallery page mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const photos = Array.from({ length: SITE_CONFIG.gallery.totalPhotos }, (_, i) => {
     const num = String(i + 1).padStart(2, "0");
@@ -26,15 +31,6 @@ export const GalleryPage: React.FC = () => {
     <PageLayout>
       <div className="pt-28 pb-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Back button */}
-          <button
-            onClick={() => navigate("/")}
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-accent transition-colors mb-8 group"
-          >
-            <ArrowLeft size={20} className="transition-transform group-hover:-translate-x-1" />
-            <span className="font-medium">{t("gallery.backLabel")}</span>
-          </button>
-
           {/* Heading */}
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
             {t("gallery.heading")}

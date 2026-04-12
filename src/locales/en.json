@@ -119,7 +119,6 @@
   },
   "gallery": {
     "heading": "Gallery",
-    "closeLabel": "Close",
-    "backLabel": "Back to homepage"
+    "closeLabel": "Close"
   }
 }

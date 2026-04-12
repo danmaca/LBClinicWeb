@@ -126,7 +126,6 @@
   },
   "gallery": {
     "heading": "Fotogalerie",
-    "closeLabel": "Zavřít",
-    "backLabel": "Zpět na hlavní stránku"
+    "closeLabel": "Zavřít"
   }
 }
