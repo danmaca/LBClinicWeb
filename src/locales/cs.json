@@ -5,6 +5,7 @@
     "faq": "FAQ",
     "gallery": "Fotogalerie",
     "treatments": "Ošetření",
+    "references": "Napsali o nás",
     "contact": "Objednat se"
   },
   "hero": {
@@ -127,6 +128,21 @@
   "gallery": {
     "heading": "Fotogalerie",
     "closeLabel": "Zavřít"
+  },
+  "references": {
+    "heading": "Napsali o nás",
+    "r1": {
+      "personName": "Veronika Moserová",
+      "text": "Naprostá spokojenost. Paní doktorka Vernerová je moc milá a má skvělý přístup k pacientům, což jako někdo, kdo má panické záchvaty ze zubaře, hodně oceňuji."
+    },
+    "r2": {
+      "personName": "Alex Cuker",
+      "text": "Paní zubařka byla velmi milá a profesionální. Správně identifikovala problémy v dutině ústní a ochotně se snažila vyjít vstříc při jejich řešení."
+    },
+    "r3": {
+      "personName": "Barbora Kosinová",
+      "text": "Všichni příjemní, ochotní. Paní doktorka Vernerová vstřícná, milá a se skvělým přístupem k dětem."
+    }
   },
   "treatments": {
     "heading": "Nabídka ošetření",

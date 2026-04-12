@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { HomePage } from "../pages/HomePage";
 import { GalleryPage } from "../pages/GalleryPage";
 import { TreatmentPage } from "../pages/TreatmentPage";
+import { ReferencePage } from "../pages/ReferencePage";
 
 export interface RouteDefinition {
   /** Hash-based path, e.g. "/" or "/gallery" */
@@ -27,12 +28,16 @@ export const routes: RouteDefinition[] = [
     showSplash: true,
   },
   {
-    path: "/gallery",
+    path: "/galerie",
     component: GalleryPage,
   },
   {
-    path: "/treatments",
+    path: "/osetreni",
     component: TreatmentPage,
+  },
+  {
+    path: "/reference",
+    component: ReferencePage,
   },
 ];
 

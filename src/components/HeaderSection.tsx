@@ -10,11 +10,12 @@ export const HeaderSection: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#/treatments", label: t("nav.treatments") },
+    { href: "#/osetreni", label: t("nav.treatments") },
+    { href: "#/reference", label: t("nav.references") },
     { href: "#team", label: t("nav.team") },
     { href: "#pricing", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },
-    { href: "#/gallery", label: t("nav.gallery") },
+    { href: "#/galerie", label: t("nav.gallery") },
   ];
 
   return (
