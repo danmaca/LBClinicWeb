@@ -86,14 +86,19 @@ export const PricingListInfo: React.FC = () => {
         // Bezpečné získání textů; fallback na 'cs'
         const getTitle = (nameObj: any) => nameObj[lang] || nameObj["cs"];
 
+        const isCs = lang === "cs";
+
+        const formatPrice = (raw: string) => (isCs ? raw : raw.replace(/Kč/g, "CZK"));
+
         const processedItems = category.items.map((item) => ({
           name: getTitle(item.name),
-          price:
+          price: formatPrice(
             typeof item.price === "number"
               ? `${item.price.toLocaleString("cs-CZ")} Kč`
               : typeof item.price === "object" && item.price !== null
                 ? (item.price as any)[lang] || (item.price as any)["cs"]
                 : (item.price as string),
+          ),
         }));
 
         return <AccordionItem key={idx} title={getTitle(category.name)} items={processedItems} />;
