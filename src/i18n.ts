@@ -23,6 +23,14 @@ i18n
     interpolation: {
       escapeValue: false,
     },
+    detection: {
+      // Check localStorage first so the user's explicit choice always wins
+      // over the browser's navigator language.
+      order: ["localStorage", "navigator"],
+      // Persist the selected language to localStorage
+      caches: ["localStorage"],
+      lookupLocalStorage: "i18nextLng",
+    },
   });
 
 i18n.on("languageChanged", (lng) => {

@@ -72,9 +72,4 @@ export const REFERENCE_SLIDES: ReferenceSlide[] = [
     personName: "",
     text: "",
   },
-  {
-    image: "4.jpg",
-    personName: "",
-    text: "",
-  },
 ];
