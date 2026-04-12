@@ -85,7 +85,7 @@ export const ReferenceCarousel: React.FC = () => {
                 }}
               >
                 <div
-                  className={`rounded-lg overflow-hidden shadow-sm bg-white lg:relative h-full min-w-0 ${!(slide.personName || slide.text) ? "flex items-center justify-center" : ""}`}
+                  className={`overflow-hidden lg:relative h-full min-w-0 ${!(slide.personName || slide.text) ? "flex items-center justify-center" : ""}`}
                 >
                   {/* Image: normal block on sm/md, absolute right-aligned on lg */}
                   <div
