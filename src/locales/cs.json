@@ -165,81 +165,102 @@
   "treatments": {
     "heading": "Nabídka ošetření",
     "intro": "Naše klinika poskytuje ucelenou nabídku stomatologických služeb pod jednou střechou. Tým specializovaných odborníků pokrývá veškeré oblasti moderní zubní péče. Stavíme na precizní práci, individuálním přístupu k léčbě a otevřené komunikaci s pacientem. Věříme, že špičková stomatologie a vstřícné prostředí k sobě neodmyslitelně patří.",
-    "preventive_exam": {
-      "title": "Preventivní prohlídka",
-      "desc": "Důkladné vyšetření zaměřené na včasný záchyt problémů a udržení zdravého chrupu po dlouhá léta."
-    },
-    "dental_hygiene": {
-      "title": "Dentální hygiena",
-      "desc": "Profesionální čištění zubů jako základ prevence – účinná ochrana před kazem i onemocněním dásní."
-    },
-    "teeth_whitening": {
-      "title": "Bělení zubů",
-      "desc": "Šetrné zesvětlení zubů pro zářivější úsměv a odstranění nežádoucích pigmentací skloviny."
-    },
-    "pediatric_dentistry": {
-      "title": "Dětská stomatologie",
-      "desc": "Staráme se o dětské zuby od prvního zoubku. Pravidelná prevence položí základ krásného úsměvu na celý život."
-    },
-    "wisdom_teeth": {
-      "title": "Extrakce zubů moudrosti",
-      "desc": "Bezpečné a šetrné odstranění zubů moudrosti s důrazem na minimální pooperační obtíže."
-    },
-    "implants": {
-      "title": "Zubní implantáty",
-      "desc": "Spolehlivá a trvalá náhrada chybějícího zubu pomocí moderních implantačních systémů."
-    },
-    "fillings": {
-      "title": "Estetické zubní výplně",
-      "desc": "Výplně v barvě zubu pro ošetření kazu a obnovu přirozeného vzhledu i funkce."
-    },
-    "orthodontics": {
-      "title": "Ortodoncie",
-      "desc": "Korekce postavení zubů a čelistí pro zdravý skus i esteticky vyrovnaný úsměv."
-    },
-    "endodontics": {
-      "title": "Endodoncie",
-      "desc": "Ošetření kořenových kanálků umožňuje zachránit zub a předejít jeho nutné extrakci."
-    },
-    "periodontics": {
-      "title": "Léčba parodontitidy",
-      "desc": "Účinná léčba zánětu dásní a parodontitidy s cílem zastavit úbytek tkání a stabilizovat chrup."
-    },
-    "dentures": {
-      "title": "Zubní náhrady a protézy",
-      "desc": "Kvalitní snímatelné náhrady navržené na míru pro pohodlné a spolehlivé každodenní nošení."
-    },
-    "veneers": {
-      "title": "Keramické fazety",
-      "desc": "Tenké keramické obložky přední strany zubů pro dokonalý tvar, barvu a zářivý úsměv."
-    },
-    "bridge": {
-      "title": "Zubní můstek",
-      "desc": "Fixní řešení pro náhradu jednoho či více chybějících zubů s oporou o sousední pilíře."
-    },
-    "crown": {
-      "title": "Zubní korunka",
-      "desc": "Individuálně zhotovená korunka, která obnoví tvar, pevnost i přirozený vzhled zubu."
-    },
-    "sedation": {
-      "title": "Ošetření v sedaci a anestezii",
-      "desc": "Zákroky v analgosedaci nebo celkové anestezii zajistí klidný průběh ošetření bez bolesti a úzkosti."
-    },
-    "smile_makeover": {
-      "title": "Kompletní rekonstrukce úsměvu",
-      "desc": "Celková proměna úsměvu kombinující estetické a funkční řešení pro zcela nový začátek."
-    },
-    "oral_surgery": {
-      "title": "Stomatochirurgie",
-      "desc": "Chirurgické výkony v dutině ústní prováděné s maximální přesností a důrazem na šetrný přístup."
-    },
-    "emergency": {
-      "title": "Zubní pohotovost",
-      "desc": "Rychlá pomoc při akutní bolesti zubů zaměřená na okamžitou úlevu a zamezení dalším komplikacím."
-    },
-    "xray": {
-      "title": "Rentgenová diagnostika",
-      "desc": "Moderní 2D a 3D rentgenové vyšetření pro přesné plánování léčby a spolehlivou diagnostiku."
-    }
+    "items": [
+      {
+        "title": "Preventivní prohlídka",
+        "desc": "Důkladné vyšetření zaměřené na včasný záchyt problémů a udržení zdravého chrupu po dlouhá léta.",
+        "img": "preventive_exam.svg"
+      },
+      {
+        "title": "Dentální hygiena",
+        "desc": "Profesionální čištění zubů jako základ prevence – účinná ochrana před kazem i onemocněním dásní.",
+        "img": "dental_hygiene.svg"
+      },
+      {
+        "title": "Bělení zubů",
+        "desc": "Šetrné zesvětlení zubů pro zářivější úsměv a odstranění nežádoucích pigmentací skloviny.",
+        "img": "teeth_whitening.svg"
+      },
+      {
+        "title": "Dětská stomatologie",
+        "desc": "Staráme se o dětské zuby od prvního zoubku. Pravidelná prevence položí základ krásného úsměvu na celý život.",
+        "img": "pediatric_dentistry.svg"
+      },
+      {
+        "title": "Extrakce zubů moudrosti",
+        "desc": "Bezpečné a šetrné odstranění zubů moudrosti s důrazem na minimální pooperační obtíže.",
+        "img": "wisdom_teeth.svg"
+      },
+      {
+        "title": "Zubní implantáty",
+        "desc": "Spolehlivá a trvalá náhrada chybějícího zubu pomocí moderních implantačních systémů.",
+        "img": "implants.svg"
+      },
+      {
+        "title": "Estetické zubní výplně",
+        "desc": "Výplně v barvě zubu pro ošetření kazu a obnovu přirozeného vzhledu i funkce.",
+        "img": "fillings.svg"
+      },
+      {
+        "title": "Ortodoncie",
+        "desc": "Korekce postavení zubů a čelistí pro zdravý skus i esteticky vyrovnaný úsměv.",
+        "img": "orthodontics.svg"
+      },
+      {
+        "title": "Endodoncie",
+        "desc": "Ošetření kořenových kanálků umožňuje zachránit zub a předejít jeho nutné extrakci.",
+        "img": "endodontics.svg"
+      },
+      {
+        "title": "Léčba parodontitidy",
+        "desc": "Účinná léčba zánětu dásní a parodontitidy s cílem zastavit úbytek tkání a stabilizovat chrup.",
+        "img": "periodontics.svg"
+      },
+      {
+        "title": "Zubní náhrady a protézy",
+        "desc": "Kvalitní snímatelné náhrady navržené na míru pro pohodlné a spolehlivé každodenní nošení.",
+        "img": "dentures.svg"
+      },
+      {
+        "title": "Keramické fazety",
+        "desc": "Tenké keramické obložky přední strany zubů pro dokonalý tvar, barvu a zářivý úsměv.",
+        "img": "veneers.svg"
+      },
+      {
+        "title": "Zubní můstek",
+        "desc": "Fixní řešení pro náhradu jednoho či více chybějících zubů s oporou o sousední pilíře.",
+        "img": "bridge.svg"
+      },
+      {
+        "title": "Zubní korunka",
+        "desc": "Individuálně zhotovená korunka, která obnoví tvar, pevnost i přirozený vzhled zubu.",
+        "img": "crown.svg"
+      },
+      {
+        "title": "Ošetření v sedaci a anestezii",
+        "desc": "Zákroky v analgosedaci nebo celkové anestezii zajistí klidný průběh ošetření bez bolesti a úzkosti.",
+        "img": "sedation.svg"
+      },
+      {
+        "title": "Kompletní rekonstrukce úsměvu",
+        "desc": "Celková proměna úsměvu kombinující estetické a funkční řešení pro zcela nový začátek.",
+        "img": "smile_makeover.svg"
+      },
+      {
+        "title": "Stomatochirurgie",
+        "desc": "Chirurgické výkony v dutině ústní prováděné s maximální přesností a důrazem na šetrný přístup.",
+        "img": "oral_surgery.svg"
+      },
+      {
+        "title": "Zubní pohotovost",
+        "desc": "Rychlá pomoc při akutní bolesti zubů zaměřená na okamžitou úlevu a zamezení dalším komplikacím.",
+        "img": "emergency.svg"
+      },
+      {
+        "title": "Rentgenová diagnostika",
+        "desc": "Moderní 2D a 3D rentgenové vyšetření pro přesné plánování léčby a spolehlivou diagnostiku.",
+        "img": "xray.svg"
+      }
+    ]
   }
 }
