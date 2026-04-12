@@ -19,7 +19,7 @@
     "heading": "Our Team",
     "memberBios": [
       "Restorative Dentistry\nAesthetic Photocomposite Restorations\nProsthodontics\nOral Surgery\nPediatric Dentistry",
-      "Dental Hygiene\nPeriodontal Disease Treatment\nTeeth Whitening"
+      "Dental Hygiene\nPeriodontal Disease Treatment\nTeeth Whitening\n \n \n"
     ]
   },
   "pricing": {
@@ -68,10 +68,15 @@
       {
         "question": "What to do in case of acute pain?",
         "answer": [
-          "Contact us by phone at +420 776 377 100 and we will try to schedule you as soon as possible. Outside our office hours, we recommend the dental emergency services:",
+          "Contact us by phone at +420 776 377 100 and we will try to schedule you as soon as possible.",
+          "",
+          "Outside our office hours, we recommend the dental emergency services:",
           "<b>Nemocnice Na Františku, Praha 1</b>, tel. 222 924 268, Spálená 12, Praha 1, tel. 222 924 268",
+          "",
           "<b>VFN, U Nemocnice 2, Praha 2</b> tel. 224 962 723; 224 962 725; 224 963 138",
+          "",
           "<b>Fakultní Thomayerova nemocnice s poliklinikou, Vídeňská 800, Praha 4</b>, pavilon B1, tel. 261 083 546",
+          "",
           "<b>Children's dental emergency at Motol University Hospital, V Úvalu 84, Praha 5</b> contact: tel. 224 433 653; 224 433 652, 224 433 101, 224 433 120"
         ]
       },

@@ -91,7 +91,9 @@ export const PricingListInfo: React.FC = () => {
           price:
             typeof item.price === "number"
               ? `${item.price.toLocaleString("cs-CZ")} Kč`
-              : (item.price as string),
+              : typeof item.price === "object" && item.price !== null
+                ? (item.price as any)[lang] || (item.price as any)["cs"]
+                : (item.price as string),
         }));
 
         return <AccordionItem key={idx} title={getTitle(category.name)} items={processedItems} />;
