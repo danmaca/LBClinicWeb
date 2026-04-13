@@ -52,11 +52,16 @@ export const SITE_CONFIG = {
     },
   ],
   gallery: {
-    totalPhotos: 22,
+    totalPhotos: 24,
   },
 };
 
 export const REFERENCE_SLIDES: ReferenceSlide[] = [
+  {
+    image: "1.jpg",
+    personName: "",
+    text: "",
+  },
   {
     image: "2.jpg",
     personName: "",
