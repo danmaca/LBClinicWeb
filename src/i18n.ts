@@ -20,6 +20,10 @@ i18n
     },
     fallbackLng: SITE_CONFIG.defaultLanguage,
     supportedLngs: SITE_CONFIG.supportedLanguages,
+    // Strip region codes (e.g. cs-CZ → cs, en-US → en) so that
+    // Safari / iOS, which reports full locale tags, correctly matches
+    // the supported language list.
+    load: "languageOnly",
     interpolation: {
       escapeValue: false,
     },
