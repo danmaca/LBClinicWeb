@@ -10,7 +10,24 @@ export const TeamSection: React.FC = () => {
   // Refs for each bio <p> element
   const bioRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
-  const syncBioHeights = useCallback(() => {
+  // Track the container width so we only re-measure when width actually
+  // changes — not on height-only changes (e.g. mobile address bar hide/show
+  // during scroll, which fires a resize event but doesn't affect text reflow).
+  const containerRef = useRef<HTMLDivElement>(null);
+  const lastWidthRef = useRef<number>(0);
+
+  const syncBioHeights = useCallback((forceUpdate = false) => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const currentWidth = container.offsetWidth;
+
+    // Skip if width hasn't changed (unless this is the initial call or a forced update)
+    if (!forceUpdate && currentWidth === lastWidthRef.current && lastWidthRef.current !== 0) {
+      return;
+    }
+    lastWidthRef.current = currentWidth;
+
     const els = bioRefs.current.filter((el): el is HTMLParagraphElement => el !== null);
     if (els.length === 0) return;
 
@@ -19,8 +36,10 @@ export const TeamSection: React.FC = () => {
       el.style.minHeight = "0px";
     });
 
-    // Delay measurement to let the browser fully reflow after the reset
-    setTimeout(() => {
+    // Use requestAnimationFrame so the reset and re-measurement happen
+    // within the same frame, before the browser paints. The user never
+    // sees the intermediate 0-height state (no visible jump).
+    requestAnimationFrame(() => {
       const heights = els.map((el) => el.scrollHeight);
       const max = Math.max(0, ...heights);
       if (max > 0) {
@@ -28,17 +47,17 @@ export const TeamSection: React.FC = () => {
           el.style.minHeight = `${max}px`;
         });
       }
-    }, 120);
+    });
   }, []);
 
   // Sync heights after mount and whenever the language changes
   useEffect(() => {
-    syncBioHeights();
+    syncBioHeights(true);
   }, [i18n.language, syncBioHeights]);
 
-  // Re-sync on window resize (text reflow may change natural heights)
+  // Re-sync on window resize (only triggers re-measurement when width changes)
   useEffect(() => {
-    const handleResize = () => syncBioHeights();
+    const handleResize = () => syncBioHeights(false);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [syncBioHeights]);
@@ -50,7 +69,7 @@ export const TeamSection: React.FC = () => {
           {t("team.heading")}
         </h2>
 
-        <div className="grid grid-cols-2 gap-4 md:gap-12 max-w-4xl mx-auto">
+        <div ref={containerRef} className="grid grid-cols-2 gap-4 md:gap-12 max-w-4xl mx-auto">
           {SITE_CONFIG.teamMembers.map((member, index) => (
             <div key={index} className="flex flex-col">
               {/* Photo card */}
