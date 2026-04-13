@@ -1,11 +1,47 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SITE_CONFIG } from "../config";
 
 export const TeamSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const memberBios = t("team.memberBios", { returnObjects: true }) as string[];
+
+  // Refs for each bio <p> element
+  const bioRefs = useRef<(HTMLParagraphElement | null)[]>([]);
+
+  const syncBioHeights = useCallback(() => {
+    const els = bioRefs.current.filter((el): el is HTMLParagraphElement => el !== null);
+    if (els.length === 0) return;
+
+    // Reset min-height so we can measure natural content heights
+    els.forEach((el) => {
+      el.style.minHeight = "0px";
+    });
+
+    // Delay measurement to let the browser fully reflow after the reset
+    setTimeout(() => {
+      const heights = els.map((el) => el.scrollHeight);
+      const max = Math.max(0, ...heights);
+      if (max > 0) {
+        els.forEach((el) => {
+          el.style.minHeight = `${max}px`;
+        });
+      }
+    }, 120);
+  }, []);
+
+  // Sync heights after mount and whenever the language changes
+  useEffect(() => {
+    syncBioHeights();
+  }, [i18n.language, syncBioHeights]);
+
+  // Re-sync on window resize (text reflow may change natural heights)
+  useEffect(() => {
+    const handleResize = () => syncBioHeights();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [syncBioHeights]);
 
   return (
     <section id="team" className="py-20">
@@ -32,11 +68,16 @@ export const TeamSection: React.FC = () => {
                   className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100"
                 />
                 {/* Text overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-2 pb-2 pt-8 md:px-5 md:pb-5 md:pt-16 pointer-events-none">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent px-2 pb-2 pt-8 md:px-5 md:pb-5 md:pt-16 pointer-events-none flex flex-col justify-end">
                   <h3 className="text-xs sm:text-sm md:text-xl font-bold text-white mb-0.5 md:mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gray-200 leading-relaxed whitespace-pre-line text-[10px] sm:text-xs md:text-sm">
+                  <p
+                    ref={(el) => {
+                      bioRefs.current[index] = el;
+                    }}
+                    className="text-gray-200 leading-relaxed whitespace-pre-line text-[10px] sm:text-xs md:text-sm"
+                  >
                     {Array.isArray(memberBios) ? (memberBios[index] ?? "") : ""}
                   </p>
                 </div>
