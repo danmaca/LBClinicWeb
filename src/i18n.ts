@@ -8,6 +8,8 @@ import uk from "./locales/uk.json";
 import ru from "./locales/ru.json";
 import { SITE_CONFIG } from "./config";
 
+const STORAGE_KEY = "i18nextLng";
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
@@ -28,17 +30,32 @@ i18n
       escapeValue: false,
     },
     detection: {
-      // Check localStorage first so the user's explicit choice always wins
-      // over the browser's navigator language.
+      // Check localStorage first (explicit user choice), then browser language.
       order: ["localStorage", "navigator"],
-      // Persist the selected language to localStorage
-      caches: ["localStorage"],
-      lookupLocalStorage: "i18nextLng",
+      // Do NOT auto-cache the detected language. This prevents a stale
+      // auto-detected value (e.g. "en" from an old visit) from overriding
+      // a correct navigator detection on subsequent visits.
+      // Only the explicit user choice in LanguageSwitcher writes to localStorage.
+      caches: [],
+      lookupLocalStorage: STORAGE_KEY,
     },
   });
 
 i18n.on("languageChanged", (lng) => {
   document.documentElement.setAttribute("lang", lng);
 });
+
+/**
+ * Persist a language choice to localStorage.
+ * Call this ONLY when the user explicitly picks a language
+ * (e.g. from the LanguageSwitcher), not on auto-detection.
+ */
+export function persistLanguageChoice(lng: string): void {
+  try {
+    localStorage.setItem(STORAGE_KEY, lng);
+  } catch {
+    // localStorage may be unavailable (private browsing, quota, etc.)
+  }
+}
 
 export default i18n;

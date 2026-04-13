@@ -134,12 +134,12 @@ try {
     $mail->addReplyTo($email, $name);
 
     // Content
-    $subject = "Nová objednávka z webu LB Clinic – $name – $reasonText";
+    $subject = "Nová objednávka z webu LB dental clinic – $name – $reasonText";
     $mail->isHTML(false);                                  // Nastavit na plain text
     $mail->Subject = $subject;
 
     // Plain text body
-    $mailBody = "Nová objednávka z kontaktního formuláře na webu LB Clinic\n";
+    $mailBody = "Nová objednávka z kontaktního formuláře na webu LB dental clinic\n";
     $mailBody .= "=========================================================\n\n";
     $mailBody .= "Jméno:             $name\n";
     $mailBody .= "Telefon:           $phone\n";

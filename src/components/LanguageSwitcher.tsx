@@ -61,6 +61,14 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
   }, [open]);
 
   const select = (lng: SupportedLanguage) => {
+    // Persist the user's explicit choice so it survives page reloads.
+    // Auto-detected languages are NOT cached (caches: [] in i18n.ts),
+    // so only a manual selection writes to localStorage.
+    try {
+      localStorage.setItem("i18nextLng", lng);
+    } catch {
+      // localStorage may be unavailable (private browsing, etc.)
+    }
     void i18n.changeLanguage(lng);
     setOpen(false);
     onAfterChange?.();
