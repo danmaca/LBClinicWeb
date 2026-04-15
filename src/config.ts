@@ -7,6 +7,8 @@ export const SITE_CONFIG = {
   email: "recepce@lbclinic.cz",
   phone: "+420 776 377 100",
   identNumber: "27452310",
+  /** Google Analytics 4 Measurement ID — replace with your real ID from GA admin */
+  gaMeasurementId: "G-6FXFW19CEJ",
   address: {
     street: "Vodňanská 1656/5",
     zip: "198 00",

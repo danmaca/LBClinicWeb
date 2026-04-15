@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useHashRouter } from "./router/useHashRouter";
 import { matchRoute } from "./router/routes";
+import { trackPageView } from "./analytics";
 
 /** Intro animation only on first load when landing on the home page */
 const initialShowIntro =
@@ -31,6 +32,11 @@ function App() {
   const { path } = useHashRouter();
   const route = matchRoute(path);
   const PageComponent = route.component;
+
+  // Track page views in Google Analytics on every route change
+  useEffect(() => {
+    trackPageView(path);
+  }, [path]);
 
   return (
     <div data-intro={introPhase !== "done" ? introPhase : undefined}>
