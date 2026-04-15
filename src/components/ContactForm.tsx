@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { SITE_CONFIG } from "../config";
+import { trackEvent } from "../analytics";
 
 const REASON_KEYS = [
   "dental_hygiene",
@@ -140,6 +141,10 @@ export const ContactForm: React.FC = () => {
       const responseData = await response.json();
 
       if (response.ok) {
+        trackEvent("contact_form_submit", {
+          reason: formData.reason,
+          preferred_time: formData.preferred_time,
+        });
         setStatus("success");
         setFieldErrors({});
         setFormData({

@@ -4,6 +4,7 @@ import { Menu, X, Phone, Mail } from "lucide-react";
 import { SITE_CONFIG } from "../config";
 import { MainLogoImage } from "./MainLogoImage";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { trackEvent } from "../analytics";
 
 export const HeaderSection: React.FC = () => {
   const { t } = useTranslation();
@@ -42,6 +43,13 @@ export const HeaderSection: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   className="text-gray-700 hover:text-accent font-medium transition-colors duration-[800ms]"
+                  onClick={() =>
+                    trackEvent("nav_click", {
+                      link_label: link.label,
+                      link_href: link.href,
+                      nav_type: "desktop",
+                    })
+                  }
                 >
                   {link.label}
                 </a>
@@ -78,6 +86,13 @@ export const HeaderSection: React.FC = () => {
             <a
               href="#contact"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
+              onClick={() =>
+                trackEvent("nav_click", {
+                  link_label: t("nav.contact"),
+                  link_href: "#contact",
+                  nav_type: "desktop",
+                })
+              }
             >
               {t("nav.contact")}
             </a>
@@ -109,7 +124,14 @@ export const HeaderSection: React.FC = () => {
                 key={link.href}
                 href={link.href}
                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-[800ms]"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  trackEvent("nav_click", {
+                    link_label: link.label,
+                    link_href: link.href,
+                    nav_type: "mobile",
+                  });
+                  setIsMenuOpen(false);
+                }}
               >
                 {link.label}
               </a>
@@ -141,7 +163,14 @@ export const HeaderSection: React.FC = () => {
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center w-full px-4 py-2 border border-transparent text-base font-medium rounded-md text-yellow-600 bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  trackEvent("nav_click", {
+                    link_label: t("nav.contact"),
+                    link_href: "#contact",
+                    nav_type: "mobile",
+                  });
+                  setIsMenuOpen(false);
+                }}
               >
                 {t("nav.contact")}
               </a>
