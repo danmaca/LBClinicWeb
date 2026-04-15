@@ -9,6 +9,8 @@ export interface RouteDefinition {
   path: string;
   /** React component to render for this route */
   component: FC;
+  /** Page title sent to Google Analytics and used in document.title */
+  title: string;
   /** Whether to show the splash screen on this route (only home) */
   showSplash?: boolean;
 }
@@ -25,19 +27,23 @@ export const routes: RouteDefinition[] = [
   {
     path: "/",
     component: HomePage,
+    title: "LB Dental Clinic",
     showSplash: true,
   },
   {
     path: "/galerie",
     component: GalleryPage,
+    title: "Galerie",
   },
   {
     path: "/osetreni",
     component: TreatmentPage,
+    title: "Ošetření",
   },
   {
     path: "/reference",
     component: ReferencePage,
+    title: "Reference",
   },
 ];
 

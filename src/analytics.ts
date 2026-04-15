@@ -21,12 +21,15 @@ declare global {
  *
  * @param path      The logical route path, e.g. "/" or "/gallery"
  * @param language  The active UI language code, e.g. "cs", "en"
+ * @param title     Human-readable page title for GA4 reporting
  */
-export function trackPageView(path: string, language?: string): void {
+export function trackPageView(path: string, language?: string, title?: string): void {
   if (typeof window.gtag !== "function") return;
 
   window.gtag("config", SITE_CONFIG.gaMeasurementId, {
     page_path: path,
+    page_title: title ?? document.title,
+    page_location: window.location.href,
     ...(language ? { language } : {}),
   });
 }

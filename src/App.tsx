@@ -37,8 +37,8 @@ function App() {
 
   // Track page views in Google Analytics on every route change and language switch
   useEffect(() => {
-    trackPageView(path, i18n.language);
-  }, [path, i18n.language]);
+    trackPageView(path, i18n.language, route.title);
+  }, [path, i18n.language, route]);
 
   return (
     <div data-intro={introPhase !== "done" ? introPhase : undefined}>
