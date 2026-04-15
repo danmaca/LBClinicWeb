@@ -19,13 +19,15 @@ declare global {
 /**
  * Send a `page_view` event to Google Analytics 4.
  *
- * @param path  The logical route path, e.g. "/" or "/gallery"
+ * @param path      The logical route path, e.g. "/" or "/gallery"
+ * @param language  The active UI language code, e.g. "cs", "en"
  */
-export function trackPageView(path: string): void {
+export function trackPageView(path: string, language?: string): void {
   if (typeof window.gtag !== "function") return;
 
   window.gtag("config", SITE_CONFIG.gaMeasurementId, {
     page_path: path,
+    ...(language ? { language } : {}),
   });
 }
 

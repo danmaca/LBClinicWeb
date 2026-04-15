@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useHashRouter } from "./router/useHashRouter";
 import { matchRoute } from "./router/routes";
 import { trackPageView } from "./analytics";
@@ -32,11 +33,12 @@ function App() {
   const { path } = useHashRouter();
   const route = matchRoute(path);
   const PageComponent = route.component;
+  const { i18n } = useTranslation();
 
-  // Track page views in Google Analytics on every route change
+  // Track page views in Google Analytics on every route change and language switch
   useEffect(() => {
-    trackPageView(path);
-  }, [path]);
+    trackPageView(path, i18n.language);
+  }, [path, i18n.language]);
 
   return (
     <div data-intro={introPhase !== "done" ? introPhase : undefined}>
