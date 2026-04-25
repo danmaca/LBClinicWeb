@@ -67,7 +67,7 @@ export const pricelist = {
             ru: "Гигиена полости рта 60 мин — первичная",
             uk: "Гігієна порожнини рота 60 хв — первинна",
           },
-          price: "1 900 Kč",
+          price: 2100,
         },
         {
           name: {
@@ -76,7 +76,7 @@ export const pricelist = {
             ru: "Гигиена полости рта 60 мин — повторная",
             uk: "Гігієна порожнини рота 60 хв — повторна",
           },
-          price: "2 100 Kč",
+          price: 2000,
         },
         {
           name: {
@@ -85,7 +85,25 @@ export const pricelist = {
             ru: "Гигиена полости рта для детей до 12 лет, 30 мин",
             uk: "Гігієна порожнини рота для дітей до 12 років, 30 хв",
           },
-          price: "1 100 Kč",
+          price: 1100,
+        },
+        {
+          name: {
+            cs: "Dentální hygiena u dětí se stálým chrupem",
+            en: "Dental hygiene for children with permanent teeth",
+            ru: "Гигиена полости рта у детей с постоянными зубами",
+            uk: "Гігієна порожнини рота у дітей з постійними зубами",
+          },
+          price: 1490,
+        },
+        {
+          name: {
+            cs: "Dentální hygiena u dětí s fixními rovnátky",
+            en: "Dental hygiene for children with fixed braces",
+            ru: "Гигиена полости рта у детей с несъёмными брекетами",
+            uk: "Гігієна порожнини рота у дітей з незнімними брекетами",
+          },
+          price: 1590,
         },
         {
           name: {
@@ -118,7 +136,7 @@ export const pricelist = {
             ru: "Домашнее отбеливание Opalescence 10% или 16% (в стоимость входят гели, каппы на обе челюсти, инструктаж)",
             uk: "Домашнє відбілювання Opalescence 10% або 16% (у вартість входять гелі, капи на обидві щелепи, інструктаж)",
           },
-          price: "8 000 Kč",
+          price: 8000,
         },
       ],
     },
@@ -160,12 +178,12 @@ export const pricelist = {
         },
         {
           name: {
-            cs: "Vstřebatelná kolagenová houbička s lokálním ATB do extrakční rány",
-            en: "Resorbable collagen sponge with local antibiotic for the extraction wound",
-            ru: "Рассасывающаяся коллагеновая губка с местным антибиотиком для лунки после удаления",
-            uk: "Розсмоктувальна колагенова губка з місцевим антибіотиком для лунки після видалення",
+            cs: "Vstřebatelná kolagenová houbička s lokálním ATB do extrakční rány, řízená tkáňová regenerace",
+            en: "Resorbable collagen sponge with local antibiotic for extraction wound, guided tissue regeneration",
+            ru: "Рассасывающаяся коллагеновая губка с местным антибиотиком в лунку после удаления, направленная тканевая регенерация",
+            uk: "Розсмоктувальна колагенова губка з місцевим антибіотиком у лунку після видалення, керована тканинна регенерація",
           },
-          price: 800,
+          price: 1200,
         },
         {
           name: {
@@ -344,7 +362,7 @@ export const pricelist = {
             ru: "Удаление подъязычной уздечки",
             uk: "Видалення під'язикової вуздечки",
           },
-          price: "3 200 Kč",
+          price: 3200,
         },
         {
           name: {
@@ -367,7 +385,7 @@ export const pricelist = {
             ru: "Эндодонтическое лечение молочного зуба",
             uk: "Ендодонтичне лікування молочного зуба",
           },
-          price: "3 000 Kč",
+          price: 3000,
         },
         {
           name: {
@@ -409,12 +427,12 @@ export const pricelist = {
       items: [
         {
           name: {
-            cs: "Korunka keramická zirkon",
-            en: "Zirconia ceramic crown",
-            ru: "Циркониевая керамическая коронка",
-            uk: "Цирконієва керамічна коронка",
+            cs: "Korunka keramická zirkon/E-max",
+            en: "Zirconia/E-max ceramic crown",
+            ru: "Циркониевая/E-max керамическая коронка",
+            uk: "Цирконієва/E-max керамічна коронка",
           },
-          price: "13 000 Kč",
+          price: 14000,
         },
         {
           name: {
@@ -423,7 +441,7 @@ export const pricelist = {
             ru: "Фрезерованная временная коронка",
             uk: "Фрезерована тимчасова коронка",
           },
-          price: "4 000 Kč",
+          price: 4000,
         },
         {
           name: {
@@ -460,7 +478,7 @@ export const pricelist = {
             ru: "Фотокомпозитный оверлей",
             uk: "Фотокомпозитний оверлей",
           },
-          price: "12 000 Kč",
+          price: 12000,
         },
         {
           name: {
@@ -469,7 +487,7 @@ export const pricelist = {
             ru: "Керамический оверлей",
             uk: "Керамічний оверлей",
           },
-          price: "14 000 Kč",
+          price: 14000,
         },
       ],
     },
@@ -488,7 +506,7 @@ export const pricelist = {
             ru: "Иммедиат-протез",
             uk: "Іммедіат-протез",
           },
-          price: "9 000 Kč",
+          price: 9000,
         },
       ],
     },
@@ -507,7 +525,7 @@ export const pricelist = {
             ru: "Неотложная помощь незарегистрированному пациенту",
             uk: "Невідкладна допомога незареєстрованому пацієнту",
           },
-          price: "1 500 Kč",
+          price: 1500,
         },
       ],
     },
@@ -526,7 +544,7 @@ export const pricelist = {
             ru: "Консультация, 15 мин",
             uk: "Консультація, 15 хв",
           },
-          price: "1 500 Kč",
+          price: 1500,
         },
       ],
     },
