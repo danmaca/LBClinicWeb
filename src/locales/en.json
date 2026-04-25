@@ -68,7 +68,13 @@
       {
         "question": "What to do in case of acute pain?",
         "answer": [
-          "Contact us by phone at +420 776 377 100 and we will try to schedule you as soon as possible.",
+          "We understand that sudden toothache can be unpleasant and requires a quick solution. We strive to provide our patients with the fastest possible help and treatment at the earliest available time.",
+          "",
+          "<a href=\"#contact\" class=\"text-accent hover:underline font-medium\">Contact us</a> by phone at",
+          "",
+          "+420 776 377 100",
+          "",
+          "Mon–Thu 8 AM – 4 PM, Fri 8 AM – 1 PM",
           "",
           "Outside our office hours, we recommend the dental emergency services:",
           "<b>Nemocnice Na Františku, Praha 1</b>, tel. 222 924 268, Spálená 12, Praha 1, tel. 222 924 268",

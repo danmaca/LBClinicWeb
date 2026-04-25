@@ -68,7 +68,13 @@
       {
         "question": "Co dělat v případě akutních bolestí?",
         "answer": [
-          "Kontaktujte nás telefonicky na čísle  +420 776 377 100, pokusíme se Vás objednat co nejdříve.",
+          "Chápeme, že náhlá bolest zubů může být nepříjemná a vyžaduje rychlé řešení. Snažíme se našim pacientům poskytnout co nejrychlejší pomoc a ošetření v nejbližším možném čase.",
+          "",
+          "<a href=\"#contact\" class=\"text-accent hover:underline font-medium\">Kontaktujte nás</a> telefonicky na čísle",
+          "",
+          "+420 776 377 100",
+          "",
+          "Po-Čt 8-16, Pá 8-13",
           "",
           "Mimo naši ordinační dobu doporučujeme zubní pohotovost:",
           "<b>Nemocnice Na Františku, Praha 1</b>, tel. 222 924 268, Spálená 12, Praha 1, tel. 222 924 268",
