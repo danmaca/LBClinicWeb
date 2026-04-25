@@ -280,6 +280,11 @@
         "title": "Rentgenová diagnostika",
         "desc": "Moderní 2D rentgenové vyšetření pro přesné plánování léčby a spolehlivou diagnostiku.",
         "img": "xray.svg"
+      },
+      {
+        "title": "Zvětšovací technologie",
+        "desc": "Vyšetření a ošetření pod operačním mikroskopem nebo pomocí lupových brýlí.",
+        "img": "microscope.svg"
       }
     ]
   }
