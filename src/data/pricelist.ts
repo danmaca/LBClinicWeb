@@ -178,10 +178,10 @@ export const pricelist = {
         },
         {
           name: {
-            cs: "Vstřebatelná kolagenová houbička s lokálním ATB do extrakční rány, řízená tkáňová regenerace",
-            en: "Resorbable collagen sponge with local antibiotic for extraction wound, guided tissue regeneration",
-            ru: "Рассасывающаяся коллагеновая губка с местным антибиотиком в лунку после удаления, направленная тканевая регенерация",
-            uk: "Розсмоктувальна колагенова губка з місцевим антибіотиком у лунку після видалення, керована тканинна регенерація",
+            cs: "Řízená tkáňová regenerace",
+            en: "Guided tissue regeneration",
+            ru: "Направленная тканевая регенерация",
+            uk: "Керована тканинна регенерація",
           },
           price: 1200,
         },
